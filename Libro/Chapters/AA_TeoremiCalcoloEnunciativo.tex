@@ -1,0 +1,217 @@
+\chapter{Teoremi del calcolo enunciativo}
+\subsubsection{Legge di identi\`a enunciativa}
+\begin{equation}
+\vdash\alpha\Rightarrow\alpha
+\end{equation}
+\begin{tabular}{c c c c}
+$(1)$& $1$ & $\alpha$ & Ass\\
+$(2)$& & $\alpha\Rightarrow\alpha$ & $1,1,I\Rightarrow$
+\end{tabular}
+\subsubsection{Legge di transitivit\`a}
+\begin{equation}
+\vdash (\alpha\Rightarrow\beta)\Rightarrow ((\beta\Rightarrow\gamma)\Rightarrow(\alpha\Rightarrow\gamma))
+\end{equation}
+\begin{tabular}{c c c c}
+$(1)$& $1$ & $\alpha\Rightarrow\beta$ & Ass\\
+$(2)$& $2$ & $\beta\Rightarrow\gamma$ & Ass\\
+$(3)$ & $3$ & $\alpha$& Ass\\
+$(4)$ & $1, 3$ & $\beta$ & $1,3, E\Rightarrow$\\
+$(5)$ &$1,2,3$ & $\gamma$ & $2,4,E\Rightarrow$\\
+$(6)$ & $1, 2$ & $\alpha\Rightarrow\gamma$ & $3, 5, I\Rightarrow$\\
+$(7)$ & $1$ & $(\beta\Rightarrow\gamma)\Rightarrow(\alpha\Rightarrow\gamma)$ & $2, 6, I\Rightarrow$\\
+$(8)$ & & $(\alpha\Rightarrow\beta)\Rightarrow((\beta\Rightarrow\gamma)\Rightarrow(\alpha\Rightarrow\gamma))$ & $1, 7, I\Rightarrow$
+\end{tabular}
+\subsubsection{Legge di importazione}
+\begin{equation}
+\vdash(\alpha\Rightarrow(\beta\Rightarrow\gamma))\Rightarrow(\alpha\land\beta\Rightarrow\gamma)
+\end{equation}
+\begin{tabular}{c c c c}
+$(1)$& $1$ & $\alpha\Rightarrow(\beta\Rightarrow\gamma)$ & Ass\\
+$(2)$& $2$ & $\alpha\land\beta$ & Ass\\
+$(3)$ & $2$ & $\alpha$& $2, E\land$\\
+$(4)$ & $2$ & $\beta$ & $2, E\land$\\
+$(5)$ &$1, 2$ & $\beta\Rightarrow\gamma$ & $1,2,E\Rightarrow$\\
+$(6)$ & $1, 2$ & $\gamma$ & $4, 5, E\Rightarrow$\\
+$(7)$ & $1$ & $\alpha\land\beta\Rightarrow\gamma$ & $2, 6, I\Rightarrow$\\
+$(8)$ & & $(\alpha\Rightarrow(\beta\Rightarrow\gamma))\Rightarrow(\alpha\land\beta\Rightarrow\gamma)$ & $1, 7, I\Rightarrow$
+\end{tabular}
+\subsubsection{Teorema di esportazione}
+\begin{equation}
+\vdash(\alpha\land\beta\Rightarrow\gamma)\Rightarrow(\alpha\Rightarrow(\beta\Rightarrow\gamma))
+\end{equation}
+\begin{tabular}{c c c c}
+$(1)$& $1$ & $\alpha\land\beta\Rightarrow\gamma$ & Ass\\
+$(2)$& $2$ & $\alpha$ & Ass\\
+$(3)$ & $3$ & $\beta$& Ass\\
+$(4)$ & $2, 3$ & $\alpha\land\beta$ & $2,3, I\land$\\
+$(5)$ &$1, 2, 3$ & $\gamma$ & $1,4,E\Rightarrow$\\
+$(6)$ & $1, 2$ & $\beta\Rightarrow\gamma$ & $4, 5, I\Rightarrow$\\
+$(7)$ & $1$ & $\alpha\Rightarrow(\beta\Rightarrow\gamma)$ & $2, 6, I\Rightarrow$\\
+$(8)$ & & $(\alpha\land\beta\Rightarrow\gamma)\Rightarrow(\alpha\Rightarrow(\beta\Rightarrow\gamma))$ & $1, 7, I\Rightarrow$
+\end{tabular}
+\subsubsection{Ragionamento a fortiori o attenuazione condizionale o paradosso dell'implicazione materiale}
+\begin{equation}
+\vdash\alpha\Rightarrow(\beta\Rightarrow\alpha)
+\end{equation}
+\begin{tabular}{c c c c}
+$(1)$& $1$ & $\alpha$ & Ass\\
+$(2)$& $2$ & $\beta$ & Ass\\
+$(3)$ & $1, 2$ & $\alpha\land\beta$& $1,2, I\land$\\
+$(4)$ & $1, 2$ & $\alpha$ & $2,3, E\land$\\
+$(5)$ &$1$ & $\beta\Rightarrow\alpha$ & $2,4,I\Rightarrow$\\
+$(6)$ & & $\alpha\Rightarrow(\beta\Rightarrow\alpha$ & $2, 5, I\Rightarrow$\\
+\end{tabular}
+\subsubsection{Legge di Duns Scoto}
+\begin{equation}
+\vdash\neg\alpha\land\alpha\Rightarrow\beta
+\end{equation}
+\begin{tabular}{c c c c}
+$(1)$& $1$ & $\alpha$ & Ass\\
+$(2)$& $2$ & $\neg\alpha$ & Ass\\
+$(3)$ & $1, 2$ & $\beta$& $1,2, E\neg$\\
+$(4)$ & $2$ & $\alpha\Rightarrow\beta$ & $2,3, I\Rightarrow$\\
+$(5)$ &  & $\neg\alpha\Rightarrow()\alpha\Rightarrow\beta)$ & $2,4,I\Rightarrow$\\
+$(6)$ & & $\neg\alpha\land\alpha\Rightarrow\beta$ & Legge di importazione\\
+\end{tabular}
+\subsubsection{Equivalenza delle contraddizioni}
+\`E banale notare come essendo che una contraddizione implica tutto una contraddizione ne implica un'altra, pertanto:
+\begin{equation}
+\vdash\alpha\land\neg\alpha\Rightarrow\beta\land\neg\beta
+\end{equation}
+Che afferma l'equivalenza di tutte le contraddizioni. 
+\subsubsection{Legge di autocontraddizione}
+\begin{equation}
+\vdash(\alpha\Rightarrow\neg\alpha)\Rightarrow\neg\alpha
+\end{equation}
+\begin{tabular}{c c c c}
+$(1)$& $1$ & $\alpha\Rightarrow\neg\alpha$ & Ass\\
+$(2)$& $2$ & $\alpha$ & Ass\\
+$(3)$ & $1, 2$ & $\neg\alpha$& $1,2, E\Rightarrow$\\
+$(4)$ & $1$ & $\neg\alpha$ & $2,2, 3, I\neg$\\
+$(5)$ &  & $(\alpha\Rightarrow\neg\alpha)\Rightarrow\neg\alpha$ & $1,4,I\Rightarrow$\\
+\end{tabular}
+\subsubsection{Modus tollens o legge di contrapposizione debole}
+\begin{equation}
+\vdash (\alpha\Rightarrow\beta)\Rightarrow(\neg\beta\Rightarrow\neg\alpha)
+\end{equation}
+\subsubsection{Legge del terzo escluso}
+\begin{equation}
+\vdash \alpha\lor\neg\alpha
+\end{equation}
+\begin{tabular}{c c c c}
+$(1)$& $1$ & $\neg(\alpha\lor\neg\alpha)$ & Ass\\
+$(2)$& $2$ & $\alpha$ & Ass\\
+$(3)$ & $2$ & $\alpha\lor\neg\alpha$& $2, I\lor$\\
+$(4)$ & $1, 2$ & $\alpha\land\neg(\alpha\lor\neg\alpha)$ & $2,2, 3, I\land$\\
+$(5)$ &  $1, 2$& $\neg(\alpha\lor\neg\alpha)$ & $4,E\land$\\
+$(6)$ & $1$ & $\neg\alpha$ & $2,3,5,I\neg$\\
+$(7)$ & $1$ & $\alpha\lor\neg\alpha$ & $6, ,I\lor$\\
+$(8)$ &  & $\neg\neg(\alpha\lor\neg\alpha)$ & $1,1,7,I\neg$\\
+$(9)$ &  & $\alpha\lor\neg\alpha$ & $8, DN$\\
+\end{tabular}
+\subsubsection{Legge dell'inferenza indiretta}
+\begin{equation}
+\vdash(\neg\alpha\Rightarrow\beta)\Rightarrow((\neg\alpha\Rightarrow\neg\beta)\Rightarrow\alpha)
+\end{equation}
+\subsubsection{Legge di autofondazione}
+\begin{equation}
+\vdash(\neg\alpha\Rightarrow\alpha)\Rightarrow\alpha
+\end{equation}
+\begin{tabular}{c c c c}
+$(1)$& $1$ & $\neg\alpha\Rightarrow\alpha$ & Ass\\
+$(2)$& $2$ & $\neg\alpha$ & Ass\\
+$(3)$ & $1, 2$ & $\alpha$& $1,2, E\Rightarrow$\\
+$(4)$ & $1$ & $\neg\neg\alpha$ & $2,2, 3, I\neg$\\
+$(5)$ &  $1$ & $\alpha$ & $4, DN$\\
+$(6)$ &  $1$ & $(\neg\alpha\Rightarrow\alpha)\Rightarrow\alpha$ & $1, 5, I\Rightarrow$\\
+\end{tabular}
+\subsubsection{Legge classica di contrapposizione}
+\begin{equation}
+\vdash(\neg\alpha\Rightarrow\neg\beta)\Rightarrow(\beta\Rightarrow\alpha)
+\end{equation}
+\begin{tabular}{c c c c}
+$(1)$& $1$ & $\neg\alpha\Rightarrow\neg\beta$ & Ass\\
+$(2)$& $2$ & $\beta$ & Ass\\
+$(3)$ & $3$ & $\neg\alpha$& Ass\\
+$(4)$ & $1, 3$ & $\neg\beta$ & $1,3 , E\Rightarrow$\\
+$(5)$ & $2, 3$ & $\neg\alpha\land\beta$ & $2,3, I\land$\\
+$(6)$ &  $2, 3$ & $\beta$ & $5, E\land$\\
+$(7)$ &  $1, 6$ & $\neg\neg\alpha$ & $3,4,6, I\neg$\\
+$(8)$ &  $1,2$ & $\alpha$ & $7, DN$\\
+$(9)$ &  $1$ & $\beta\Rightarrow\alpha$ & $2, 8, I\Rightarrow$\\
+$(10)$ &  & $(\neg\alpha\Rightarrow\neg\beta)\Rightarrow(\beta\Rightarrow\alpha)$ & $1, 9, I\Rightarrow$\\
+\end{tabular}
+\subsubsection{Quantificatore esistenziale e congiunzione}
+\begin{equation}
+\vdash\exists x(\alpha\land\beta)\Rightarrow\exists x\alpha\land\exists x\beta
+\end{equation}
+\begin{tabular}{c c c c}
+$(1)$& $1$ & $\exists x(\alpha\land\beta)$ & Ass\\
+$(2)$& $2$ & $\alpha\land\beta$ & Ass\\
+$(3)$ & $2$ & $\alpha$& $2, E\land$\\
+$(4)$ & $2$ & $\exists x\alpha$ & $3 , I\exists$\\
+$(5)$ & $2$ & $\beta$ & $2 E\land$\\
+$(6)$ & $2$ & $\exists x\beta$ & $5 I\exists$\\
+$(7)$ & $2$ & $\exists x\alpha\land\exists x\beta$ & $4,6 I\land$\\
+$(8)$ & $1$ & $\exists x\alpha\land\exists x\beta$ & $1, 2, 7, E\exists$\\
+$(9)$ &     & $\exists x(\alpha\land\beta)\Rightarrow\exists x\alpha\land\exists x\beta$ & $1, 8, I\Rightarrow$\\
+\end{tabular}
+\subsubsection{Quantifiatore universale e disgiunzione}
+\begin{equation}
+\vdash\forall x\alpha\lor\forall x\beta\Rightarrow\forall x(\alpha\lor\beta)
+\end{equation}
+\begin{tabular}{c c c c}
+$(1)$  & $1$ & $\forall x\alpha\lor\forall x\beta$ & Ass \\
+$(2)$  & $2$ & $\forall x\alpha$ & Ass \\
+$(3)$  & $2$ & $\alpha$ & $2, E\forall$ \\
+$(4)$  & $2$ & $\alpha\lor\beta$ & $3, I\lor$ \\
+$(5)$  & $2$ & $\forall x(\alpha\lor\beta)$ & $4, I\forall$ \\
+$(6)$  & $6$ & $\forall\beta$ & Ass \\
+$(7)$  & $6$ & $\beta$ & $6, E\forall$ \\
+$(8)$  & $2, 6$ & $\alpha\lor\beta$ & $3, 7, I\lor$ \\
+$(9)$  & $2, 6$ & $\forall x(\alpha\lor\beta)$ & $8, I\forall$ \\
+$(10)$ & $1$ & $\forall x(\alpha\lor\beta)$ & $1, 2, 5, 6, 9, E\lor$ \\
+$(11)$ &  & $\forall x\alpha\lor\forall x\beta\Rightarrow\forall x(\alpha\lor\beta)$ & $1, 10, I\Rightarrow$ \\
+\end{tabular}
+\subsubsection{Legge di Leibniz o di indiscernibilit\`a elementare degli identici}
+\begin{equation}
+\vdash t=s\Rightarrow(\alpha[x/s]\Rightarrow\alpha[x/t]
+\end{equation}
+\begin{tabular}{c c c c}
+$(1)$  & $1$ & $t=s$ & Ass \\
+$(2)$  & $2$ & $\alpha[x/s]$ & Ass \\
+$(3)$  & $1, 2$ & $\alpha[x/t]$ & $1,2, E=$ \\
+$(4)$  & $1$ & $\alpha[x/s]\Rightarrow\alpha[x/t]$ & $2, 3, I\Rightarrow$ \\
+$(5)$  &  & $t=s\Rightarrow(\alpha[x/s]\Rightarrow\alpha[x/t]$ & $1, 4, I\Rightarrow$ \\
+\end{tabular}
+\subsubsection{Simmetria dell'identit\`a}
+\begin{equation}
+\vdash t=s\Rightarrow s=t
+\end{equation}
+\begin{tabular}{c c c c}
+$(1)$  & $1$ & $t=s$ & Ass \\
+$(2)$  &  & $t=t$ &  $I=$\\
+$(3)$  & $1$ & $s=t$ & $1, 2, E=$ \\
+$(4)$  &  & $t=s\Rightarrow s=t$ &  $1, 3, I\Rightarrow$\\
+\end{tabular}\\
+$E=$ si applica considerando $\alpha[x]$ come $x=t$.
+\subsubsection{Transitivit\`a dell'identit\`a}
+\begin{equation}
+\vdash t=s\land s=r\Rightarrow t=r
+\end{equation}
+\begin{tabular}{c c c c}
+$(1)$  & $1$ & $t=s\land s=r$ &  Ass\\
+$(2)$  & $1$ & $t=s$ & $1 E\land$ \\
+$(3)$  & $1$ & $s=r$ & $1 E\land$ \\
+$(4)$  & $1$ & $t=r$ & $2, 3, E=$ \\
+$(5)$  &  & $t=s\land s=r\Rightarrow t=r$ & $1, 4, I\Rightarrow$ \\
+\end{tabular}
+
+
+
+
+
+
+
+
+

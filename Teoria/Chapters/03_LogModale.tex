@@ -1,0 +1,310 @@
+\chapter{Logica modale}
+\section{Intuizione}
+\subsection{Modalit\`a}
+Una modalit\`a \`e un'espressione che \`e utilizzata per qualificare la verit\`a di un giudizio o un operatore che esprime un modo in cui una proposizione \`e vera. Pu\`o essere considerata come un operatore che 
+prende una proposizione e ritorna un'altra proposizione pi\`u complessa. Sono formalizzate attraverso operatori come $\Box$ e $\diamond$ che possono essere applicati ad una formula $\phi$ per ottenerne
+un'altra $\Box \phi$. Una modalit\`a \`e un espressione utilizzata per qualificare la verit\`a di un giudizio. Le prime modalit\`a formalizzate sono quelle aletiche in cui $\diamond$ esprime possibilit\`a
+e $\Box$ necessit\`a. 
+\section{Linguaggio}
+Se $P$ \`e un insieme di proposizioni primitive l'insieme di formule definite dalla logica modale base sono definite:
+\begin{itemize}
+\item Ogni $p\in P$ \`e una formula.
+\item Se $A$ e $B$ sono formule allora $\neq A, A\land B, A\lor B, A\Rightarrow B$ e $A\equiv B$ sono formule.
+\item Se $A$ \`e una formula $\Box A$ e $\diamond A$ sono formule.
+\end{itemize}
+\subsection{Interpretazione intuitiva}
+La formula $\Box\phi$ pu\`o essere interpretata intuitivamente in molti modi:
+\begin{itemize}
+\item $\phi$ \`e necessariamente vera (logica modale classica).
+\item Si sa che $\phi$ \`e vera (logica epistemologica).
+\item $\phi$ \`e dimostrabile in una teoria (logica della dimostrabilit\`a).
+\item $\phi$ sar\`a sempre vera (logica temporale).
+\end{itemize}
+In tutti 	questi casi $\diamond\phi$ pu\`o essere interpretato come $\neg\Box\neq\phi$, ovvero $\phi$ \`e possibilmente vera.
+\section{Strutture relazionali}
+La semantica estensionale della logica modale \`e data attraverso strutture relazionali, tuple $<W,R_{a_1},\dots,R_{a_n}>$ dove $R_{a_i}\subseteq W\times\cdots\times W$. Ogni $w\in W$ \`e chiamato 
+punto o mondo e ogni $R_{a_i}$ \`e detta relazione di accessibilit\`a.
+\subsection{Esempi di strutture relazionali}
+\begin{itemize}
+\item Strict partial order (SPO): $<Q, < >$, $<$ \`e transitiva e irreflessiva.
+\item Strict linear order: $<W, < >$, SPO e per ogni $v\neq u\in W$, $v<w$ o $w<v$.
+\item Partial order (PO): $<W,\le >$. $\le$ \`e transitiva, riflessiva e antisimmetrica.
+\item Linear order: $<W, \le>$, PO e per ogni $v\neq u\in W$, $v\le w$ o $w\le v$.
+\item Labeled transition system (LTS): $<W, R_a>_{a\in A}$ e $R_a\subseteq W\times W$.
+\item XML document: $<W, R_I>_{I\in L}$, $W$ contiene i componenti di un documento XML e $L$ \`e l'insieme delle labels che appaiono nel documento.
+\end{itemize}
+\section{Semantica}
+Un basic frame \`e una struttura algebrica $F=<W, R>$ dove $E\subseteq W\times W$. Un interpretazione $I$ di un linguaggio modale in un frame $F$ \`e una funzione $I:P\rightarrow 2^W$. Intuituvamente
+$w\in I(p)$ vuol dire che $p$ \`e vera in $w$ o che $w$ \`e di tipo $p$. Un modello $\mathcal{M}$ \`e formato dal paio di frame e interpretazione: $\mathcal{M}=<F, I>$. La verit\`a \`e relativa al mondo, 
+pertanto si definisce la relazione di $\models$ tra un mondo in un modello e una formula.
+\begin{itemize}
+\item $\mathcal{M}, w\models p$ se e solo se $w\in I(p)$.
+\item $\mathcal{M}, w\models \phi\land \psi$ se e solo se $\mathcal{M}, w\models\phi$ e $\mathcal{M}, w\models\psi$.
+\item $\mathcal{M}, w\models \phi\lor \psi$ se e solo se $\mathcal{M}, w\models\phi$ o $\mathcal{M}, w\models\psi$.
+\item $\mathcal{M}, w\models \phi\Rightarrow \psi$ se e solo se $\mathcal{M}, w\models\phi$ implica $\mathcal{M}, w\models\psi$.
+\item $\mathcal{M}, w\models \phi\equiv \psi$ se e solo se $\mathcal{M}, w\models\phi$ se e solo se $\mathcal{M}, w\models\psi$.
+\item $\mathcal{M}, w\models \neg\phi$ se e solo se  non $\mathcal{M}, w\models\phi$.
+\item $\mathcal{M}, w\models \Box\phi$ se e solo se  per ogni $w'$ tale che $wRw'$,  $\mathcal{M}, w'\models\phi$.
+\item $\mathcal{M}, w\models \Box\phi$ se e solo se  esiste un $w'$ tale che $wRw'$,  $\mathcal{M}, w'\models\phi$.
+\end{itemize}
+$\phi$ \`e soddisfatta globalmente in un modello $\mathcal{M}\models\phi$ se e solo se $\mathcal{M}, w\models\phi$ per ogni $w\in W$.
+\subsection{Esprimere propriet\`a sulle strutture}
+\begin{tabular}{|c|c|}
+\hline
+Formula vera a $w$ & Propriet\`a di $w$\\
+\hline
+$\diamond T$ & $w$ ha un punto successore.\\
+\hline
+$\diamond\diamond T$ & $w$ ha un punto successore con un punto successore.\\
+\hline
+$\diamond_1\dots\diamond_n T$ & $w$ esiste un cammino di lunghezza $n$ che comincia a $w$.\\
+\hline
+$\Box\bot$ & $w$ non ha nessun punto successore.\\
+\hline
+$\Box\Box\bot$ & Ogni successore di $w$ non ha un punto successore.\\
+\hline
+$\Box_1\dots\Box_n\bot$ & Ogni cammino che comincia da $w$ ha lunghezza minore di $n$.\\
+ \hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline
+Formula vera a $w$ & Propriet\`a di $w$\\
+\hline
+$\diamond p$ & $w$ ha un punto successore che \`e $p$.\\
+\hline
+$\diamond\diamond p$ & $w$ ha un punto successore con un punto successore che \`e $p$.\\
+\hline
+$\diamond_1\dots\diamond_n p$ & $w$ esiste un cammino di lunghezza $n$ che comincia a $w$ e finisce con un punto che \`e $p$.\\
+\hline
+$\Box p$ & Ogni successore di $w$ \`e $p$.\\
+\hline
+$\Box\Box p$ & Ogni successore del successore di $w$ \`e $p$.\\
+\hline
+$\Box_1\dots\ Box_n p$ & Ogni di lunghezza $n$ che comincia da $w$ finisce in un punto che \`e $p$.\\
+ \hline
+\end{tabular}
+\subsection{Propriet\`a della relazione di accessibilit\`a}
+\begin{itemize}
+\item Logica temporale: la relazione di accessibilit\`a deve rappresentare una relazione temporale e $wRw'$ vuol dire che $w'$ \`e un mondo futuro. Esistono due tipi di strutture: alberi o insiemi di cammini 
+nella direzione del tempo per futuro e passato con come radice il mondo presente.
+\item Logica epistemica: la relazione di accessibilit\`a \`e utilizzata per rappresentare le credenze dell'agente $A$ e $wRw'$ rappresenta il fatto che $w'$ \`e una situazione possibile coerente con la situazione
+attuale $w$. Utilizzano strutture gerarchiche radicate.
+\item Logica descrittiva: la relazione di accessibilit\`a rappresenta una relazione tra due concetti o classi. La struttura \`e un grafo di conoscenza senza restrizioni sulla sua forma.
+\end{itemize}
+\section{Analisi di proposizioni}
+\subsection{Relazione di validit\`a su frames}
+Una formula $\phi$ \`e valida in un mondo $w$ di un frame $F$, ovvero $F,w\models\phi$ se e solo se $\mathcal{M}, w\models\phi$ per ogni $I$ con $\mathcal{M}=<F,I>$. Una formula \`e valida in un 
+frame $F$, ovvero $F\models\phi$ se e solo se $F,w\models\phi$ per ogni $w\in W$. Detto $C$ una classe di frames allora una formula $\phi$ \ `e valida nella classe di frames $C$, ovvero $\models_C\phi$ 
+se e solo se $F\models\phi$ per ogni $F\in C$. Una formula si dice valida $\models\phi$ se e solo se $F\models\phi$ per ogni frame $F$.
+\subsection{Conseguenza logica}
+$\phi$ \`e conseguenza logica di $\Gamma$ , $\Gamma\models\phi$ se per ogni modello $\mathcal{M}=<F,I>$ e ogni punto $w\in W$, $\mathcal{M},w\models\Gamma$ implica che $\mathcal{M}, w
+\models\phi$. $\phi$ si dice conseguenza logica di $\Gamma$ in una classe di frame $C$, $\Gamma\models_C\phi$ se per ogni modello $\mathcal{M}=<F,I>$ con $F\in C$ e ogni punto $w\in W$, 
+$\mathcal{M},w\models\Gamma$ implica che $\mathcal{M}, w\models\phi$. Insoddisfacibilit\`a ed equivalenza logica sono definiti come al solito.
+\section{$\mathbf{K}$ modale o analisi di Hilbert}
+Gli assiomi che formano $\mathbf{K}$ caratterizzano le logiche modali con relazione di validit\`a chiusa al loro interno chiamate logiche modali normali. Gli assiomi sono:
+\begin{itemize}
+\item[$\mathbf{A_1}$] $\phi\Rightarrow(\psi\Rightarrow\phi)$.
+\item[$\mathbf{A_2}$] $(\phi\Rightarrow(\psi\Rightarrow\theta))\Rightarrow((\phi\Rightarrow\psi)\Rightarrow(\phi\Rightarrow\theta))$.
+\item[$\mathbf{A_3}$] $(\neq\psi\Rightarrow\neq\phi)\Rightarrow((\neq\psi\Rightarrow\phi)\Rightarrow\phi)$.
+\item[$\mathbf{MP}$] $\dfrac{\phi, \phi\Rightarrow\psi}{\psi}$.
+\item[$\mathbf{K}$] $\Box(\phi\Rightarrow\psi)\Rightarrow(\Box\phi\Rightarrow\Box\psi)$.
+\item[$\mathbf{Nec}$] $\dfrac{\phi}{\Box\phi}$ o regola di necessit\`a.
+\end{itemize}
+Si noti come $\phi\Rightarrow\Box \phi$ non \`e equivalente a $Neq$, in quanto non valida. Si nota come nell'analisi di Hilbert esiste una differenza tra deduzione e prova in quanto il teorema di deduzione non
+\`e vero.
+\section{Relazione di accessibilit\`a}
+Le formule possono essere utilizzate per dare forma alla struttura imponendo propriet\`a all'accessibilit\`a di $R$. Siano esempi:
+\begin{itemize}
+\item Logica temporale: se la relazione di accessibilit\`a deve rappresentare una relazione temporale e $wRw'$ vuol dire che $w'$ \`e un mondo futuro, allora $R$ deve essere una relazione transitiva, ovvero
+se $w'$ \`e un mondo futuro di $w$ allora ogni mondo futuro di $w'$ \`e un mondo futuro di $w$:
+\item Logica della conoscenza: se la relazione di accessibilit\`a \`e utilizzata per rappresentare la conoscenza di un agente $A$ e $wRw'$ rappresenta il fatto che $w'$ \`e una possibile situaizone coerente con la
+situazione attuale $w$ allora $R$ deve essere riflessiva in quanto $w$ \`e sempre coerente con s\`e stesso. 
+\end{itemize}
+\subsection{Propriet\`a tipiche di $\mathbf{R}$}
+\begin{itemize}
+\item Riflessivit\`a: $\forall w.R(w,w)$.
+\item Transitivit\`a: $\forall w, v, u.((R(w, v)\land R(v, u))\Rightarrow R(w, u))$.
+\item Simmetria: $\forall w, v.(R(w, v)\Rightarrow R(v, w))$.
+\item Euclidea: $\forall w, v, u.((R(w, v)\land R(w, u))\Rightarrow R(v, u))$.
+\item Seriale: $\forall w.\exists v.R(w, v)$.
+\item Funzionale: $\forall w.\exists !v.R(w, v)$.
+\end{itemize}
+\section{$\mathbf{KT}$ modale}
+In questa logica modale la relazione $R$ \`e riflessiva e vale l'assioma $\mathbf{T}$ secondo cui se un frame \`e riflessivo allora vale la formula $\Box\phi\Rightarrow\phi$ o alternativamente $\phi\Rightarrow
+\diamond\phi$. 
+\subsection{Correttezza}
+Sia $\mathcal{M}$ un modello su un frame riflessivo $F=(W, R)$ e $w\in E$. Si prova come $\mathcal{M}, w\models\Box\phi\Rightarrow\phi$. Siccome $R$ \`e riflessiva allora $wRw$. Si supponga che 
+$M,w\models\Box\phi$, dalla condizione di soddisfacibilit\`a di $\Box$, $\mathcal{M}, w\models\Box\phi$ e $wRw$ implica che $\mathcal{M}, w \models\phi$. Siccome dall'ipotesi si \`e derivata la tesi si 
+pu\`o concludere che $\mathcal{M}, w\models\Box\phi\Rightarrow\phi$.
+\subsection{Completezza}
+Si supponga che un frame $F=(W, R)$ non sia riflessivo: se $R$ non \`e riflessiva allora esiste un $w\in W$ tale che non accede a s\`e stesso, ovvero $wRw$ non sussiste. Sia $\mathcal{M}$ un qualunque
+modello di $F$ e $\phi$ una formula proposizionale $p$. Sia $V$ l'insieme $p$ vero in tutti i mondi di $W$ tranne $w$ dove \`e falsa. Dal fatto che $w$ non accede a s\`e stesso si ha che in tutti i mondi $w'$
+accessibili da $w$ $p$ \`e vera: $\forall w', wRw', \mathcal{M}, w'\models p$. Dalla condizione di soddisfacibilit\`a di $\Box$ si ha che $\mathcal{M}, w\models\Box p$. Siccome $\mathcal{M}, w\models\Box 
+p$ si ha che $w\models\Box p\Rightarrow p$. 
+\section{$\mathbf{KB}$ modale}
+In questa logica modale la relazione $R$ \`e simmetrica e vale l'assioma $\mathbf{B}$ secondo cui se un frame \`e riflessivo allora vale la formula $\phi\Rightarrow\Box\diamond\phi$.
+\subsection{Correttezza}
+SIa $\mathcal{M}$ un modello su un frame simmetrico $F=(W, R)$ e $w\in W$. Si provi che $\mathcal{M}, w\models \phi\Rightarrow\Box\diamond\phi$. Per ipotesi $\mathcal{M}, w\models\phi$ e si vuole
+dimostrare che $\mathcal{M}, w\models\phi$. Dalle condizioni di soddisfacibilit\`a di $\Box$ si deve provare che per ogni mondo $w'$ accessibile da $w$, $w'\models\diamond\phi$. Sia $w'$ un mondo 
+accessibile da $w$: $wRw'$. Dal fatto che $R$ \`e simmetrica si ha che $w'Rw$ e dalle condizioni di soddisfacibilit\`a di $\diamond$ dal fatto che $w'Rw$ e che $\mathcal{M}, w\models\phi$ si ha che 
+$\mathcal{M}, w'\models\diamond\phi$. Dalle condizioni di soddisfacibilit\`a di $\Box$ si inferisce che $\mathcal{M}, w\models\Box\diamond\phi$. Essendo che dall'ipotesi abbiamo derivato la tesi si 
+conclude che $\mathcal{M}m w\models\phi \Rightarrow\Box\diamond\phi$.
+\subsection{Completezza}
+Si supponga che un frame $F=(W, R)$ non sia simmetrico. Se non lo \`e esistono due mondi $w, w'\in W$ trali che $wRw'$ e non $w'Rw$. Sia $\mathcal{M}$ un qualsiasi modello di $F$ e $\phi$ la formula
+proposizionale $p$. Sia $V$ l'insieme di mondi in cui $p$ sia falsa e $p$ vera in $w$. Dal fatto che $w'$ non accede a $w$ si ha che in tutti i mondi accessibili da $w'$ $p$ \`e falsa. Dalle condizioni di 
+soddisfacibilit\`a di $\diamond$ si ha che $\mathcal{M}, w'\not\models\diamond p$. Essendo che esiste un mondo $w'$ accessibile da $w$ con $\mathcal{M}m w\not\models\diamond p$ dalle condizoni di 
+soddisfacibilit\`a di $\Box$ si ha che $\mathcal{M}m w\not\models\Box\diamond p$. Essendo $\mathcal{M}, w\models p$ e $\mathcal{M}m w\not\models\Box\diamond p$ si ha che $\mathcal{M}, w\not\models p\Rightarrow\Box\diamond p$.
+\section{$\mathbf{KD}$ modale}
+In questa logica modale la relazione $R$ \`e seriale e vale l'assioma $\mathbf{D}$ secondo cui se un frame \`e seriale allora vale la formula $\Box\phi\Rightarrow\diamond\phi$.
+\subsection{Correttezza}
+Sia $\mathcal{M}$ un modello su un frame seriale $F=(W, R)$ e $w$ un mondo in $W$. Si provi che $\mathcal{M}m w\models\Box\phi\Rightarrow\diamond\phi$. Siccome $R$ \`e seriale esiste un mondo 
+$w'\in W$ tale che $wRw'$. Si suppone per ipotesi che $\mathcal{M}, w\models\Box\phi$. Dalla condizione di soddisfacibilit\`a di $\Box$ $\mathcal{M},w\models\Box\phi$ implica che $\mathcal{M}, w'
+\models\phi$. Siccome esiste un mondo $w'$ accessibile da $w$ che soddisfa $\phi$ dalla condizione di soddisfacibilit\`a di $\diamond $ si ha che $\mathcal{M}, w\models\diamond\phi$. Siccome 
+dall'ipotesi si \`e derivata la tesi si pu\`o concludere che $\mathcal{M}, w\models\Box\phi\Rightarrow\diamond\phi$.
+\subsection{Completezza}
+Si supponga che un frame $F=(W,R)$ non sia seriale. Se non \`e seriale allora esiste un $w\in W$ che non accede a nessun mondo: per ogni $w'$ non vale $wRw'$. Sia $\mathcal{M}$ un modello su $F$.
+Dalla condizione di soffisfacibilit\`a di $\Box$ e dal fatto che $w$ non accede a nessun mondo si ha che $\mathcal{M}, w\models\Box\phi$. Dalla condizione di soddifacibilit\`a di $\diamond$ e dal fatto
+che $w$ non accede a nessun mondo si ha che $\mathcal{M}, w\models\phi$ che implica che $\mathcal{M}, w\models\Box\phi\Rightarrow\diamond\phi$.
+\section{$\mathbf{KT_4}$ modale}
+In questa logica modale la relazione $R$ \`e riflessiva e transitiva e vale l'assioma $4$ secondo cui se un frame \`e riflessivo e transitivo allora vale la formula $\Box\phi\Rightarrow\Box\Box\phi$.
+\subsection{Correttezza}
+Sia $\mathcal{M}$ un modello su un frame transitivo $F=(W, R)$ e $w\in W$ un mondo qualsiasi. Si provi che $\mathcal{M}, w\models\Box\phi\Rightarrow\Box\Box\phi$. Si supponga per ipotesi che
+$\mathcal{M}, w\models\Box\phi$ e si deve provare che $\mathcal{M}, w\models\Box\Box\phi$. Dalla condizione di soddifacibilit\`a di $\Box$ \`e equivalente a provare che per ogni mondo $w'$ accessibile
+da $w$, $\mathcal{M}, w'\models\Box\phi$. Sia $w'$ un qualsiasi mondo accessibile da $w$. Per provare che $\mathcal{M}, w'\models\Box\phi$ si deve provare che per tutti i mondo $w''$ accessibili da 
+$w'$, $\mathcal{M}, w''\models\phi$. Sia $w''$ un mondo accessibile da $w'$, ovvero $w'Rw''$. Dal fatto che $wRw'$ e che $w'Rw''$ e che $R$ \`e transitiva si ha che $wRw''$. Siccome $\mathcal{M}, 
+w''\models\phi$, dalla condizione di soddifacibilit\`a di $\Box$ si ha che $\mathcal{M}, w''\models\phi$. Siccome $\mathcal{M}, w''\models\phi$ per ogni mondo $w''$ accessibile da $w'$ si ha che 
+$\mathcal{M}, w'\models\Box\phi$ e pertanto $\mathcal{M}, w\models\Box\Box\phi$. Siccome dall'ipotesi si \`e derivata la tesi si pu\`o concludere che $\mathcal{M}, 
+w\models\Box\phi\Rightarrow\Box\Box\phi$.
+\subsection{Completezza}
+Si supponga che un frame $F=(W,R)$ non sia transitivo. Se non lo \`e esistono tre mondi $w, w',w''\in W$ tali che $wRw'$ e $w'Rw''$ ma non $wRw''$. Sia $\mathcal{M}$ un modello qualsiasi su $F$ e sia
+$\phi$ la formula proposizionale $p$. Sia $V$ l'insieme di mondi con $p$ vero in tutti i mondi di $W$ ma $w''$ dove $p$ falsa. Dal fatto che $w$ non accede a $w''$ e dal fatto che $w''$ \`e l'unico mondo 
+in cui $p$ \`e falsa si ottiene che in tutti i mondi accessibili da $w$ $p$ \`e vera. Questo implica che $\mathcal{M}, w\models\Box p$. Si ha che $w'Rw''$ e $w''\models p$ implica che $\mathcal{M}, 
+w'\models\Box \phi$. Siccome $wRw'$ si ha che $\mathcal{M}, w\models\Box\Box p$. Riassumendo $\mathcal{M}, w\models\Box\Box p$ e $\mathcal{M}m w\models\Box p$ da cui si ha che $\mathcal{M},
+w\models\Box p\Rightarrow\Box\Box p$.
+\section{$\mathbf{KT_5}$ modale}
+In questa logica modale la relazione $R$ \`e euclidea e riflessiva (relazione di equivalenza) e vale l'assioma $4$ secondo cui se un frame \`e euclideo e riflessivo allora vale la formula $\diamond\phi\Rightarrow
+\Box\diamond\phi$.
+\subsection{Correttezza}
+Sia $\mathcal{M}$ un modello su un frame euclideo $F=(W, R)$ e $w$ un mondo qualsiasi in $W$. Si provi che $\mathcal{M}, w\models\diamond\phi\Rightarrow\Box\diamond\phi$. Si supponga per ipotesi
+che $\mathcal{M}, w\models\diamond\phi$. La condizione di soddisfacibilit\`a di $\diamond$ implica che esiste un mondo $w'$ accessibile da $w$ tale che $\mathcal{M}m w'\models\phi$.  Si deve provare
+che $\mathcal{M}, w\models\Box\diamond\phi$. Dalla condizione di soddifacibilit\`a di $\Box$ \`e equivalente a provare che per ogni mondo $w''$ accessibile da $w$, $\mathcal{M}, w''\models\diamond
+\phi$. SIa $w''$ un qualsiasi mondo accessibile da $w$. Dal fatto che $R$ \`e euclidea il fatto che $wRw'$ implica che $w''Rw'$. Siccome $\mathcal{M}, w'\models\phi$, la condizione di soddifacibilit\`a di 
+$\diamond$ implica che $\mathcal{M}, w''\models\diamond\phi$ e pertanto $\mathcal{M}, w\models\Box\diamond\phi$. Siccome dall'ipotesi si \`e derivata la tesi si pu\`o concludere che $\mathcal{M}, w
+\models\Box\phi\Rightarrow\Box\diamond\phi$.
+\subsection{Completezza}
+Si supponga che un frame $F=(W,R)$ si non euclideo. Se $R$ \`e non euclidea allora esistono tre mondo $w, w',w''\in W$ tali che $wRw'$ e $wRw''$ e non $w'Rw''$. Sia $\mathcal{M}$ un modello qualsiasi
+su $F$ e $\phi$ la formula proposizionale $p$. Sia $V$ l'insieme di mondi in cui $p$ \`e falsa in tutti i mondi di $W$ ma in $w'$ vera. Dal fatto che $w''$ non accede a $w'$ e in tutti gli altri mondi $p$ \`e 
+falsa si ha che $w''\not\models\diamond p$ che implica $\mathcal{M}, w\not\models\Box\diamond p$. Per\`o si ha che $wRw'$ e $w'\models p$ e pertanto $\mathcal{M}, w\models \diamond p$, 
+$\mathcal{M}, w\not\models\Box p\Rightarrow\Box\Box p$. Riassumendo $\mathcal{M}, w\not\models\Box\diamond p$ e $\mathcal{M}, w\models\diamond p$ da cui si ha che $\mathcal{M}, w\not\models
+\diamond p\Rightarrow\Box\diamond p$.
+\section{Logica multi modale}
+Tutte le definizioni date per la logica modale base possono essere generalizzate nel caso in cui si hanno $n$ $\Box$-operatori $\Box_1,\dots, \Box_n$ e i rispettivi $\diamond$ interpretati nel frame $F=(w, 
+R_1, \dots, R_n)$ che interpreta il corrispettivo operatore.  Tale logica \`e detta multi modale. Sono spesso utilizzate per modellare sistemi multi-agente dove la modalit\`a \`e espressa per esprimere 
+conoscenza o credenza.
+\section{Tableaux}
+Si definisce un tableau un albero finito con i nodi marcati da una delle seguenti asserzioni: $w\models\phi$, $w\not\models\phi$, $wRw'$ costruiti secondo delle regole di espansione. Si definisce ramo o 
+branch di un tableaux una sequenza $n_1,\dots, n_k$ dove $n_1$ \`e la radice dell'albero e $n_k$ una foglia e $n_{i+1}$ un figlio di $n_i$ per $1\le i<k$. Un ramo chiuso \`e un ramo che contiene nodi 
+marcati con $w\models\phi$ e $w\not\models\phi$- Tutti gli altri rami sono aperti. Se tutti i rami sono chiusi, il tableaux \`e chiuso.
+\subsection{Regole di espansione}
+\begin{tabular}{|c|c|}
+\hline
+
+\begin{tabular}{c}
+$w\models\phi\land\psi$\\
+\hline
+$w\models\phi$\\
+$w\models\psi$\\
+\end{tabular}
+&
+\begin{tabular}{c|c}
+\multicolumn{2}{c}{$w\not\models(\phi\land\psi)$}\\
+\hline
+$w\not\models\phi$ & $w\not\models\psi$\\
+\end{tabular}
+\\
+\hline
+
+\begin{tabular}{c|c}
+\multicolumn{2}{c}{$w\models\phi\lor\psi$}\\
+\hline
+$w\models\phi$ & $w\models\psi$\\
+\end{tabular}
+
+&
+\begin{tabular}{c}
+$w\not\models\phi\lor\psi$\\
+\hline
+$w\not\models\phi$\\
+$w\not\models\psi$\\
+\end{tabular}
+\\
+\hline
+\begin{tabular}{c}
+$w\models\neg\phi$\\
+\hline
+$w\not\models\phi$\\
+\end{tabular}
+&
+\begin{tabular}{c}
+$w\not\models\neg\phi$\\
+\hline
+$w\models\phi$\\
+\end{tabular}
+\\
+\hline
+
+\begin{tabular}{c|c}
+\multicolumn{2}{c}{$w\models\phi\Rightarrow\psi$}\\
+\hline
+$w\not\models\phi$ & $w\models\psi$\\
+\end{tabular}
+&
+\begin{tabular}{c}
+$w\not\models\phi\Rightarrow\psi$\\
+\hline
+$w\models\phi$\\
+$w\not\models\psi$\\
+\end{tabular}
+\\
+\hline
+\begin{tabular}{c}
+$w\models\Box\phi$\\
+\hline
+$w'\models\phi$\\
+\end{tabular}
+Se $wRw'$ \`e gi\`a sul ramo.
+&
+\begin{tabular}{c}
+$w\not\models\Box\phi$\\
+\hline
+$wRw'$\\
+$w'\not\models\phi$\\
+\end{tabular}
+Dove $w'$ \`e nuova sul ramo.\\
+\hline
+\begin{tabular}{c}
+$w\models\diamond\phi$\\
+\hline
+$wRw'$
+$w'\models\phi$\\
+\end{tabular}
+Dove $w'$ \`e nuova sul ramo.
+&
+\begin{tabular}{c}
+$w\not\models\diamond\phi$\\
+\hline
+$w'\not\models\phi$\\
+\end{tabular}
+Se $wRw'$ \`e gi\`a sul ramo.\\
+\hline
+\end{tabular}
+\subsubsection{Applicazione}
+Se un ramo $\beta=n_1,\dots, n_k$ contiene un nodo $n_i$ etichettato con la premessa di una delle regole e tale regola non \`e stata ancora applicata sul nodo allora pu\`o essere applicata e il ramo \`e espanso
+nel modo sequente:
+\begin{itemize}
+\item Se ha una sola conseguenza $\beta$ \`e espanso in $n_1,\dots,n_k, n_{k+1}$ dove $n_{k+1}$ \`e etichettato come la conseguenza della regola.
+\item Se ha due conseguenze una sopra l'altra $\beta$ \`e espanso in $n_1,\dots,n_k, n_{k+1}, n_{k+2}$ dove $n_{k+1}$ e  $n_{k+2}$ sono etichettati come le conseguenze della regola.
+\item Se ha due conseguenze alternative $\beta$ \`e espanso in due nodi $n_1,\dots,n_k, n_{k+1}$ e $n_1,\dots,n_k, n_{k+2}$ dove $n_{k+1}$ e  $n_{k+2}$ sono etichettati come le conseguenze alternative 
+della regola.
+\end{itemize}

@@ -1,0 +1,61 @@
+\chapter{La logica delle asserzioni categoriche}
+Verranno analizzati la struttura interna dei predicati, in particolare quelli che esprimono termini di classe, ovvero denotano classi o insiemi di oggetti quando sono uniti a quantificatori, operatori logici che 
+esprimono relazioni tra gli insiemi designati da termini di classe. In queste asserzioni compare una copula che accoppia due termini di classe: il soggetto e il predicato.  Ogni asserzione \`e costituita da un 
+quantificatore seguito da un termine soggetto, una copula e un predicato, queste asserzioni prendono il nome di asserzioni categoriche, queste asserzioni compaiono in quattro forme:
+\begin{itemize}
+\item $A$: ogni $S$ \`e $P$.
+\item $E$: ogni $S$ non \`e $P$, ovvero l'insieme $S$ \`e disgiunto da $P$.
+\item $I$: qualche $S$ \`e $P$.
+\item $O$: qualche $S$ non \`e $P$, ovvero l'insieme $S$ non \`e incluso in $P$.
+\end{itemize}
+$A$ e $I$ sono dette affermative, le altre negative e $A$ e $E$ sono universali mentre le altre particolari. Le negazioni di soggetto e predicato possono essere considerate come l'analisi degli insiemi 
+complementari alle due parti. 
+\section{Diagrammi di Venn}
+Per analizzare le asserzioni categoriche \`e conveniente analizzare attraverso i diagrammi di Venn le relazioni tra soggetto e predicato: un'asserzione categorica viene rappresentata da due cerchi sovrapposti che 
+rappresentano gli insiemi e l'area in comune qualcosa che appartiene ad entrambi. Per mostrare che un insieme non ha elementi lo si oscura, per indicare che contiene almeno un membro lo si indica con una $
+\times$ e le aree in bianco sono quelle senza informazioni. In quanto si devono spesso rappresentare anche complementari \`e utile incorniciare il diagramma in modo da rappresentare 
+l'insieme universale. 
+\section{Inferenze dirette}
+I diagrammi di Venn consentono di rappresentare le condizioni di verit\`a di tali asserzioni: il diagramma di una certa forma categorica dice come devono stare le cose affinch\`e sia vera. La validit\`a di una forma 
+argomentativa sancisce la validit\`a di ogni suo esempio per sostituzione mentre la sua invalidit\`a dimostra che nessun esempio pu\`o essere valido per il semplice fatto di avere quella forma. Verranno 
+considerate le forme argomentative a una o due premesse. Per le prime, chiamate inferenze dirette basta disegnare il diagramma della premessa e se descrive una situazione in cui risulta vera anche la 
+conclusione allora l'inferenza corrisponde a una forma argomentativa valida. Sono tipi di inferenza diretta:
+\begin{itemize}
+\item Obversione: si dicono obverse coppie di asserzioni ottenibili l'una dall'altra invertendo la qualit\`a e sostituendo il predicato con il suo termine complementare.
+\item Contraddizione: si dicono contraddittorie due asserzioni categoriche che siano ottenibili una dall'altra invertendo sia la qualit\`a che la quantit\`a.
+\item Conversione: si dicono converse due asserzioni categoriche che siano ottenibili una dall'altra scambiando soggetto e predicato, risulta valida per $E$ e $I$.
+\item  Contrapposizione: si dicono contrapposte due asserzioni categoriche che siano ottenibili una dall'altra in cui si sostituisce il soggetto con il complementare del predicato e il predicato con il 
+complementare del soggetto, risulta valida per $A$ e $O$. 
+\item Contrarie o subcontrarie: due asserzioni categoriche che differiscono unicamente per la qualit\`a.
+\item Subalterna: un'asserzione particolare \`e subalterna a un'universale se differisce esclusivamente per la quantit\`a.
+\end{itemize}
+\section{Sillogismi categorici}
+Si considerino ora le forme a due premesse e ci si concentri sui sillogismi categorici, ovvero argomentazioni che contengono tre termini di classe: il soggetto e predicato della conclusione chiamati termini 
+minore e maggiore e un terzo termine che compare in entrambe le premesse o termine medio. I termini maggiore e minore devono comparire esattamente una volta in una delle due premesse. Per studiarne la 
+validit\`a deduttiva verranno utilizzati i diagrammi di Venn che in questo caso saranno formati da tre cerchi sovrapposti. Verranno tracciate le informazioni riguardanti le premesse e il risultato verr\`a utilizzato 
+per controllare la validit\`a della forma: se la porzione di diagramma corrispondente alla conclusione risulta automaticamente completata in modo da verificare quest'asserzione \`e valida, altrimenti no. Le 
+forme sillogistiche sono raggruppate in quattro figure secondo la posizione del termine medio utilizzando $F$ per il termine minore, $G$ per il medio e $H$ per il maggiore:
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Figura $I$ & Figura $II$ & Figura $III$ & Figura $IV$\\
+\hline
+$GH$ &$HG$ &$GH$ & $HG$\\
+$FG$  &$FG$& $GF$& $GF$\\
+$FH$ & $FH$ & $FH$ & $FH$ \\
+\hline
+\end{tabular}
+\end{center}
+Rispetto alla classificazione per quantit\`a e qualit\`a si \`e notato che esistono solo $15$ sillogismi validi:
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Figura $I$ & Figura $II$ & Figura $III$ & Figura $IV$\\
+\hline
+$AAA$ &$EAE$ &$IAI$ & $AEE$\\
+$EAE$  &$AEE$& $AII$& $IAI$\\
+$AII$ & $EIO$ & $OAO$ & $EIO$ \\
+$EIO$ & $AOO$ & $EIO$ &\\
+\hline
+\end{tabular}
+\end{center}

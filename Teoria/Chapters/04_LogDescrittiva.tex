@@ -1,0 +1,198 @@
+\chapter{Logica descrittiva}
+Le logiche descrittive sono una famiglia di logiche che permettono di parlare riguardo un dominio composto da un insieme di oggetti organizzati in concetti e messi in relazione attraverso relazioni binarie. 
+\section{Knowledge Graphs}
+Queste logiche permettono di costruire predicati riguardo grafi diretti etichettati chiamati Knowledge graph (KGs), i cui nodi rappresentano le classi di oggetti reali e gli archi le propriet\`a che intercorrono tra paia 
+di oggetti.
+\subsection{Propriet\`a}
+\begin{itemize}
+\item Lo schema del grafo non \`e fisso e pu\`o evolvere.
+\item Non \`e necessario conoscere tutti i valori dei dati per tutti gli oggetti.
+\end{itemize}
+\subsection{Livelli nei Knowledge graph}
+\subsubsection{Livello di schema}
+\begin{itemize}
+\item Tipi di entit\`a (etypes): descrizioni dei tipi di oggetti contenuti nei nodi.
+\item Propriet\`a:
+\begin{itemize}
+\item Attributi (data properties): relazioni che associano ad ogni oggetto un tipo.
+\item Relazioni (Object properties): relazioni che sussistono tra gli oggetti.
+\end{itemize}
+\end{itemize}
+\subsubsection{Livello dei dati}
+\begin{itemize}
+\item Entit\`a: associano valori ai tipi di entit\`a.
+\item Valori di propriet\`a:
+\begin{itemize}
+\item Valori di attributi: associano valori agli attributi della oggetti.
+\item Valori di Relazioni: associano relazioni a valori degli oggetti.
+\end{itemize}
+\end{itemize}
+\section{Caratterizzazione di una logica descrittiva}
+Una logica descrittiva \`e caratterizzata da quattro elementi:.
+\subsubsection{Linguaggio}
+Un linguaggio descrittivo $L$ che determina come formare concetti (i nodi dei KG) e i ruoli (gli archi del KG e i constraints). \`E pertanto la formalizzazione di etypes, entit\`a, propriet\`a e valori di propriet\`a.
+\subsubsection{Specificare conoscenza}
+Un meccanismo per specificare la conoscenza riguardante etypes (concetti) e propriet\`a (ruoli), come per esempio una $TBox$, la formalizzazione dello schema del KG con etypes e properties con i constraints.
+\subsubsection{Propriet\`a degli oggetti}
+Un meccanismo per specificare le propriet\`a degli oggetti o entit\`a come un $ABox$, una formalizzazione delle entit\`a e valori di propriet\`a del KG.
+\subsubsection{Servizi di ragionamento}
+Un insieme di servizi di ragionamento che permettono di inferire nuove propriet\`a su concetti, ruoli e oggetti che sono le conseguenze logiche di quelle asserite esplicitamente nelle $TBox$ e $ABox$. Sono 
+equivalenti al ragionamento logico, ovvero un estensione delle formalizzazione del ragionamento KG.
+\section{Architettura di un sistema di ragionamento di una logica descrittiva}
+La logica descrittiva \`e una famiglia di formalismi $KR$, dove rappresentazione e ragionamento puntano a un sistema formato da $TBox$ e $ABox$. Esiste un alfabeto di simboli formato da 	quello della 
+logica proposizionale con l'aggiunta di:
+\begin{itemize}
+\item $\forall R$ value restriction.
+\item $\exists R$ existential quantification.
+\end{itemize}
+E $R$ sono nomi di ruolo atomici. Si pu\`o dire che la base della conoscenza \`e formata da una $TBox$ che garantisce una conoscenza terminologica e un $ABox$ che fornisce conoscenza riguardante gli 
+oggetti.
+\section{Sintassi TBox - ALC (AL con il concetto di negazione)}
+Regole di formazione:
+\begin{itemize}
+\item $< Atomic>:=A|B|\dots|P|Q|\dots|\bot|T$.
+\item $<wwf>:=<Atomic>|\neg<wwf>|<wwf>\sqcap<wwf>|<wwf>\sqcup<wwf>$ 
+\end{itemize}
+\subsection{Interpretazione $\mathbf{AL*}$}
+La funzione di interpretazione $I:<wwf>\rightarrow \Delta$.
+\begin{itemize}
+\item $I(\bot)=\emptyset$ e $I(T)=\Delta$ (dominio pieno universo).
+\item Per ogni nome concettuale $A$ di $L$, $I(A)\subseteq\Delta$.
+\item $I(\neg C)=\Delta\backslash I(C)$.
+\item $I(C\sqcap D)=I(C)\cap I(D)$.
+\item $I(C\sqcup D)=I(C)\cup I(D)$.
+\item Per ogni nome di ruolo di $R$, $I(R)\subseteq \Delta\times\Delta$.
+\item $I(\forall R.C)=\{a\in\Delta| per\ ogni\ b,\ se\ (a,b)\in I(R)\ allora\ b\in I(C)\}$.
+\item $I(\exists R.T)=\{a\in \Delta| esiste\ b\ tale\ che\ (a,b)\in I(R)\}$.
+\item $I(\exists R.C)=\{a\in\Delta| esiste\ b\ tale\ che\ (a,b)\in I(R),b\in I(C)$.
+\item Aggiunte esterne a $ALC$:
+\begin{itemize}
+\item $I(\le nR)=\{a\in\Delta| |\{b|(a,b)\in I(R)\}|\le n\}$.
+\item $I(\ge nR)=\{a\in\Delta| |\{b|(a,b)\in I(R)\}|\ge n\}$.
+\end{itemize}
+\end{itemize}
+\subsection{Assiomi terminologici}
+Vengono introdotti due nuovi simboli logici:
+\begin{itemize}
+\item $\sqsubseteq$ (sottoassunzione) con $I\models C\sqsubseteq D$ se e solo se $I(C)\subseteq I(D)$.
+\item $\equiv$ (equivalenza) con $I\models C\equiv D$ se e solo se $I(C)=I(D)$:
+\end{itemize}
+\subsubsection{Assioma di inclusione}
+$C\sqsubseteq D$ deve essere letto $C$ \`e sottoassunto da (pi\`u specifico, meno generale rispetto a) $D$. Lo stesso concetto pu\`o essere espresso come $D\sqsupseteq C$.
+\subsubsection{Assioma di uguaglianza}
+$C\equiv D$ deve essere letto come $C$ \`e equivalente a $S$. Vale se e solo se valgono insieme $C\sqsubseteq D$ e $D\sqsubseteq C$
+\subsubsection{Definizione}
+Una definizione \`e un'equivalenza con un concetto atomico sulla parte sinistra.
+\subsubsection{Specializzazione}
+Una specializzazione \`e un'inclusione con un concetto atomico sulla parte sinistra.
+\subsubsection{Terminologia}
+Una terminologia o $TBox$ \`e un insieme di definizioni e specializzazioni. Gli assiomi terminologici esprimono constraints sui concetti del linguaggio limitando cos\`i i modelli possibili. Il $TBox$ \`e l'insieme
+di tutti i constraints sul modello possibile.
+\subsection{TBox - ragionamento}
+Date due proposizione di classe $P$ e $Q$ si presentano i seguenti problemi di ragionamento:
+\begin{itemize}
+\item Soddisfacibilit\`a: $T\models P$.
+\item Sottoassunzione: $T\models P\sqsubseteq Q$ o $T\models Q\sqsubseteq P$.
+\item Equivalenza: $T\models P\sqsubseteq Q$ e $T\models Q\sqsubseteq P$.
+\item Disgiuntezza: $T\models P\sqcap Q\sqsubseteq\bot$.
+\end{itemize}
+\subsubsection{Soddisfacibilit\`a}
+Un concetto $P$ \`e soddisfacibile rispetto a una terminologia $T$ se esiste almeno un'interpretazione $I$ con $I\models\theta$ per ogni $\theta\in T$ tale che $I\models P$ ovvero $I(P)\neq\emptyset$. In
+questo caso si dice che $I$ \`e un modello per $P$. In altre parole l'interpretazione $I$ non solo soddisfa $P$ ma soddisfa tutti i constraints in $T$.
+\subsubsection{Sottoassunzione}
+Sia $T$ una $TBox$. Un problema di sottoassuzione rispetto a $T$ \`e definito come $T\models P\sqsubseteq Q(P\sqsubseteq_T Q)$. Un concetto $P$ \`e sottoassunto da un concetto $Q$ con rispetto a $T$
+se $I(P)\subseteq I(Q)$ per ogni modello $I$ di $T$. Questo problema si riduce a derivazione logica e validit\`a quando $T$ \`e vuota.
+\subsubsection{Equivalenza}
+Sia $T$ una $TBox$. Un problema di equivalenza rispetto a $T$ \`e definito come $(T\models P\equiv Q)(P\equiv_T Q)$. Due concetti $P$ e $Q$ sono equivalenti rispetto a $T$ se $I(P)=I(Q)$ per ogni 
+modello $I$ di $T$.
+\subsubsection{Disgiuntezza}
+Sia $T$ una $TBox$. Un problema di disgiuntezza rispetto a $T$ \`e definito come $T\models P\sqcap Q\sqsubseteq \bot(P\sqcap Q\sqsubseteq_T\bot)$. Due concetti $P$ e $Q$ sono disgiunti rispetto a 
+$T$ se la loro intersezione \`e vuota, $I(P)\cap I(Q)=\emptyset$ per ogni modello $I$ di $T$.
+\section{ABox}
+\subsection{Sintassi}
+Il secondo componente della base della conoscenza \`e la descrizione del mondo o $ABox$. Un'$ABox$ riguarda individui con nomi e asserisce propriet\`a riguardo essi. Si denotano nomi individuali con lettere
+minuscoli e un asserzione con concetto $C$ \`e chiamata asserzione di concetto nella forma $C(a)$.
+\subsection{Semantica}
+Si d\`a semantica alle $ABoxes$ estendendo l'interpretazione ai nomi individuali. Un'interpretazione $I:L\rightarrow\Delta'$ non mappa concetti atomici a insiemi ma mappa ogni nome individuale a un 
+elemento di $\Delta'$. ovvero $I(a)=a'\in\Delta'$. Con la Unique name assumption (UNA) si assume che nomi individuali distinti denotano oggetti distinti nel dominio. 
+\subsection{Individui nella TBox}
+A volte pu\`o essere conveniente permettere nomi individuali detti nominali nelle $TBox$. Sono usati per costruire concetti come per esempio con un costruttore di insieme che definisce un concetto senza 
+dargli un nome enumerando i suoi elementi con $I(\{a_1,\dots,a_n\})=\{a'_1,\dots,a'_n\}$.
+\subsection{Problemi di ragionamento}
+\begin{itemize}
+\item Soddisfacibilit\`a, consistenza: Un $ABox$ $A$ \`e consistente rispetto a $T$ se esiste almeno un'interpretazione $I$ che \`e modello sia di $A$ che di $T$.
+\item Controllo delle istanze: controllare se un asserzione $C(a)$ \`e derivata da un'$ABox$, ad esempio controllare se $a$ appartiene a $C$. $A\models C(a)$ se ogni interpretazione che soddisfa $A$ 
+soddisfa anche $C(a)$:
+\item Recupero dell'istanza: dato un concetto $C$ recuperare tutte le istanze $a$ che soddisfano $C$.
+\item Realizzazione dei concetti: dato un insieme $\alpha$ di concetti e un individuo $a$, trovare i concetti pi\`u specifici $C$ tali che $A\models C(a)$.
+\end{itemize}
+\subsection{Ragionamento attraverso l'espansione di un ABox}
+I servizi di ragionamento su un $ABox$ e una $TBox$ aciclica possono essere ridotti a controllare un'$ABox$ espansa. Si definisce l'espansione di un'$ABox$ $A$ rispetto a $T$ l'$ABox$ $A'$ che \`e 
+ottenuta da $A$ sostituendo ogni asserzione di concetto $C(a)$ con l'asserzione $C'(a)$ con $C'$ l'espansione di $C$ rispetto a $T$. L'espansione $C'(a)$ di $C(a)$ \`e l'insieme dei concetti $C''(a)$ tali che
+$C''(a)$ sono usati per definire $C(a)$. L'espansione $A'$ di $A$ rispetto a $T$ contiene solo primitive.
+\begin{itemize}
+\item $A$ \`e consistente rispetto a $T$ se e solo se la sua espansione $A'$ \`e consistente.
+\item $A$ \`e consistente se e solo se $A$ \`e soddisfacibile, ovvero non contraddittoria.
+\end{itemize}
+\subsection{Consistenza}
+Un'$ABox$ $A$ si dice consistente rispetto a $T$ se esiste un interpretazione $I$ che \`e un modello sia di $A$ che di $T$. Si dice che $A$ \`e consistente se \`e consistente rispetto alla $TBox$ vuota.
+\subsection{Controllo d'istanza}
+Si deve controllare se un'istanza $C(a)$ \`e derivata da un'$ABox$, ovvero se $a$ appartiene a $C$. $A\models C(a)$ se ogni interpretazione che soddisfa $A$ soddisfa anche $C(a)$. $A\models C(a)$ se e 
+solo se $A\cup\{\neg C(a)\}$ \`e inconsistente. 
+\subsubsection{Recupero di istanza}
+Dato un concetto $C$ si devono recuperare tutte le istanze di $a$ che soddisfano $C$. Una possibile implementazione consiste nel controllare l'istanza per tutte le istanze presenti.
+\subsubsection{Realizzazione dei concetti}
+Dato un insieme di concetti e un individuo $a$ si devono trovare i concetti pi\`u specifici $C$ ordinati con le sottoassunzioni tali che $A\models C(a)$. \`E il problema opposto rispetto al recupero di istanza. Una
+possibile implementazione \`e rappresentata nel fare un controllo di istanza per ogni concetto.
+\section{World assumptions}
+\subsection{Closed world assumption CWA}
+Tutto ci\`o che non \`e asserito esplicitamente \`e falso, viene utilizzata nei database.
+\subsection{Open world assumption OWA}
+Tutti ci\`o che non \`e specificatamente asserito \`e indecidibile, viene utilizzata nelle $ABox$.
+\section{Tableaux}
+\subsection{Logica descrittiva come logica multimodale}
+Si pu\`o pensare alla logica descrittiva come ad una logica multimodale in cui le entit\`a sono i mondi e sono capaci di ragionamento proposizionale. Una relazione \`e una relazione di accessibilit\`a, mentre
+un data type \`e un'insieme di entit\`a il cui comportamento \`e conosciuto a priori e computato dal ragionatore. Un attributo \`e una relazione di accessibilit\`a a un data type. Tutti le relazioni e gli attributi che
+hanno un'entit\`a nel loro dominio definiscono tutte le maniere possibili in cui quale entit\`a ha accesso alle altre entit\`a di mondo. Un etype \`e un insieme di valori di mondi che hanno lo stesso insieme di 
+relazioni di accessibilit\`a. $\exists R.C$ vuol dire accessibilit\`a ad almeno un'altra entit\`a o etype $C$. $\forall R.C$ vuol dire accessibilit\`a a tutte le entit\`a di etype $C$.
+\subsubsection{Mappatura del linguaggio}
+\begin{itemize}
+\item $\neg$ equivalente a $\neg$.
+\item $\sqcap, \sqcup$ equivalente a $\land, \lor$.
+\item $\sqsubseteq$ equivalente a $\Rightarrow$.
+\item Le entit\`a sono mondi.
+\item $TBox$ sono mondi resi espliciti nel linguaggio come variabili:
+\begin{itemize}
+\item Etype $C$ scritto come $C(x)$
+\item Relazione $R$ scritta come $R(x,y)$.
+\item $\exists R.C$ equivalente a $\diamond_RC$ e scritto come $\exists R.C(x)$.
+\item $\forall R.C$ equivalente a $\Box_RC$ scritto come $\forall R.C(x)$.
+\end{itemize}
+\item $ABox$ sono mondi resi espliciti nel linguaggio come costanti.
+\begin{itemize}
+\item Etype $C$ scritto come $C(a)$
+\item Relazione $R$ scritta come $R(a,b)$.
+\item $\exists R.C$ equivalente a $\diamond_RC$ e scritto come $\exists R.C(a)$.
+\item $\forall R.C$ equivalente a $\Box_RC$ scritto come $\forall R.C(a)$.
+\end{itemize}
+\end{itemize}
+\subsection{L'algoritmo dei tableaux}
+La formula $C$ di input \`e trasformata in $NNN$ (negation normal form) con la negazione abbassata per negare le formule atomiche in modo da evitare le regole di negazione. Una $ABox$ $A$ \`e costruita
+incrementalmente secondo i constraints in $C$ identificati attraverso decomposizione seguendo delle precise regole di trasformazione. Ogni volta che si ha pi\`u di un'opzione si divide lo spazio delle soluzioni
+come in un albero di decisione. Quando si \`e trovata una contraddizione si deve cercare un altro cammino nello spazio delle soluzioni. L'algoritmo si ferma quando trova una $A$ consistente che soddisfa tutti i
+constraints in $C$ (soddisfacibile) o quando non esiste una $A$ consistente (la formula \`e insoddisfacibile).
+\subsection{Regole di trasformazione}
+\subsubsection{$\mathbf{\sqcap}$-rule}
+La condizione \`e che $A$ contenga $(C_1\sqcap C_2)(x)$ ma non $C_1(x)$ e $C_2(x)$ contemporaneamente. Allora si crea $A'=A\cup\{C_1(x), C_2(x)\}$
+\subsubsection{$\mathbf{\sqcup}$-rule}
+La condizione \`e che $A$ contenga $(C_1\sqcup C_2)(x)$ ma n\`e $C_1(x)$ n\`e$C_2(x)$. Allora si crea $A'=A\cup\{C_1(x)\}$ e $A''=A\cup\{C_2(x)\}$.
+\subsubsection{$\mathbf{\exists}$-rule}
+La condizione \`e che $A$ contenga $(\exists R.C)(x)$ ma non esiste $z$ tale che sia $C(z)$ che $R(x,z)$ siano in $A$. Allora si crea $A'=A\cup\{C(z), R(x,z)\}$.
+\subsubsection{$\mathbf{\forall}$-rule}
+La condizione \`e che $A$ contenga $(\forall R.C)(x)$ ma non contiene $C(z)$. Allora si crea $A'=A\cup\{C(z)\}$.
+\section{Tableaux}
+\begin{itemize}
+\item Per ogni restrizione esistenziale si introduce un nuovo individuo come un role filler e questo individuo deve soddifare il constraint espresso dalla restrizione.
+\item L'algoritmo utilizza la restrizione di valore in interazione con ruoli gi\`a definiti per imporre nuovi constraints sugli indiviudi.
+\item Per i constraints per le disgiunzioni si provano entrambe le possibilit\`a in ptrove successive.
+\end{itemize}

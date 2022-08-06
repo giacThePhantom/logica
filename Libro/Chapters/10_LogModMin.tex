@@ -1,0 +1,29 @@
+\chapter{La logica modale minimale}
+L'insieme di formule valide costituisce la logica intensionale minimale indicata con $\mathbf{K}$. Le formule valide in essa sono valide in quasi tutte le logiche intensionali. Essendo tutte le tautologie vere
+in ogni mondo di ogni modello, la logica classica \`e contenuta in $\mathbf{K}$. 
+\section{Formule valide}
+\subsubsection{Esempio 1}
+Si dimostri che la formula $\Box(A\Rightarrow B)\Rightarrow(\Box A\Rightarrow\Box b)$ \`e valida. Si deve pertanto dimostrare che qualsiasi sia il modello $\mathcal{M}$ e il mondo $u$ di $W$ essa \`e vera 
+in $u$. Si ragioni per assurdo. Se tale formula non \`e valida deve esistere almeno un modello $\mathcal{M}=(W,R,I)$ e un mondo $u\in W$ in cui essa \`e falsa. Pertanto in $u$ l'antecedente deve essere vero e
+il conseguente falso. Essendo falso $\Box A\Rightarrow \Box B$ in $u$ deve essere vera $\Box A$ e falsa $\Box B$. Da queste tre formule la pi\`u informativa \`e l'ultima: essendo che $\neg\Box B$ deve esistere
+un mondo $v\in W$ accessibile da $u$ in cui sia falsa $B$. Essendo vere $\Box (A\Rightarrow B)$ e $\Box A$ le formule $A\Rightarrow B$ e $A$ devono essere vere anche in $B$. Si crea pertanto un assurdo in 
+$v$ in quanto non possono essere vere $A\Rightarrow B$ e $A$ e falsa $B$. 
+\subsubsection{Esempio 2}
+Si dimostri che \`e valida $\diamond A\Rightarrow\neg\Box\neg A$. Si ragioni per assurdo: se il condizionale non fosse valido esisterebbe $u$ in cui $\diamond$ \`e falso, ovvero \`e vera $\diamond A$ e 
+falsa $\neg\Box\neg A$. Dato che in $u$ risulta vera $\diamond A$ deve esistere $v\in W$ accessibile da $u$ in cui \`e vera $A$, ma essendo vera $\Box\neg A$ $\neg A$ deve essere vera in tutti i mondi 
+accessibili da $u$ e pertanto vera anche in $v$ e si arriva ad un assurdo.
+\subsubsection{Esempio 3}
+Si dimostri che \`e valida $\neg\Box\neg A\Rightarrow\diamond A$. Si ragioni per assurdo: se non fosse valida esisterebbe un mondo $u$ di un modello $\mathcal{M}$ in cui \`e vera $\neg\Box\neg A$ e
+falsa $\diamond A$. Se \`e falsa $\Box\neg A$ vi deve essere $v\in W$ accessibile da $u$ tale che $A$ \`e vera. Essendo $A$ vera in $v$ e $v$ accessibile da $u$ in $u$ deve essere vera $\diamond A$ e si 
+arriva all'assurdo. Dai due esempi precedenti si dimostra il bicondizionale $\neg\Box\neg A\Leftrightarrow\diamond A$. 
+\section{Formule non valide}
+\subsubsection{Esempio 4}
+Si verifichi che la formula $\poss p\land \diamond q\Rightarrow\diamond(p\land q)$ non \`e valida: se in un mondo $u$ \`e vera $\diamond p\land\diamond q$ ed \`e falsa $\diamond(p\land q)$ si deduce che
+esiste $v\in W$ accessibile da $u$ in cui \`e vera $p$ e un mondo $w$ accessibile da $u$ in cui \`e vera $q$. Se in $v$ si pone falsa $q$ e in $w$ si pone falsa $p$ in entrambi \`e falsa $p\land q$.
+\subsubsection{Esempio 5}
+Si consideri la formula $\nece p\Rightarrow p$ si noti come la formula non \`e valida in quanto \`e falsa in un mondo $u$ in cui \`e vera $\nece p$ e falsa $p$ e il mondo \`e cieco. 
+\section{Il calcolo \textbf{K} della logica modale minimale}
+\textbf{K} come calcolo logico assiomatico si ottiene estendendo un qualsiasi calcolo logico assiomatico per la logica proposizionale classica. Si ampli il linguaggio con l'operatore $\nece$ e si definisca $\poss:=
+\neg\nece\neg A$. Si ampli inoltre l'apparato deduttivo con l'assioma di distribuzione $\nece(A\Rightarrow B)\Rightarrow(\nece A\Rightarrow\nece B)$ e la regola di necessitazione se si \`e derivato $A$ allora
+si pu\`o derivare $\nece A$:  $\vdash A\Rightarrow\vdash\nece A$. Si dimostra facilmente che tutte le formule derivabili in \textbf{K} sono valide e che tutte le formule valide sono derivabili in \textbf{K}, pertanto 
+essa \`e corretta e completa. Nasce anche la regola di necessitazione generalizzata. Se $A_1,\dots, A_n\vdash A$ allora $\nece A_1,\dots,\nece A_n\vdash \nece A$.  

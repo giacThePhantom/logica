@@ -1,0 +1,87 @@
+\BOOKMARK [0][-]{chapter.1}{Logica Proposizionale}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Linguaggio}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{Formule come alberi}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Sottoformule}{section.1.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Soddisfacibilit\340}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{Formule valide, soddisfacibili e insoddisfacibili}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.4}{Conseguenza e equivalenza logica}{chapter.1}% 7
+\BOOKMARK [2][-]{subsection.1.4.1}{Propriet\340 della conseguenza logica proposizionale}{section.1.4}% 8
+\BOOKMARK [1][-]{section.1.5}{Assiomi e teorie}{chapter.1}% 9
+\BOOKMARK [2][-]{subsection.1.5.1}{Teoria proposizionale}{section.1.5}% 10
+\BOOKMARK [2][-]{subsection.1.5.2}{Assiomatizzazione}{section.1.5}% 11
+\BOOKMARK [2][-]{subsection.1.5.3}{Rappresentazione compatta della conoscenza}{section.1.5}% 12
+\BOOKMARK [2][-]{subsection.1.5.4}{Sistemi basati sulla logica}{section.1.5}% 13
+\BOOKMARK [1][-]{section.1.6}{Tavole di verit\340}{chapter.1}% 14
+\BOOKMARK [1][-]{section.1.7}{Problemi di ragionamento e decisione}{chapter.1}% 15
+\BOOKMARK [1][-]{section.1.8}{Decidire soddisfacibilit\340}{chapter.1}% 16
+\BOOKMARK [2][-]{subsection.1.8.1}{Conjunctive normal form \(CNF\)}{section.1.8}% 17
+\BOOKMARK [2][-]{subsection.1.8.2}{La procedura di decisione DPLL SAT}{section.1.8}% 18
+\BOOKMARK [0][-]{chapter.2}{Logica del primo ordine}{}% 19
+\BOOKMARK [1][-]{section.2.1}{Linguaggio}{chapter.2}% 20
+\BOOKMARK [2][-]{subsection.2.1.1}{Sintassi}{section.2.1}% 21
+\BOOKMARK [2][-]{subsection.2.1.2}{Terms e formule}{section.2.1}% 22
+\BOOKMARK [1][-]{section.2.2}{Funzione di interpretazione}{chapter.2}% 23
+\BOOKMARK [1][-]{section.2.3}{Soddisfacibilit\340 rispetto ad un'assegnazione}{chapter.2}% 24
+\BOOKMARK [1][-]{section.2.4}{Variabili libere}{chapter.2}% 25
+\BOOKMARK [1][-]{section.2.5}{Soddisfacibilit\340 e validit\340}{chapter.2}% 26
+\BOOKMARK [1][-]{section.2.6}{Domini finiti con nomi per ogni elemento}{chapter.2}% 27
+\BOOKMARK [0][-]{chapter.3}{Logica modale}{}% 28
+\BOOKMARK [1][-]{section.3.1}{Intuizione}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.1.1}{Modalit\340}{section.3.1}% 30
+\BOOKMARK [1][-]{section.3.2}{Linguaggio}{chapter.3}% 31
+\BOOKMARK [2][-]{subsection.3.2.1}{Interpretazione intuitiva}{section.3.2}% 32
+\BOOKMARK [1][-]{section.3.3}{Strutture relazionali}{chapter.3}% 33
+\BOOKMARK [2][-]{subsection.3.3.1}{Esempi di strutture relazionali}{section.3.3}% 34
+\BOOKMARK [1][-]{section.3.4}{Semantica}{chapter.3}% 35
+\BOOKMARK [2][-]{subsection.3.4.1}{Esprimere propriet\340 sulle strutture}{section.3.4}% 36
+\BOOKMARK [2][-]{subsection.3.4.2}{Propriet\340 della relazione di accessibilit\340}{section.3.4}% 37
+\BOOKMARK [1][-]{section.3.5}{Analisi di proposizioni}{chapter.3}% 38
+\BOOKMARK [2][-]{subsection.3.5.1}{Relazione di validit\340 su frames}{section.3.5}% 39
+\BOOKMARK [2][-]{subsection.3.5.2}{Conseguenza logica}{section.3.5}% 40
+\BOOKMARK [1][-]{section.3.6}{K modale o analisi di Hilbert}{chapter.3}% 41
+\BOOKMARK [1][-]{section.3.7}{Relazione di accessibilit\340}{chapter.3}% 42
+\BOOKMARK [2][-]{subsection.3.7.1}{Propriet\340 tipiche di R}{section.3.7}% 43
+\BOOKMARK [1][-]{section.3.8}{KT modale}{chapter.3}% 44
+\BOOKMARK [2][-]{subsection.3.8.1}{Correttezza}{section.3.8}% 45
+\BOOKMARK [2][-]{subsection.3.8.2}{Completezza}{section.3.8}% 46
+\BOOKMARK [1][-]{section.3.9}{KB modale}{chapter.3}% 47
+\BOOKMARK [2][-]{subsection.3.9.1}{Correttezza}{section.3.9}% 48
+\BOOKMARK [2][-]{subsection.3.9.2}{Completezza}{section.3.9}% 49
+\BOOKMARK [1][-]{section.3.10}{KD modale}{chapter.3}% 50
+\BOOKMARK [2][-]{subsection.3.10.1}{Correttezza}{section.3.10}% 51
+\BOOKMARK [2][-]{subsection.3.10.2}{Completezza}{section.3.10}% 52
+\BOOKMARK [1][-]{section.3.11}{KT4 modale}{chapter.3}% 53
+\BOOKMARK [2][-]{subsection.3.11.1}{Correttezza}{section.3.11}% 54
+\BOOKMARK [2][-]{subsection.3.11.2}{Completezza}{section.3.11}% 55
+\BOOKMARK [1][-]{section.3.12}{KT5 modale}{chapter.3}% 56
+\BOOKMARK [2][-]{subsection.3.12.1}{Correttezza}{section.3.12}% 57
+\BOOKMARK [2][-]{subsection.3.12.2}{Completezza}{section.3.12}% 58
+\BOOKMARK [1][-]{section.3.13}{Logica multi modale}{chapter.3}% 59
+\BOOKMARK [1][-]{section.3.14}{Tableaux}{chapter.3}% 60
+\BOOKMARK [2][-]{subsection.3.14.1}{Regole di espansione}{section.3.14}% 61
+\BOOKMARK [0][-]{chapter.4}{Logica descrittiva}{}% 62
+\BOOKMARK [1][-]{section.4.1}{Knowledge Graphs}{chapter.4}% 63
+\BOOKMARK [2][-]{subsection.4.1.1}{Propriet\340}{section.4.1}% 64
+\BOOKMARK [2][-]{subsection.4.1.2}{Livelli nei Knowledge graph}{section.4.1}% 65
+\BOOKMARK [1][-]{section.4.2}{Caratterizzazione di una logica descrittiva}{chapter.4}% 66
+\BOOKMARK [1][-]{section.4.3}{Architettura di un sistema di ragionamento di una logica descrittiva}{chapter.4}% 67
+\BOOKMARK [1][-]{section.4.4}{Sintassi TBox - ALC \(AL con il concetto di negazione\)}{chapter.4}% 68
+\BOOKMARK [2][-]{subsection.4.4.1}{Interpretazione AL*}{section.4.4}% 69
+\BOOKMARK [2][-]{subsection.4.4.2}{Assiomi terminologici}{section.4.4}% 70
+\BOOKMARK [2][-]{subsection.4.4.3}{TBox - ragionamento}{section.4.4}% 71
+\BOOKMARK [1][-]{section.4.5}{ABox}{chapter.4}% 72
+\BOOKMARK [2][-]{subsection.4.5.1}{Sintassi}{section.4.5}% 73
+\BOOKMARK [2][-]{subsection.4.5.2}{Semantica}{section.4.5}% 74
+\BOOKMARK [2][-]{subsection.4.5.3}{Individui nella TBox}{section.4.5}% 75
+\BOOKMARK [2][-]{subsection.4.5.4}{Problemi di ragionamento}{section.4.5}% 76
+\BOOKMARK [2][-]{subsection.4.5.5}{Ragionamento attraverso l'espansione di un ABox}{section.4.5}% 77
+\BOOKMARK [2][-]{subsection.4.5.6}{Consistenza}{section.4.5}% 78
+\BOOKMARK [2][-]{subsection.4.5.7}{Controllo d'istanza}{section.4.5}% 79
+\BOOKMARK [1][-]{section.4.6}{World assumptions}{chapter.4}% 80
+\BOOKMARK [2][-]{subsection.4.6.1}{Closed world assumption CWA}{section.4.6}% 81
+\BOOKMARK [2][-]{subsection.4.6.2}{Open world assumption OWA}{section.4.6}% 82
+\BOOKMARK [1][-]{section.4.7}{Tableaux}{chapter.4}% 83
+\BOOKMARK [2][-]{subsection.4.7.1}{Logica descrittiva come logica multimodale}{section.4.7}% 84
+\BOOKMARK [2][-]{subsection.4.7.2}{L'algoritmo dei tableaux}{section.4.7}% 85
+\BOOKMARK [2][-]{subsection.4.7.3}{Regole di trasformazione}{section.4.7}% 86
+\BOOKMARK [1][-]{section.4.8}{Tableaux}{chapter.4}% 87

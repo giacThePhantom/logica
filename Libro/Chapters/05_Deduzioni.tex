@@ -1,0 +1,138 @@
+\chapter{Deduzioni naturali}
+\section{La dimostrazione formale}
+Superato il linguaggio enunciativo le tavole di verit\`a non sono pi\`u uno strumento adeguato per stabilire la correttezza dei ragionamenti. Occorre lo sviluppo di un sistema formale, un apparato di regole e di 
+principi che consenta di costruire dimostrazioni formali inquadrate su un certo linguaggio formale. Si studier\`a un sistema formale che consenta di dimostrare formalmente la validit\`a di schemi d'argomento 
+deducendo la loro conclusione dalle premesse attraverso una sequenza di deduzioni elementari. Si esibisce la bont\`a di un'inferenza attraverso una concatenazione di inferenze base di indubbia validit\`a. Una 
+dimostrazione della validit\`a di uno schema \`e una sequenza di formule alcune in quanto premesse e altre ottenute attraverso le regole d'inferenza. Questo sistema formale \`e detto calcolo della deduzione 
+naturale.
+\section{Assiomatica}
+Nei sistemi di tipo assiomatico le formule di partenza delle dimostrazioni formali sono assiomi. Si tratta di formule assunte senza dimostrazione come principi di deduzione. Questi assiomi sono alla base di tutte 
+le dimostrazioni attraverso le regole di inferenza. In un qualsiasi sistema di formule una regola di inferenza si applica a un certo gruppo di formule $\alpha_1,\dots, \alpha_n$ dette premesse dalle quali si 
+inferisce una formula $\alpha$ detta conclusione. Si rappresentano le regole attraverso una riga orizzontale sopra la quale si annotano le premesse intervallate da linee e con la conclusione al di sotto. Vengono 
+chiamate anche regole di derivazione o trasformazione in quanto derivano formule da formule. Un esempio di regola di inferenza \`e il modus ponendo ponens o modus ponens: $\dfrac{\alpha\Rightarrow\beta, 
+\alpha}{\beta}$ che descrive come avendo come premessa una condizionale e ponendo l'antecedente si pone il conseguente come conclusione, viene chiamata anche regola di separazione o di eliminazione del 
+condizionale o $E\Rightarrow$. Ogni conclusione ricavata da assiomi e regole di inferenza \`e detta teorema. Nel calcolo assiomatico si definisce l'insieme dei teoremi il pi\`u piccolo insieme di formule che 
+contiene gli assiomi ed \`e chiuso sotto le regole d'inferenza. La struttura di una dimostrazione formale di tipo assiomatico \`e una sequenze di formule ciascuna delle quali \`e introdotta in quanto assioma o 
+segue dalle formule precedenti per applicazione di una regola d'inferenza.  
+\section{Il calcolo enunciativo}
+Il calcolo della deduzione naturale \`e utilizzato per costruire dimostrazioni formali della validit\`a di forme o schemi d'argomento intesi come sequenze finite di formule strutturate come $\alpha_1,\dots,
+\alpha_n\vdash\beta$. Il simbolo che separa premesse da conclusione \`e detto segno di asserzione, \`e un simbolo del linguaggio e indica l'inferibilit\`a della conclusione. In questo paradigma non ci sono 
+tipicamente assiomi ma unicamente regole di inferenza una di introduzione e una di eliminazione per ciascuno dei simboli logici, connettivi e quantificatori. In generale per un simbolo logico $\$$ una regola di 
+eliminazione \`e determinata come $E\$$ e lo contiene come operatore principale nella premessa e dice cosa ne si pu\`o inferire. Una regola di introduzione \`e determinata come $I\$$ dice come ottenere da 
+certe premesse una conclusione che contiene $\$$ come operatore principale. Le regole del calcolo enunciativo governano i connettivi vero-funzionali e consentono di operare manipolazioni meramente 
+enunciative sulle formule: sono adatte per costruire dimostrazioni la cui validit\`a dipende dai connettivi.
+\subsection{Assunzioni a tempo indeterminato}
+La regola di assunzione consente di introdurre una qualunque formula in un qualsiasi passo di una dimostrazione. Questo nella rappresentazione lineare viene rappresentata aggiungendo la colonna delle 
+assunzioni a destra del numero progressivo. Si indica cos\`i che la formula dipende dall'assunzione fatta in tale riga. Un'assunzione viene introdotta come dipendente da s\`e stessa. L'assunzione determina il 
+ragionamento ipotetico: nelle dimostrazioni ci si concede di introdurre enunciati in qualit\`a di ipotesi e si tiene conto che ci\`o che si dimostra dipende dalle ipotesi o assunzioni fatte. L'unica differenza con le 
+premesse \`e che le assunzioni non sono state ricavate come conclusioni da formule precedenti attraverso regole d'inferenza esclusa l'assunzione, una premessa in senso stretto viene utilizzata per ottenere una 
+formula mediante una regola di inferenza. Si pu\`o dire che le assunzioni sono una forma particolare di premesse. 
+\subsection{Modus ponens o eliminazione del condizionale}
+Come gi\`a visto il modus ponens \`e $\dfrac{\alpha\Rightarrow\beta, \alpha}{\beta}(E\Rightarrow)$. La conclusione dipende da tutte le assunzioni da cui dipendono le premesse. Si nota come pur essendo 
+concettualmente distinte assunzioni e premesse di norma coincidono.
+\subsection{Introduzione del condizionale e assunzioni a tempo determinato}
+Questa regola d'inferenza \`e la reciproca del modus ponens e consiste nel ricavare un condizionale nella conclusione, viene pertanto detta introduzione del condizionale o prova condizionale $I\Rightarrow$. 
+Per derivare un condizionale $\alpha\Rightarrow\beta$ la strategia consiste nell'assumere l'antecedente $\alpha$ nel tentativo di dedurre il conseguente $\beta$ come conclusione eventualmente utilizzando 
+altre assunzioni $\alpha_1,\dots,\alpha_n$. In questo modo si scarica l'assunzione dell'antecedente $\alpha$ e si dice che si \`e derivato il condizionale $\alpha\Rightarrow\beta$ in dipendenza dalle assunzioni 
+restanti $\alpha_1,\dots,\alpha_n$. In generale se a un certo passo di una dimostrazione $\beta$ dipende da $\alpha$ come assunzione $I\Rightarrow$ permette di concludere $\alpha\Rightarrow\beta$. 
+Questo condizionale dipende da tutte le assunzioni rimanenti ma non da $\alpha$. Le assunzioni scaricate sono rappresentate fra parentesi quadre. Si creano in questo modo assunzioni con tempo di vita 
+determinato o limitato all'interno dell'argomento. 
+\subsubsection{I teoremi}
+Essendo che $I\Rightarrow$ fa diminuire il numero di assunzioni ha un'importanza particolare nel calcolo della deduzione naturale: si possono cerare formule nelle quali non compare alcuna assunzione dette 
+per l'appunto teoremi che sono definiti come formule derivabili sulla base delle regole del calcolo in dipendenza da un insieme vuoto di assunzioni. Quando una formula \`e derivata come un teorema si dice che 
+\`e stata dimostrata. Si noti come quando la conclusione di uno schema di ragionamento \`e stata derivata mediante le regole di ragionamento si \`e dimostrata la validit\`a dello schema d'argomento, quando 
+una formula \`e stata dimostrata vuol dire che \`e stata dedotta come teorema. I teoremi sono scritti come formule d'asserzione non preceduti da alcuna formula. In generale da qualsiasi forma d'argomento di 
+cui si sia dimostrata la validit\`a si pu\`o ottenere un teorema applicando $I\Rightarrow$ iterativamente. Si pu\`o dire che i teoremi del calcolo della deduzione naturale sono leggi logiche in quanto non 
+dipendendo da alcuna assunzione sono formule vere da un punto di vista puramente logico. Si rende necessario sul fatto che i termini siano veri. Non \`e obbligatorio scaricare le assunzioni ma 
+aiuta in quanto \`e pi\`u facile derivare risultati in dipendenza dal minor numero possibile di assunzioni. 
+\subsection{Eliminazione della congiunzione}
+Essendo una congiunzione vera se e solo se sono veri entrambi i suoi congiunti, la regola di eliminazione della congiunzione o attenuante congiuntiva $E\land$ consente data come premessa di una 
+congiunzione di derivare come conclusione uno o l'altro dei suoi congiunti: $\dfrac{\alpha\land\beta}{\alpha}$ $\dfrac{\alpha\land\beta}{\beta}(E\land)$. La conclusione dipende da tutte le assunzioni da cui 
+dipende la premessa. \`E intuitivo come si tratti di una buona regola di inferenza, ovvero la conclusione di ogni sua applicazione sia una conseguenza logica della premessa. 
+\subsection{Introduzione alla congiunzione}
+\`E l'operazione reciproca di $E\land$, detta aggiunzione $I\land$ consente, date come premesse due formule qualunque di derivare come conclusione la loro congiunzione: $\dfrac{\alpha, \beta}
+{\alpha\land\beta}I\land$. La conclusione dipende da tutte le assunzioni da cui dipendono le premesse. \`E intuitivo come si tratti di una buona regola sul fatto vero-funzionale che se due formule sono vere lo \`e 
+senz'altro anche la loro congiunzione. L'introduzione della congiunzione permette di dimostrare $\alpha\vdash\beta\Rightarrow\alpha$, ovvero il paradosso dell'implicazione materiale che sostiene che 
+verificata $\alpha$ questa \`e implicata da una qualsiasi formula, questo accade in quanto $\Rightarrow$ non esprime alcun nesso causale o di contenuto. Questa regola insieme all'eliminazione e introduzione 
+del condizionale rendono ridondanti le regole di inferenza per una bicondizionale $\alpha\Leftrightarrow\beta$ in quanto pu\`o essere considerata come $(\alpha\Rightarrow\beta)
+\land(\beta\Rightarrow\alpha)$. Volendo concludere da una condizionale come premessa si separano attraverso $E\land$, se ci si vuole arrivare come conclusione si utilizza $I\land$.
+\subsection{Eliminazione della disgiunzione}
+L'eliminazione della disgiunzione o $E\lor$ la si usa quando si vuole derivare da una disgiunzione $\alpha\lor\beta$. Una strategia generale consiste nel derivare la conclusione separatamente da ciascuno dei 
+due disgiunti in quanto in base alla vero-funzionalit\`a della disgiunzione risulta vera se almeno uno dei suoi disgiunti \`e vero: se la conclusione segue da uno dei due essa segue dalla disgiunzione stessa. 
+$E\lor$ si applica alle formule delle seguenti righe: quella in cui compare la disgiunzione $\alpha\lor\beta$, quella in cui si assume il primo disgiunto $\alpha$, quella in cui si deriva la conclusione $\gamma$ 
+dal primo disgiunto, quella in cui si assume il secondo disgiunto $\beta$ quella in cui si deriva la conclusione $\gamma$ dal secondo disgiunto. Questa operazione scarica le assunzioni dei due disgiunti separati 
+in quanto non \`e rilevante quale dei singoli disgiunti valga effettivamente in quanto derivando la conclusione da entrambi segue direttamente dalla disgiunzione: $\dfrac{\alpha\lor\beta, \gamma, \gamma}
+{\gamma}E\lor$ con $[\alpha]$ sulla prima $\gamma$ e $[\beta]$ sulla seconda.
+\subsection{Introduzione della disgiunzione}
+L'introduzione della disgiunzione o $I\lor$ consente di derivare la disgiunzione tra questa e qualunque altra formula: $\dfrac{\alpha}{\alpha\lor\beta},\dfrac{\beta}{\alpha\lor\beta}I\lor$. La conclusione 
+dipende dalle stesse assunzioni da cui dipende la premessa ed \`e corretta e affidabile sfruttando le propriet\`a vero-funzionali della disgiunzione.
+\subsection{Eliminazione della negazione}
+La regola di eliminazione della negazione $E\neg$ dice che da una contraddizione si pu\`o dedurre qualsiasi cosa: $\dfrac{\alpha. \neg\alpha}{\beta}E\neg$. La conclusione dipende da tutte le assunzioni da cui 
+dipendono le due premesse. \`E banale notare come dal falso pu\`o seguire qualsiasi cosa, ovvero una contraddizione non preclude alcuna possibilit\`a. 
+\subsection{Introduzione della negazione}
+La regola di introduzione della negazione o reductio ad absurdum o $I\neg$ dice che se da una qualunque assunzione $\alpha$ si deriva una contraddizione, ovvero si ottiene $\alpha$ derivando sia da $\beta$ 
+che da $\neg\beta$ si pu\`o negare la formula di partenza concludendo $\neg\alpha$ scaricando l'assunzione $\alpha$: $\dfrac{\beta, \neg\beta}{\neg\alpha}I\neg$ dove $\beta$ e $\neg\beta$ hanno sopra $
+[\alpha]$. La regola si basa su tre premesse: la formula $\alpha$ da negare e le due formule $\beta$ e $\neg\beta$ da essa derivate. Questa operazione tenta pertanto di dimostrare come $\alpha$ generi
+una contraddizione e sia pertanto falsa. 
+\subsection{Due negazioni fanno un'affermazione}
+La regola di eliminazione della doppia negazione permette di derivare $\dfrac{\neg\neg\alpha}{\alpha}DN$. Si possono in questo modo ridurre le doppie negazioni ottenute. Questo strumento permette 
+l'inferenza indiretta, ovvero si deriva un enunciato assumendo provvisoriamente la sua deduzione. 
+\subsection{Introduzione di teoremi}
+Una caratteristica della deduzione naturale \`e la progressivit\`a: \`e possibile utilizzare i risultati di dimostrazioni gi\`a effettuate per accorciare quelle nuove. Per fare questo si utilizza una regola di introduzione 
+del teorema abbreviata con $IT$ che permette di introdurre in in qualunque passo di una dimostrazione un teorema gi\`a dimostrato in forma schematica. Questa regola non \`e primitiva ma derivata in quanto 
+facilita i calcoli ma non aumenta la potenza inferenziale. 
+\section{Il calcolo elementare o dei predicati}
+Affinch\`e il sistema logico sia capace di trattare ragionamenti la cui correttezza dipende dai quantificatori \`e necessario dotarlo di regole ulteriori, ovvero regole di introduzione e eliminazione per ciascuno di 
+essi .
+\subsection{Eliminazione dell'universale}
+Si osservi come esista un'analogia tra il quantificatore universale e la congiunzione che nel caso di un numero finito di oggetti diventa un'equivalenza. Si pu\`o intendere allora la regola di eliminazione 
+dell'universale $E\forall$ in analogia con l'eliminazione della congiunzione. $E\forall$ dice che se una formula $\alpha$ vale per tutte le cose di cui parliamo allora essa varr\`a per singoli casi: $\dfrac{\forall 
+x\alpha}{\alpha[x/t]}E\forall$, ricordando che $t$ deve essere libera per $x$ in $\alpha$. La conclusione dipende da tutte le assunzioni da cui dipendeva la premessa. Viene chiamata anche regola di 
+esemplificazione. Questa regola consente anche di togliere un quantificatore rimanendo con una formula che ha la corrispondente variabile libera.
+\subsection{Introduzione dell'universale}
+Viene detta anche generalizzazione universale serve per derivare una formula universale come conclusione $I\forall$. Questa regola sfrutta il principio per cui esiste una caratteristica in comune di cui esiste un 
+esempio e il valore arbitrario delle variabili libere, essendo che quando non sono vincolate possono stare indeterminatamente per oggetti qualsiasi ci\`o che si dimostra per variabili libere vale implicitamente per 
+qualsiasi cosa appartenga al loro campo di variazione. Riuscendo a derivare $F(x)$ per un $x$ completamente arbitrario la derivazione di $F(x)$ funge da schema applicabile a qualsiasi particolare oggetto nel 
+campo di variazione della variabile, legittimando l'inferenza $\forall xF(x)$, la formula generale \`e pertanto: $\dfrac{\alpha[x]}{\forall y\alpha[x/y]}I\forall$ la conclusione dipende in questo modo da tutte le 
+assunzioni da cui dipendeva la premessa. Questa regola va sottoposta a due condizioni: la variabile $y$ non deve comparire libera in $\alpha$ a meno che $y$ non coincida con $x$ stessa, inoltre la regola pu\`o 
+essere applicata solo se $\alpha[x]$ che funge da premessa non dipende da assunzioni in cui la stessa variabile $x$ compariva libera in quanto non potrebbe essere considerato completamente arbitrario.
+\subsection{Eliminazione dell'esistenziale}
+Vi \`e una stretta analogia tra quantificatore esistenziale e disgiunzione in quanto per le caratteristiche vero-funzionali della disgiunzione questa \`e vera se almeno uno dei due disgiunti \`e vero. La regola di 
+eliminazione dell'esistenziale o $E\exists$ pu\`o essere considerata tentando di derivare $\gamma$ da ciascuno dei disgiunti separatamente eventualmente utilizzando altre assunzioni. Essendo gli elementi 
+del quantificatore esistenziale potenzialmente infiniti si rende necessario sfruttare le propriet\`a delle variabili libere si pu\`o tentare di provare che $\gamma$ segue da $F(x)$ essendo che ci\`o che si prova per 
+variabili libere vale per cose qualsiasi nel loro campo di variazione, una prova di $\gamma$ in dipendenza da $F(x)$ funge da schema che rappresenta un'implicita deduzione di $\gamma$ da tutti i disgiunti che 
+$F(x)$ esprime: $\dfrac{\exists y\alpha[x/y], \gamma}{\gamma}E\exists$ dove sopra la prima $\gamma$ si trova $[a[x]]$. Detta in altro modo se c'\`e qualcosa per cui vale una certa condizione e $\gamma$ 
+segue dall'assunzione che la condizione valga per un qualunque oggetto $x$ arbitrariamente scelto allora $\gamma$ segue senz'altro. In questo modo si scaricano le assunzioni sul  disgiunto-tipo. 
+Quest'operazione \`e soggetta a condizioni restrittive per evitare deduzioni scorrette: la variabile $y$ non deve comparire libera in $\alpha$ a meno che non coincida con $x$, la variabile $x$ non deve 
+comparire libera nelle assunzioni utilizzate per derivare la conclusione $\gamma$ dal disgiunto tipo e occorre che $x$ non sia libera neppure in $\gamma$.
+\subsection{Introduzione dell'esistenziale}
+Detta anche generalizzazione esistenziale o particolarizzazione $I\exists$ si usa per derivare formule quantificate esistenzialmente come conclusione e dice che se una condizione vale per un qualunque $t$ 
+allora esiste qualcosa per cui vale quella condizione $\dfrac{\alpha[x/t]}{\exists x\alpha}I\exists$ e al solito $t$ deve essere libero per $x$ in $\alpha$. La conclusione dipende da tutte le assunzioni da cui 
+dipende la premessa. Permette di ottenere una formula quantificata esistenzialmente sia da una formula chiusa che da una formula aperta. Nel primo caso si sostituisce alla costante individuale una 
+variabile e si introduce il quantificatore, nel secondo si introduce direttamente l'esistenziale. 
+\subsection{Propriet\`a dei quantificatori}
+\subsubsection{Scambio dei quantificatori}
+$\forall x\forall y\alpha\vdash\forall y\forall x\alpha$ e $\exists x\exists y\alpha\vdash\exists y\exists x\alpha$ i quali dicono che l'ordine dei quantificatori omogenei \`e indifferente, ma lo stesso non accade per 
+le coppie di quantificatori eterogenei: vale $\exists y\forall x\alpha\vdash\forall x \exists y\alpha$ mentre non vale per qualunque $\alpha$ $\forall x\exists y\alpha\vdash \exists y\forall x\alpha$. Le relazioni 
+per cui vale quest'inversione si dicono uniformabili.
+\subsubsection{Cambio alfabetico}
+Se $y$ non \`e libera rispettivamente in $\forall x\alpha$ e $\exists x\alpha$ allora valgono $\vdash\forall x\alpha\Leftrightarrow\forall y(\alpha[x/y])$ e $\vdash\exists x\alpha\Leftrightarrow\exists y(\alpha[x/
+y])$. Questi due teoremi illustrano l'intercambiabilit\`a delle variabili vincolate. Il cambio alfabetico non deve mutare il senso della formula. La restrizione per cui $y$ non deve essere libera garantisce questo. 
+\subsubsection{Associativit\`a rispetto ai connettori}
+$\vdash\forall x(\alpha\land\beta)\Leftrightarrow\forall x\alpha\land\forall x\beta$ e $\vdash\exists x(\alpha\lor\beta)\Leftrightarrow\exists x\alpha\lor\exists x\beta$ e vale il teorema $\vdash\exists 
+x(\alpha\land\beta)\Rightarrow\exists x\alpha\land\exists x\beta$.
+\subsection{Quantificatori e implicazione materiale}
+$\forall x(\alpha\Rightarrow\beta)\vdash\forall x\alpha\Rightarrow\forall x\beta$ e $\exists x\alpha\Rightarrow\exists\beta\vdash\exists x(\alpha\Rightarrow \beta)$.
+\section{Il calcolo dei predicati con identit\`a o quasielementare}
+Alcune inferenze si basano su qualit\`a particolari dell'identit\`a che si rende pertanto necessario esprimere estendendo il linguaggio dei predicati in un linguaggio quasielementare. 
+\subsection{Eliminazione dell'identit\`a}
+Detta anche regola di sostitutivit\`a $E=$ dice che data l'identit\`a tra $t$ e $s$ da $\alpha[x/t]$ si ricava $\alpha[x/s]$ e viceversa: $\dfrac{t=s, \alpha[x/t]}{\alpha[x/s]}, \dfrac{t=s, \alpha[x/s]}{\alpha[x/t]}
+E=$ il senso generale \`e espresso nel principio di indiscernibilit\`a degli identici: se $t$ \`e identico a $s$ allora ogni propriet\`a di $t$ \`e anche propriet\`a di $s$ e viceversa, ovvero l'identit\`a implica la 
+congruenza rispetto a tutte le propriet\`a. 
+\subsection{Introduzione dell'identit\`a}
+Abbreviato come $I=$ consente di introdurre l'identit\`a $t=t$ per un qualsiasi $t$ come un teorema senza dipendenza da alcuna assunzione: $\dfrac{}{t=t}I=$ Questo dimostra come l'identit\`a sia una 
+relazione riflessiva attraverso la legge di identit\`a: $\vdash\forall x(x=x)$. 
+\section{Considerazioni conclusive}
+A differenza dell'utilizzo delle tavole di verit\`a il calcolo della deduzione naturale non ha carattere meccanico e pertanto non si riuscir\`a a trovare una dimostrazione formale dell'invalidit\`a di un esempio a 
+meno di utilizzare controesempi. Non aumentando la capacit\`a espressiva delle tavole risulta utile solo nel calcolo dei predicati. \`E stato stabilito infatti che l'insieme delle inferenze logico predicative valide 
+non \`e decidibile, per ragionamenti complessi non esiste un test algoritmico di validit\`a. 

@@ -1,0 +1,54 @@
+\chapter{La semantica di Kripke}
+La semantica dei mondi possibili prevede un modello costituito da tre componenti $\mathcal{M}=<W, R, I>$, costituita da un insieme non vuoto $W$ di mondi, una relazione binaria $R$ di accessibilit\`a tra
+mondi e un'interpretazione $I$ che associa in ciascun mondo di $W$ il valore di verit\`a alle elettere proposizionali di $U$. Dato un modello ogni formula $A$ della logica intensionale ottenuta ampliando il 
+linguaggio della logica proposizionale classica con due nuovi operatori ad un argomento $\Box$ e $\diamond$ assume in ciascun mondo di $W$ uno e uno solo dei due valori di verit\`a. $\Box$ e $\diamond$ si 
+possono leggere come \`e necessario ed \`e possibile, pertanto all'insieme delle formule ben formati si aggiunge: se $A$ \`e una formula allora $\Box A$ e $\diamond A$ sono formule. Queste formule sono 
+dette modalizzate.
+\section{Strutture (frames)}
+Si definisce struttura una coppia ordinata $<W, R>$ in cui $W$ \`e un insieme non vuoto i cui elementi sono detti mondi possibili indicati con le lettere minuscole e $R$ \`e una relazione binaria in $W$, un
+sottoinsieme del prodotto cartesiano $W\times W$ e viene detta relazione di accessibilit\`a. Si dice $uRv$ se ci\`o che vale nel mondo $v$ pu\`o influenzare cosa accade nel mondo $u$. Se nessun mondo vede
+s\`e stesso $R$ si dice irriflessiva, e se nessun mondo \`e cieco si dice che \`e seriale. In particolare per dare una struttura basta disegnare un insieme qualsiasi di mondi e collegarli con frecce nel modo che si 
+vuole. 
+\section{Interpretazioni e verit\`a in strutture: modelli}
+Nelle logiche intensionali l'assegnazione di valori di verit\`a o interpretazione $I$ viene riferita ad una struttura $(W, R)$: si associa un valore di verit\`a alle lettere proposizionali di $U$ in corrispondenza di 
+ogni mondo di $W$. \`E pertanto una funzione a due argomenti avente come dominio $U\times W$ e come codominio $\{True, False\}$. Un modello \`e pertanto $\mathcal{M}=(W, R, I)$. Mediante questa 
+definizione di modello si pu\`o definire il concetto semantico di verit\`a di una formula $A$ in un mondo $u$ indicata con $(W, R, I), u\models A$ o $\mathcal{M}, u\models A$, ovvero $A$ \`e vera nel mondo 
+$u$ in base a $I$ nella struttura $(W, R)$. Pertanto definendo per induzione: 
+\begin{itemize}
+\item[$(1)$] $A=p$: $\mathcal{M}, u\models p\Leftrightarrow I(p, u)=True$.
+\item[$(2)$] $A=\neg B$: $\mathcal{M}, u\models A\Leftrightarrow \mathcal{M}, u\not\models B$.
+\item[$(3)$] $A=B\land C$: $\mathcal{M}, u\models A\Leftrightarrow \mathcal{M}, u\models B$ e $\mathcal{M}, u\models C$.
+\item[$(4)$] $A=B\lor C$: $\mathcal{M}, u\models A\Leftrightarrow \mathcal{M}, u\models B$ o $\mathcal{M}, u\models C$.
+\item[$(5)$] $A=B\Rightarrow C$: $\mathcal{M}, u\models A\Leftrightarrow \mathcal{M}, u\not\models B$ o $\mathcal{M}, u\models C$.
+\item[$(6)$] $A=\Box B$: $\mathcal{M}, u\models A\Leftrightarrow$per ogni $v\in W$ se $uRv$ allora $\mathcal{M}, v\models B$.
+\item[$(7)$] $A=\diamond B$: $\mathcal{M}, u\models A\Leftrightarrow$ esiste $v\in W$ tale che $uRv$ e $\mathcal{M}, v\models B$.
+\end{itemize}
+Da questa definizione ($(1)-(5)$) si nota come il valore di verit\`a di una formula del linguaggio della logica proposizionale classica in un mondo $u$ si calcola come nella logica classica. La proposizione $(6)$
+determina $\Box B$ come vera in $u$ se e solo se $B$ \`e vera in tutti i mondi di $W$ accessibili da $i$. La $(7)$ determina come $\diamond B$ sia vera in $u$ se e solo se $B$ \`e vera in almeno un mondo di 
+$W$ accessibile a $u$. Si noti come in un mondo cieco $u$ tutte le formule modalizzate $\Box A$ sono vere, mentre $\diamond A$ sono false. Si noti come continua a valere il principio di bivalenza. Ci\`o che 
+vale in logica classica continua  a valere in ogni mondo di una struttura per qualsiasi interpretazione. Pertanto queste logiche conservano le tautologie e le regole della logica classica. 
+\section{Concetti semantici}
+Al variare del mondo cambia il valore di verit\`a di una formula. Si verifichi il caso in cui una formula abbia lo stesso valore in tutti i mondi. Si possono pertanto definire i concetti di validit\`a per modello e 
+struttura:
+\begin{itemize}
+\item Una formula $A$ \`e valida in un modello $\mathcal{M}(W, R, I)$, ovvero $\mathcal{M}\models A((W, R, I)\models A)$ se e solo se $A$ \`e vera in tutti i mondi di $W$, ovvero $\mathcal{M}\models A
+\Leftrightarrow$ per ogni $u$ in $W, \mathcal{M}, u\models A$.
+\item Una formula $A$ \`e valida in una struttura $(W, R)$, ovvero $(W, R)\models A$ se e solo se per ogni $I$, $A$ \`e valida in $W, R, I$, $(W, R)\models A\Leftrightarrow$ per ogni $I, (W, R, I)\models A$.
+\end{itemize}
+Inoltre, indicando con $R\dots$ il fatto che $R$ goda della propriet\`a $\dots$:
+\begin{itemize}
+\item Una formula $A$ \`e valida in tutte le strutture $(W, R)$ con $R\dots$, ovvero $R\dots\models A$ se e solo se per ogni $(W, R)$ con $R\dots$ e per ogni $I$, $A$ \`e valida in $(W, R, I)$: 
+$R\dots\models A\Leftrightarrow$ per ogni $(W, R)$ con $R\dots(W, R)\models A$.
+\item Una formula $A$ \`e valida  $\models A$ se e solo se \`e valida in tutte le strutture: $\models A\Leftrightarrow$ per ogni $(W, R), (W, R)\models A$. 
+\end{itemize}
+Si noti come il concetto di vailidit\`a diventi pi\`u articolato: variando $u$ si ha il concetto di validit\`a in un modello, variando $I$ si ha il concetto di validit\`a in struttura e facendo variare la struttura con quelle
+di una classe $R\dots$ si ha il concetto di validit\`a per le strutture con $R\dots$, se si fa variare la struttura in tutti i modi possibili si ha la validit\`a pi\`u generale, analoghe alle tautologie. Da questi concetti 
+siestraggono i concetti di conseguenza logica: sia $X$ un insieme di formule
+\begin{itemize}
+\item Conseguenza logica in un modello $\mathcal{M}=(W, R, I)$: $\mathcal{M}, X\models A\Leftrightarrow$ per ogni $u$ in $W$, se $\mathcal{M}, u\models X$, allora $\mathcal{M},u\models A$.
+\item Conseguenza logica in una struttura$(W, R)$: $(W, R), X\models A\Leftrightarrow$ per ogni $I$, $(W, R, I), X\models A$.
+\item Conseguenza logica in una classe di strutture con $R\dots$: $ X\models A$ (con $R\dots$) $\Leftrightarrow$ per ogni $(W, R)$ con $R\dots$ $(W, R),u\models A$.
+\item Conseguenza logica in tutte le strutture: $ X\models A\Leftrightarrow$ per ogni $(W, R)$, se $(W, R)\models X$ allora $W, R)\models A\Leftrightarrow$ per ogni $(W, R), (W, R), X\models A$.
+\end{itemize}
+Come per la logica proposizionale classica si possono introdurre i concetti di soddisfacibilit\`a di formule e insiemi che qua non vengono esplicitati. Nella semantica di Kripke ogni formula riceve in ciascun 
+modello uno e un solo dei due valori di verit\`a. 

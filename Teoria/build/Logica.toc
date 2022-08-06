@@ -1,0 +1,126 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\contentsline {chapter}{\numberline {1}Logica Proposizionale}{4}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Linguaggio}{4}{section.1.1}% 
+\contentsline {subsection}{\numberline {1.1.1}Formule come alberi}{4}{subsection.1.1.1}% 
+\contentsline {subsection}{\numberline {1.1.2}Sottoformule}{4}{subsection.1.1.2}% 
+\contentsline {section}{\numberline {1.2}Soddisfacibilit\`a}{5}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}Formule valide, soddisfacibili e insoddisfacibili}{5}{section.1.3}% 
+\contentsline {section}{\numberline {1.4}Conseguenza e equivalenza logica}{5}{section.1.4}% 
+\contentsline {subsection}{\numberline {1.4.1}Propriet\`a della conseguenza logica proposizionale}{6}{subsection.1.4.1}% 
+\contentsline {subsubsection}{Dimostrazione riflessivit\`a}{6}{section*.2}% 
+\contentsline {subsubsection}{Dimostrazione monotonicit\`a}{6}{section*.3}% 
+\contentsline {subsubsection}{Dimostrazione Taglio}{6}{section*.4}% 
+\contentsline {subsubsection}{Dimostrazione compattezza}{6}{section*.5}% 
+\contentsline {subsubsection}{Dimostrazione del teorema della deduzione}{6}{section*.6}% 
+\contentsline {subsubsection}{Principio di refutazione}{6}{section*.7}% 
+\contentsline {section}{\numberline {1.5}Assiomi e teorie}{7}{section.1.5}% 
+\contentsline {subsection}{\numberline {1.5.1}Teoria proposizionale}{7}{subsection.1.5.1}% 
+\contentsline {subsection}{\numberline {1.5.2}Assiomatizzazione}{7}{subsection.1.5.2}% 
+\contentsline {subsubsection}{Insieme di assiomi per una teoria}{7}{section*.8}% 
+\contentsline {subsection}{\numberline {1.5.3}Rappresentazione compatta della conoscenza}{7}{subsection.1.5.3}% 
+\contentsline {subsection}{\numberline {1.5.4}Sistemi basati sulla logica}{7}{subsection.1.5.4}% 
+\contentsline {section}{\numberline {1.6}Tavole di verit\`a}{7}{section.1.6}% 
+\contentsline {section}{\numberline {1.7}Problemi di ragionamento e decisione}{7}{section.1.7}% 
+\contentsline {section}{\numberline {1.8}Decidire soddisfacibilit\`a}{8}{section.1.8}% 
+\contentsline {subsection}{\numberline {1.8.1}Conjunctive normal form (CNF)}{8}{subsection.1.8.1}% 
+\contentsline {subsubsection}{Propriet\`a delle clauses}{8}{section*.9}% 
+\contentsline {subsubsection}{Propriet\`a delle formule in CNF}{8}{section*.10}% 
+\contentsline {subsubsection}{Riduzione in CNF}{8}{section*.11}% 
+\contentsline {subsubsection}{Costo del CNF}{9}{section*.12}% 
+\contentsline {subsection}{\numberline {1.8.2}La procedura di decisione DPLL SAT}{9}{subsection.1.8.2}% 
+\contentsline {subsubsection}{Soddisfacibilit\`a di un insieme di clauses}{9}{section*.13}% 
+\contentsline {subsubsection}{Valutazione parziale}{9}{section*.14}% 
+\contentsline {subsubsection}{DPLL}{9}{section*.15}% 
+\contentsline {chapter}{\numberline {2}Logica del primo ordine}{10}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Linguaggio}{10}{section.2.1}% 
+\contentsline {subsection}{\numberline {2.1.1}Sintassi}{10}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.1.2}Terms e formule}{10}{subsection.2.1.2}% 
+\contentsline {section}{\numberline {2.2}Funzione di interpretazione}{10}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}Soddisfacibilit\`a rispetto ad un'assegnazione}{11}{section.2.3}% 
+\contentsline {section}{\numberline {2.4}Variabili libere}{11}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}Soddisfacibilit\`a e validit\`a}{11}{section.2.5}% 
+\contentsline {section}{\numberline {2.6}Domini finiti con nomi per ogni elemento}{11}{section.2.6}% 
+\contentsline {chapter}{\numberline {3}Logica modale}{12}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Intuizione}{12}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.1.1}Modalit\`a}{12}{subsection.3.1.1}% 
+\contentsline {section}{\numberline {3.2}Linguaggio}{12}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Interpretazione intuitiva}{12}{subsection.3.2.1}% 
+\contentsline {section}{\numberline {3.3}Strutture relazionali}{13}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}Esempi di strutture relazionali}{13}{subsection.3.3.1}% 
+\contentsline {section}{\numberline {3.4}Semantica}{13}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.4.1}Esprimere propriet\`a sulle strutture}{14}{subsection.3.4.1}% 
+\contentsline {subsection}{\numberline {3.4.2}Propriet\`a della relazione di accessibilit\`a}{14}{subsection.3.4.2}% 
+\contentsline {section}{\numberline {3.5}Analisi di proposizioni}{14}{section.3.5}% 
+\contentsline {subsection}{\numberline {3.5.1}Relazione di validit\`a su frames}{14}{subsection.3.5.1}% 
+\contentsline {subsection}{\numberline {3.5.2}Conseguenza logica}{14}{subsection.3.5.2}% 
+\contentsline {section}{\numberline {3.6}$\mathbf {K}$ modale o analisi di Hilbert}{15}{section.3.6}% 
+\contentsline {section}{\numberline {3.7}Relazione di accessibilit\`a}{15}{section.3.7}% 
+\contentsline {subsection}{\numberline {3.7.1}Propriet\`a tipiche di $\mathbf {R}$}{15}{subsection.3.7.1}% 
+\contentsline {section}{\numberline {3.8}$\mathbf {KT}$ modale}{15}{section.3.8}% 
+\contentsline {subsection}{\numberline {3.8.1}Correttezza}{16}{subsection.3.8.1}% 
+\contentsline {subsection}{\numberline {3.8.2}Completezza}{16}{subsection.3.8.2}% 
+\contentsline {section}{\numberline {3.9}$\mathbf {KB}$ modale}{16}{section.3.9}% 
+\contentsline {subsection}{\numberline {3.9.1}Correttezza}{16}{subsection.3.9.1}% 
+\contentsline {subsection}{\numberline {3.9.2}Completezza}{16}{subsection.3.9.2}% 
+\contentsline {section}{\numberline {3.10}$\mathbf {KD}$ modale}{16}{section.3.10}% 
+\contentsline {subsection}{\numberline {3.10.1}Correttezza}{17}{subsection.3.10.1}% 
+\contentsline {subsection}{\numberline {3.10.2}Completezza}{17}{subsection.3.10.2}% 
+\contentsline {section}{\numberline {3.11}$\mathbf {KT_4}$ modale}{17}{section.3.11}% 
+\contentsline {subsection}{\numberline {3.11.1}Correttezza}{17}{subsection.3.11.1}% 
+\contentsline {subsection}{\numberline {3.11.2}Completezza}{17}{subsection.3.11.2}% 
+\contentsline {section}{\numberline {3.12}$\mathbf {KT_5}$ modale}{17}{section.3.12}% 
+\contentsline {subsection}{\numberline {3.12.1}Correttezza}{18}{subsection.3.12.1}% 
+\contentsline {subsection}{\numberline {3.12.2}Completezza}{18}{subsection.3.12.2}% 
+\contentsline {section}{\numberline {3.13}Logica multi modale}{18}{section.3.13}% 
+\contentsline {section}{\numberline {3.14}Tableaux}{18}{section.3.14}% 
+\contentsline {subsection}{\numberline {3.14.1}Regole di espansione}{19}{subsection.3.14.1}% 
+\contentsline {subsubsection}{Applicazione}{19}{section*.16}% 
+\contentsline {chapter}{\numberline {4}Logica descrittiva}{20}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Knowledge Graphs}{20}{section.4.1}% 
+\contentsline {subsection}{\numberline {4.1.1}Propriet\`a}{20}{subsection.4.1.1}% 
+\contentsline {subsection}{\numberline {4.1.2}Livelli nei Knowledge graph}{20}{subsection.4.1.2}% 
+\contentsline {subsubsection}{Livello di schema}{20}{section*.17}% 
+\contentsline {subsubsection}{Livello dei dati}{20}{section*.18}% 
+\contentsline {section}{\numberline {4.2}Caratterizzazione di una logica descrittiva}{21}{section.4.2}% 
+\contentsline {subsubsection}{Linguaggio}{21}{section*.19}% 
+\contentsline {subsubsection}{Specificare conoscenza}{21}{section*.20}% 
+\contentsline {subsubsection}{Propriet\`a degli oggetti}{21}{section*.21}% 
+\contentsline {subsubsection}{Servizi di ragionamento}{21}{section*.22}% 
+\contentsline {section}{\numberline {4.3}Architettura di un sistema di ragionamento di una logica descrittiva}{21}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}Sintassi TBox - ALC (AL con il concetto di negazione)}{21}{section.4.4}% 
+\contentsline {subsection}{\numberline {4.4.1}Interpretazione $\mathbf {AL*}$}{22}{subsection.4.4.1}% 
+\contentsline {subsection}{\numberline {4.4.2}Assiomi terminologici}{22}{subsection.4.4.2}% 
+\contentsline {subsubsection}{Assioma di inclusione}{22}{section*.23}% 
+\contentsline {subsubsection}{Assioma di uguaglianza}{22}{section*.24}% 
+\contentsline {subsubsection}{Definizione}{22}{section*.25}% 
+\contentsline {subsubsection}{Specializzazione}{22}{section*.26}% 
+\contentsline {subsubsection}{Terminologia}{23}{section*.27}% 
+\contentsline {subsection}{\numberline {4.4.3}TBox - ragionamento}{23}{subsection.4.4.3}% 
+\contentsline {subsubsection}{Soddisfacibilit\`a}{23}{section*.28}% 
+\contentsline {subsubsection}{Sottoassunzione}{23}{section*.29}% 
+\contentsline {subsubsection}{Equivalenza}{23}{section*.30}% 
+\contentsline {subsubsection}{Disgiuntezza}{23}{section*.31}% 
+\contentsline {section}{\numberline {4.5}ABox}{23}{section.4.5}% 
+\contentsline {subsection}{\numberline {4.5.1}Sintassi}{23}{subsection.4.5.1}% 
+\contentsline {subsection}{\numberline {4.5.2}Semantica}{24}{subsection.4.5.2}% 
+\contentsline {subsection}{\numberline {4.5.3}Individui nella TBox}{24}{subsection.4.5.3}% 
+\contentsline {subsection}{\numberline {4.5.4}Problemi di ragionamento}{24}{subsection.4.5.4}% 
+\contentsline {subsection}{\numberline {4.5.5}Ragionamento attraverso l'espansione di un ABox}{24}{subsection.4.5.5}% 
+\contentsline {subsection}{\numberline {4.5.6}Consistenza}{24}{subsection.4.5.6}% 
+\contentsline {subsection}{\numberline {4.5.7}Controllo d'istanza}{24}{subsection.4.5.7}% 
+\contentsline {subsubsection}{Recupero di istanza}{25}{section*.32}% 
+\contentsline {subsubsection}{Realizzazione dei concetti}{25}{section*.33}% 
+\contentsline {section}{\numberline {4.6}World assumptions}{25}{section.4.6}% 
+\contentsline {subsection}{\numberline {4.6.1}Closed world assumption CWA}{25}{subsection.4.6.1}% 
+\contentsline {subsection}{\numberline {4.6.2}Open world assumption OWA}{25}{subsection.4.6.2}% 
+\contentsline {section}{\numberline {4.7}Tableaux}{25}{section.4.7}% 
+\contentsline {subsection}{\numberline {4.7.1}Logica descrittiva come logica multimodale}{25}{subsection.4.7.1}% 
+\contentsline {subsubsection}{Mappatura del linguaggio}{25}{section*.34}% 
+\contentsline {subsection}{\numberline {4.7.2}L'algoritmo dei tableaux}{26}{subsection.4.7.2}% 
+\contentsline {subsection}{\numberline {4.7.3}Regole di trasformazione}{26}{subsection.4.7.3}% 
+\contentsline {subsubsection}{$\mathbf {\sqcap }$-rule}{26}{section*.35}% 
+\contentsline {subsubsection}{$\mathbf {\sqcup }$-rule}{26}{section*.36}% 
+\contentsline {subsubsection}{$\mathbf {\exists }$-rule}{26}{section*.37}% 
+\contentsline {subsubsection}{$\mathbf {\forall }$-rule}{26}{section*.38}% 
+\contentsline {section}{\numberline {4.8}Tableaux}{26}{section.4.8}% 

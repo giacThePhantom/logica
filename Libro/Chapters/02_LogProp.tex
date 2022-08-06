@@ -1,0 +1,226 @@
+\chapter{Logica proposizionale}
+\section{Simbolizzare \`e chiarificare}
+Nella logica esistono varie notazioni simboliche artificiali con cui esprimere la struttura logica dei ragionamenti in modo da poterne verificare le condizioni di verit\`a. Essendo che la correttezza dei ragionamenti 
+dipende dalla struttura, dai rapporti tra gli enunciati che li compongono e dal significato delle parole logiche la valutazione dei ragionamenti \`e resa difficoltosa dall'utilizzo del linguaggio naturale in quanti 
+impreciso e metaforico. Viene pertanto teorizzato un simbolismo logico perfetto che rimedia ai difetti delle lingue naturali e che permette di descrivere la scienza rigorosa. 
+\section{Determinatezza, bivalenza, vero-funzionalit\`a}
+Per descrivere un linguaggio logico \`e necessario considerare tre elementi:
+\begin{itemize}
+\item Principio di determinatezza: ogni enunciato ha uno e un solo valore di verit\`a.
+\item Principio di bivalenza: i valori di verit\`a sono soltanto due: vero o valso. Combinato con il primo ci dice che ogni enunciato ha uno e uno solo
+dei due valori di verit\`a. 
+\item Vero funzionalit\`a o estensibilit\`a: lo stato o valore di verit\`a degli enunciati composti dipende interamente da quello degli enunciati che li
+compongono. In altro modo, il valore di verit\`a di enunciati dipende o \`e funzione del valore di verit\`a degli enunciati che li compongono. 
+\end{itemize}
+Il principio di vero funzionalit\`a non vale in tutti i contesti: \`e possibile che per alcuni enunciati sostituire un enunciato elementare con un altro dallo stesso valore di verit\`a cambi lo stato di verit\`a 
+dell'enunciato composto. Questi casi di fallimento della sostituzione danno luogo a elementi non vero-funzionali o non estensionali prodotti tipicamente da espressioni modali o epistemiche.
+\section{Connettivi logici}
+I connettivi logici o connettivi enunciativi sono quelle espressioni che consentono di formare enunciati composti connettendo tra di loro enunciati dati. Si possono chiamare anche connettivi vero-funzionali. In 
+questo capitolo verr\`a analizzato il linguaggio enunciativo o proposizionale con cui ci si propone di evidenziare la forma logica di ragionamenti la cui correttezza dipende dalla struttura connettivale degli 
+enunciati che li compongono. Gli enunciati semplici vengono sostituiti da singole lettere dette variabili enunciative o proposizionali che possono sostituire un qualunque enunciato semplice. Per
+i simboli logici vengono utilizzati simboli appositi.
+\subsection{Congiunzione}
+Il connettivo logico della congiunzione traduce la "e". \`E un connettivo binario e si indica con il simbolo $\land$. I due enunciati connetti verranno detti congiunti. Questo connettivo \`e un connettivo vero-
+funzionale e il suo valore di verit\`a dipende unicamente da quello dei suoi componenti e in particolare risulter\`a vero se e solo se entrambi i suoi congiunti sono veri. Il valore di verit\`a pu\`o pertanto essere 
+rappresentato da una tabella:
+\begin{tabular}{|c|c|c|}
+\hline
+$P$ & $Q$ & $P\land Q$\\
+\hline
+T & T & T \\
+\hline
+T & F & F \\
+\hline
+F & T & F \\
+\hline
+F & F & F \\
+\hline
+\end{tabular}
+Questa tabella si dice matrice del connettivo e pu\`o essere intesa come una sua definizione in quanto esprime la funzione di verit\`a che il connettivo esprime. 
+\subsection{Disgiunzione}
+Il connettivo logico della disgiunzione traduce la "o". \`E un connettivo binario e si indica con il simbolo $\lor$. I due enunciati verranno detti disgiunti. Questo connettivo ha il significato della disgiunzione 
+debole o inclusiva e risulta falsa solo quando entrambi i disgiunti sono falsi:
+\begin{tabular}{|c|c|c|}
+\hline
+$P$ & $Q$ & $P\lor Q$\\
+\hline
+T & T & T \\
+\hline
+T & F & T \\
+\hline
+F & T & T \\
+\hline
+F & F & F \\
+\hline
+\end{tabular}
+\subsection{Negazione}
+Il connettivo logico della negazione traduce il "non". Viene rappresentato con il simbolo $\neg$ o $\sim$. \`E un connettivo unario in quanto si applica ad un unico enunciato per volta. 
+\begin{tabular}{|c|c|}
+\hline
+$P$ & $\neg P$ \\
+\hline
+T & F \\
+\hline
+F & T \\
+\hline
+\end{tabular}
+Questo connettivo ha il ruolo di invertire il valore di verit\`a dell'enunciato. Si nota come $\neg\neg P\equiv P$. Si dice che due enunciati sono contradditori se e solo se uno deve essere vero se l'altro \`e falso e 
+viceversa. 
+\subsection{Condizione materiale}
+Il connettivo binario del condizionale intende tradurre l'espressione "se...allora...". Si nota con il simbolo $\Rightarrow$. Il primo enunciato \`e detto antecedente, il secondo conseguente. Si intende che un 
+enunciato condizionale \`e falso nel caso in cui il suo antecedente sia vero e il conseguente falso, ovvero si intende escludere che all'antecedente della sua assezione accada di essere vero mentre il conseguente 
+\`e falso.
+\begin{tabular}{|c|c|c|}
+\hline
+$P$ & $Q$ & $P\Rightarrow Q$\\
+\hline
+T & T & T \\
+\hline
+T & F & F \\
+\hline
+F & T & T \\
+\hline
+F & F & T \\
+\hline
+\end{tabular}
+Viene anche chiamato condizionale materiale. Questo connettivo esprime la nozione di condizione sufficiente: la verit\`a del suo antecedente \`e condizione sufficiente per la verit\`a del suo conseguente in 
+quanto la permette sia al suo verificarsi che attraverso altre condizioni. 
+\subsection{Bicondizionale}
+Questo connettivo logico intende tradurre l'espressione "se e solo se". Viene utilizzato il simbolo $\Leftrightarrow$. Gli enunciati costituenti sono detti lato sinistro e destro e il composto risulta vero solo se i 
+due sono entrambi con lo stesso valore di verit\`a:
+\begin{tabular}{|c|c|c|}
+\hline
+$P$ & $Q$ & $P\Leftrightarrow Q$\\
+\hline
+T & T & T \\
+\hline
+T & F & F \\
+\hline
+F & T & F \\
+\hline
+F & F & T \\
+\hline
+\end{tabular}
+\`E anche detto equivalenza materiale e si dice che due enunciati sono materialmente equivalenti quando hanno lo stesso valore di verit\`a. Equivale alla congiunzione di due condizionali in cui l'antecedente 
+dell'uno \`e il conseguente dell'altro. Si pu\`o pertanto dire che: $P\Leftrightarrow Q:=(P\Rightarrow Q)\land (Q\Rightarrow P)$. Questo connettivo permette di esprimere il concetto di condizione necessaria e 
+sufficiente.
+\section{Regole per mettere in campo una buona formazione}
+\subsubsection{Parentesi}
+In maniera del tutto analoga alle formule matematiche servono per evitare ambiguit\`a e dare un ordine di utilizzo di considerazione ai connettivi logici.
+\subsection{Simboli}
+Il linguaggio logico possiede un alfabeto logico formato dai cinque connettivi logici e un alfabeto descrittivo consistente in un numero indefinito di variabili enunciative che pu\`o essere pensato come 
+indefinitamente esteso. \`E importante distinguere i due alfabeti: quello descrittivo si riferisce ad enunciati che descrivono il mondo e parlano di stati di cose, quello logico possiede elementi non descrittivi che 
+hanno unicamente la funzione di connettivi e operatori. Esister\`a inoltre un alfabeto ausiliario che in questo caso consiste unicamente delle parentesi.
+\subsection{Formule ben formate}
+Un linguaggio logico-formale si considera dato quando \`e stato specificato insieme al suo alfabeto anche il modo in cui tali simboli possono essere combinati per formare espressioni composte. Viene definita 
+come formula del linguaggio una qualunque sequenza finita di simboli. La costruzione di un linguaggio formale esige precise regole morfologiche o di formazione che ne definiscono la sintassi che specificano 
+un sottoinsieme di formule ammissibili dette sintatticamente ben formate. Si noti come esistono un numero infinito di enunciati e formule mentre si devono specificare le regole di formazione in 
+maniera finita e assolutamente rigorosa. Le regole devono rendere possibile, di fronte ad una qualunque formula di decidere se \`e ben formata o meno. Si rende pertanto necessario procedere per induzione. 
+\subsection{Come catturare un infinito in modo finito}
+Per definire un insieme finito si rende necessario l'utilizzo di tre clausole:
+\begin{itemize}
+\item Base dell'induzione: si specifica un certo gruppo iniziale di elementi appartenenti all'insieme.
+\item Passo dell'induzione: si specificano delle operazioni e si dice che applicando tali operazioni a elementi dell'insieme si ottengono elementi 
+dell'insieme.
+\item Conclusione o chiusura dell'induzione: si specifica che appartengono unicamente all'insieme unicamente quelli che soddisfano i primi due passi.
+\end{itemize}
+In questo modo viene rigorosamente specificato un insieme con cardinalit\`a infinita.
+\subsection{Metavariabili e regole di formazione}
+Le regole di formazione di un linguaggio formale consistono in una serie di clausole che forniscono una definizione induttiva di formula ben formata, identificando tutte e sole le  formule ben formate. A questo 
+scopo si deve introdurre la nozione di metavariabile o variabili metalogiche o metalinguistiche sono simboli che rappresentano simboli o sequenze di simboli del linguaggio formale. Verranno ora introdotte 
+formule per queste metavariabili, ovvero valide per singole variabili enunciative o per sequenze di esse. Essendo le formule in numero indefinito, sar\`a necessario avere un numero indefinito di 
+metavariabili, che verranno identificate con le lettere greche. 
+\begin{itemize}
+\item Base induttiva: ogni variabile enunciativa \`e una formula ben formata.
+\item Passo induttivo, considerando $\alpha$ e $\beta$ formule ben formate:
+\begin{itemize}
+\item $\neg\alpha$ \`e una formula ben formata.
+\item $\alpha\land\beta$ \`e una formula ben formata.
+\item $\alpha\lor\beta$ \`e una formula ben formata.
+\item $\alpha\Rightarrow\beta$ \`e una formula ben formata.
+\item $\alpha\Leftrightarrow\beta$ \`e una formula ben formata.
+\end{itemize}
+\item Chiusura dell'induzione: le uniche formule ben formate sono quelle che si possono ricavare dalla base e dal passo induttivo.
+\end{itemize}
+Questo sta a significare che sono formule ben formate tutte le variabili enunciative e tutti i composti che si ottengono connettendo formule ben formate date in modo conforme alle regole mediante i cinque 
+connettivi logici con gli eventuali simboli ausiliari. 
+\subsection{Campo, subordinazione di connettivi}
+Essendo le parentesi meri ausili alla comprensione della formula verranno omesse quando questo passo non crea ambiguit\`a, pertanto possono essere omesse agli estremi di una formula, e attraverso 
+l'occorrenza di un simbolo, il campo e la subordinazione di un connettivo. Si indica per occorrenza di un simbolo in una formula il numero di volte in cui compare, ordinandolo da sinistra  a destra. Il campo o 
+ambito dell'occorrenza di un connettivo in una formula \`e la pi\`u piccola formula ben formata in cui tale occorrenza compare. Le parentesi hanno lo scopo di chiarire l'ambito di ciascun connettivo. Grazie alla 
+nozione di campo si pu\`o definire quella di subordinazione di un connettivo: si dice subordinato a un altro se e solo se il suo campo \`e contenuto nel campo di quest ultimo. Si dice pertanto che la formula 
+subordinata \`e una sottoformula e connettivo principale il connettivo non subordinato a nessun altro. Si stabilisce anche un ordine di forza dei connettivi in questo ordine:$\neg$,  $\lor$ e $\land$ e $
+\Leftrightarrow, \Rightarrow$ e stabilendo che un connettivo che lega pi\`u fortemente attrae nel proprio campo una certa formula o variabile enunciativa. Congiunzioni e disgiunzioni sono associative. 
+\section{Creare tavole di verit\`a}
+\subsection{Valutare i ragionamente con le tavole di verit\`a}
+Il metodo delle tavole di verit\`a pu\`o essere utilizzato come un sistema di calcolo logico, in modo da stabilire in modo meccanico la correttezza o la non correttezza di tutti gli argomenti la cui forma logica sia 
+esprimibile nel linguaggio enunciativo. Le premesse sono intervallate da virgole e sono separate dalla conclusione dal segno $/$. Questo schema cattura la forma logica di una quantit\`a di elementi espressi in 
+linguaggio naturale. Si pu\`o dare pertanto una prima caratterizzazione di ragionamento espresso nel linguaggio formale: un ragionamento \`e una sequenza finita di formule dette premesse intervallate da 
+virgole seguite dal segno $/$ che precede la conclusione, una formula. Ricordando il criterio di correttezza logica un argomento \`e corretto se e solo se non pu\`o darsi che tutte le sue premesse siano vere e la 
+conclusione falsa. Mediante una tavola di verit\`a diventa pertanto possibile assegnare il valore vero o falso a ciascuna delle variabili enunciative che compongono le premesse e la conclusione degli schemi 
+d'argomento. Eseguendo quest'assegnazione per ogni combinazione di valori di verit\`a si verificher\`a che se vi \`e una sola assegnazione in cui tutte le premesse risultano vere ma la conclusione falsa lo schema 
+\`e scorretto, se tutti i casi in cui le assegnazioni di valori di verit\`a alle variabili enunciative rendono vere tutte le premesse e la conclusione lo schema \`e corretto. Gli argomenti scorretti vengono chiamati 
+fallacie logiche. 
+\subsection{Tautologie, incoerenze e contingenze}
+Le leggi logiche pi\`u note sono il principio di identit\`a, di non contraddizione e del terzo escluso.  
+\subsubsection{Principio di identit\`a}
+$\alpha\Rightarrow \alpha$ ovvero ogni enunciato implica s\`e stesso, viene pertanto detta anche legge di identit\`a enunciativa. 
+\subsubsection{Principio di non contraddizione}
+$\neg(\alpha\land\neg \alpha)$ ovvero ogni enunciato non si d\`a il caso che valgano l'enunciato stesso e la sua negazione.
+\subsubsection{Principio del terzo escluso}
+$\alpha\lor\neg \alpha$ ovvero per qualsiasi enunciato valgono l'enunciato stesso o la sua negazione.
+\subsubsection{Tautologie}
+Si dice tautologia una qualsiasi formula che assume il valore di vero per qualunque valore di verit\`a assegnato alle sue variabili enunciative. Vengono dette anche leggi logico-enunciative e si nota perch\`e 
+prendono il nome di leggi. Sono infatti vere a prescindere del valore di verit\`a assegnato alle variabili enunciative in virt\`u della loro forma logica. 
+\subsubsection{Incoerenze o contraddizioni}
+Si dice incoerenza o contraddizione una qualsiasi formula che assume il valore di falso per qualunque valore di verit\`a assegnato alle sue variabili enunciative. La negazione di una tautologia \`e un'incoerenza e 
+viceversa.
+\subsubsection{Contingenza}
+Si dice contingenza una formula il cui valore di verit\`a dipende dai valori di verit\`a delle sue variabili enunciative. 
+\subsubsection{Decidibilit\`a}
+Le tabelle di verit\`a permettono di classificare univocamente le formule in tautologie, contraddizioni o contingenze o la correttezza del ragionamento. Essendo questo fattibile in un numero finito di passi si dice 
+che la questione di stabilire le leggi logico-enunciative \`e decidibile. Il limite delle tabelle di verit\`a \`e la loro complessit\`a: rendendosi necessario sviluppare tutte le possibili combinazioni per le variabili 
+enunciative un algoritmo per la decisione avr\`a complessit\`a $O(2^n)$, dove $n$ \`e il numero di variabili enunciative. 
+\subsection{La foma condizionale corrispondente}
+Dato un qualunque schema di ragionamento nella forma generale $\alpha_1,\dots, \alpha_n/\beta$ si definisce la sua forma condizionale corrispondente come la formula: $\alpha_1\land\dots\land 
+\alpha_n\Rightarrow\beta$. Questa forma \`e quel condizionale che ha per antecedente la congiunzione delle premesse dell'argomento e come conseguente la conclusione. Per qualunque schema vale che \`e 
+corretto se e solo se la sua forma condizionale corrispondente \`e una tautologia. 
+\section{Alberi di refutazione}
+Creati per snellire il lavoro delle tavole di verit\`a, gli alberi di refutazione sono una ricerca esaustiva dei modi in cui tutte le formule di una lista possano essere vere. Si comincia formando una lista composta 
+dalle sue premesse e dalla negazione della sua conclusione e si scompone ogni formula segnandola fino ad ottenere lettere enunciative o loro negazioni. Se si trova qualche assegnazione di un valore di verit\`a 
+alle lettere enunciative che rende vere tutte le formule della lista allora risulta che la forma \`e stata refutata e si pu\`o sancirne l'invalidit\`a, se invece la ricerca non permette di scoprire alcuna assegnazione di 
+valori di verit\`a che lo permetta allora la forma \`e valida. Se alla fine di un ramo dell'albero il tentativo di refutazione fallisce lo si segna con una $X$ e si chiama cammino chiuso, altrimenti aperto. Un cammino 
+si dice terminato se \`e chiuso o se le sole formule non segnate che contiene sono elementari o loro negazioni. Se tutti i cammini dell'albero terminato sono chiusi la forma \`e valida, mentre se ne rimane uno 
+aperto \`e refutata. In particolare ogni cammino aperto dell'albero terminato rappresenta un modello per la costruzione di un controesempio. 
+\subsection{Regole sintattiche}
+\begin{itemize}
+\item Le regole per la costruzione degli alberi si applicano solo a formule intere e non a sottoformule.
+\item L'ordine di applicazione non \`e importante ma \`e pi\`u efficace utilizzare prima regole che non danno luogo a ramificazioni. 
+\item In un albero terminato per una forma argomentativa i cammini aperti indicano tutti i controesempi a quella formula. 
+\end{itemize}
+\subsection{Regole di formazione}
+\begin{itemize}
+\item Negazione: se un cammino aperto contiene sia una formula che la sia negazione si scriva una $X$ al termine del cammino.
+\item Congiunzione: se un cammino aperto contiene un formula non segnata nella formula $\alpha\land\beta$ la si segni e si scriva sia $\alpha$ che $\beta$  al termine di ogni cammino aperto che la contiene.
+\item Disgiunzione: se un cammino aperto contiene una disgiunzione non segnata si traccino due rami sotto ciascun cammino aperto che la contiene e si scriva un disgiunto per ramo.
+\item Condizionale: se un cammino contiene una condizionale non segnata la si segni e si traccino due rami sotto ciascun cammino aperto che la contiene e si scriva la negazione dell'antecedente sul primo e il 
+conseguente sul secondo. 
+\item Bicondizionale: se un cammino contiene una bicondizionale non segnata la si segni e si traccino due rami sotto ciascun cammino aperto che la contiene e si scriva lato sinistro e destro sul primo e la 
+negazione dei due sul secondo.
+\item Negazione negata: se un cammino contiene una doppia negazione non segnata la si segni e si scriva la formula su ogni ramo che la contiene. 
+\item Congiunzione negata: se un cammino aperto contiene un formula non segnata nella formula $\neg(\alpha\land\beta)$ la si segni, si traccino due cammini  e si scriva $\neg\alpha$ sul primo e $\neg\beta$ 
+al termine del secondo.
+\item Disgiunzione negata: se un cammino aperto contiene un formula non segnata nella forma $\neg(\alpha\lor\beta)$ la si segni e si scriva sia $\neg\alpha$ che $\neg\beta$  al termine di ogni cammino 
+aperto che la contiene.
+\item Congiunzione negata: se un cammino aperto contiene una formula non segnata nella forma $\neg(\alpha\Rightarrow\beta)$ la si segni e si scriva sia $\alpha$ che $\neg\beta$ al termine di ogni cammino 
+aperto che la contiene. 
+\item Bicondizionale negata: se un cammino aperto contiene una formula non segnata nella forma $\neg(\alpha\Leftrightarrow\beta)$ la si segni, si traccino due rami sotto ciascun cammino aperto che la 
+contiene e scrivere $\alpha$ e $\neg\beta$ sotto il primo e $\neg\alpha$ e $\beta$ sotto il secondo. 
+\end{itemize}
+\subsection{Altri utilizzi per gli alberi di refutazione}
+Inoltre un albero terminato con un cammino aperto costituisce  un insieme vero-funzionalmente consistente. In particolare:
+\begin{itemize}
+\item $\alpha$ \`e inconsistente se e solo se tutti i cammini di un albero terminato per $\alpha$ sono chiusi.
+\item $\alpha$ \`e tautologica se e solo se tutti i cammini di un albero terminato per $\neg\alpha$ sono chiusi.
+\item $\alpha$ \`e vero-funzionalmente contingente se e solo se $\alpha$ non \`e n\`e tautologica n\`e inconsistente.
+\end{itemize}

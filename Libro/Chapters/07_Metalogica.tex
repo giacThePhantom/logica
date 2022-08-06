@@ -1,0 +1,71 @@
+\chapter{Cenni di metalogica}
+Una volta determinato un linguaggio logico $L$ e a un sistema formale $S$ su di esso ci si pu\`o occupare delle caratteristiche generali del sistema entrando
+cos\`i nel campo della metalogica. Si tratta di un discorso che verte sulle caratteristiche complessive dei sistemi logici. I teoremi della metalogica qui 
+discussi vengono chiamati metateoremi e vertono sui sistemi formali esprimendo le loro propriet\`a generali.
+\section{Coerenza e completezza o le virt\`u di una logica}
+\subsection{La coerenza dei sistemi formali}
+Un sistema formale $S$ viene detto sintatticamente coerente se per nessuna formula $\alpha$ del linguaggio formale su cui \`e impiantato si d\`a il caso che 
+$\vdash\alpha$ e $\vdash\neg\alpha$ ossia se non consente di derivare come teoremi sua una formila che la sua negazione. Se ci\`o accade il sistema\`e detto
+incoerente o contradditorio. Per capire le conseguenze di un sistema incoerente si introduca l'inconsistenza: un sistema $S$ viene detto inconsistente se 
+consente di dimostrare o derivare come teoremi tutte le formule del linguaggio $L$ su cui \`e impiantato. Se ne esiste una che $S$ non dimostra viene detto 
+consistente. In un sistema formale che esprime la logica classica e nei sistemi dotati di $E\neg$ o di formulazioni equivalenti della legge dello pseudo-
+Scoto l'incoerenza implica l'inconsistenza: questa regola dice che da una contraddizione si pu\`o dedurre qualunque formula. Pertanto se fosse possiblie 
+dedurre una contraddizione come teorema il sistema in questione diventerebbe inconsistente che sarebbe deduttivamente inutile in quanto dimostra tutto. Da 
+qui l'importanza di fornire dimostrazioni di coerenza o non contraddittoreit\`a che garantiscano che i principi di un sistema formale siano sicuri. La 
+dimostrazione della coerenza di un sistema formale avviene utilizzando la coerenza o correttezza semantica in quanto caratterizzata con riferimento alla 
+nozione di verit\`a. Si studi la correttezza del calcolo dei predicati classico. Di questo il sistema della deduzione naturale \`e una sistemazione tipica.
+Provare che \`e corretto vuol dire provare che tutti i teoremi del calcolo dei predicati sono veri in ogni interpretazione, ovvero in tutti i modelli: se
+$\vdash\alpha$ allora $\models\alpha$. Questo \`e detto il teorema speciale o debole di coerenza del calcolo dei predicati che riguarda il caso a zero 
+premesse. Il teorema generale o forte di correttezza dice che tutte le formule derivabili da un gruppo qualsiasi di premesse nel calcolo dei predicati sono 
+conseguenza logica di quel gruppo di premesse: se $\alpha_1, \dots, \alpha_n\vdash\beta$ allora $\alpha_1,\dots, \alpha_n\models\beta$, la dimostrazione non
+vista nel dettaglio ha luogo per induzione sulla costruzione delle dimostrazioni formali. Il teorema debole dice che le versioni del calcolo dei predicati 
+consentono di derivare come teoremi solo formule vere in ogni interpretazione, o le leggi logiche. Da questa correttezza semantica deriva la coerenza 
+sintattica: non essendo la contraddizione una legge logica non potr\`a mai essere derivata: non \`e vera in nessuna interpretazione. Il teorema forte dice 
+che i principi e regole d'inferenza delle versioni del calcolo dei predicati consentono di dedurre solo conseguenze logiche: essendo che la conseguenza
+logica cattura il criterio di correttezza logica dei ragionamenti e il teorema assicura che il calcolo dei predicati consente di costruire dimostrazioni
+formali per ragionamenti effettivamente validi non consentendo mai di derivare una conclusione falsa da premesse tutte vere.
+\subsection{La completezza dei sistemi formali}
+La completezza \`e la propriet\`a che dice che i sistemi "dimostrano il pi\`u possibile". Il teorema deboel di completezza afferma che tutte le formule vere 
+in ogni interpretazione sono teoremi del calcolo dei predicati: se $\models\alpha$ allora $\vdash\alpha$ ovvero nel calcolo dei predicati si possono 
+derivare come predicati tutte le leggi logiche. Unendo i teoremi deboli di coerenza e completezza si otterr\`a: $\vdash\alpha$ se e solo se $\models\alpha$ 
+che dice come nel caso della logica dei predicati classica il teorema del calcolo logico e quello di legge logica sono nozioni indipendenti che individuano
+lo stesso insieme di formule. Il teorema forte di completezza dice che tutte le conseguenze logiche di un gruppo qualsiasi di premesse sono derivabili da 
+quel gruppo di premesse nel calcolo dei predicati: se $\alpha_1, \dots, \alpha_n\models\beta$ allora $\alpha_1,\dots, \alpha_n\vdash\beta$, ossia nel calcolo
+dei predicati si possono costruire dimostrazoni formali per tutti i ragionamenti effettivamente validi. Queste due propriet\`a dicono come la logica classica
+non sia arbitraria in quanto le inferenze dimostrabili sono corrette contemporaneamente sintatticamente e semanticamente e che i vari sistemi formali che
+la esprimono sono equivalenti fra loro in quanto coerenti e completi. 
+\section{Teoremi limitativi}
+\subsection{L'incompletezza dell'aritmetica}
+In un qualsiasi sistema formale $S$ che soddisfi certe condizioni si pu\`o parlare di alcune propriet\`a e relazioni sintattiche che riguardano $S$ stesso, 
+nel senso che la propriet\`a sintattica di essere dimostrabile in $S$ pu\`o essere espressa all'interno della teoria stessa. Per ottenere ci\`o si rende 
+necessaria la g\"odelizzazione: studiando un qualunque linguaggio formalizzato $L$ e un sistema $S$ si du esso impiantato si ha a che fare con un insieme 
+numerabile di oggetti e che pertanto si possono rappresentare associandoli ai numeri naturali. La g\"odelizzazione \`e basata su questa associazione univoca
+di simboli, formule e sequenze di formule di $L$ a un numero naturale. Successivamente data un'espressione di $L$ si pu\`o stabilire il numero di G\"odel
+che le corrisponde e dato un numero naturale si pu\`o stabilire se e a quale espressione si riferisce. Se ora il sistema ha capacit\`a espressive 
+riconducibili al fatto che contiene una certa quantit\`a di aritmetica formale \`e possibile che enunciati del sistema parlino di propriet\`a e ralzioni tra
+enunciati del sistema stesso: i numeri natorali diventano gli oggetti di cui gli enunciati aritmetici parlano ma codici univocamente associati a espressioni
+del linguaggio della teoria stessa, allora affermazioni si $S$ sono rispecchiate in $S$ come affermazioni su numeri. Utilizzando la diagonalizzazione si 
+possono costruire enunciati che parlano di s\`e stessi in quato si riferiscono al proprio numero di G\"odel. Si costruisca pertanto in $S$ $\gamma$ che
+dice di essere indimostrabile in $S$: $\gamma\Leftrightarrow\neg Dim("\gamma")$. In luogo del predicato di verit\`a $V$ si ha un predicato di 
+dimostrabilit\`a. La formula $Dim(x)$ \`e una fromula aritmetica che raffigura nel sistema la propriet\`a sintattica di formule del sistema di essere
+dimostrabile in $S$, ovvero di essere un teorema in $S$. Questo predicato \`e esprimibile in $S$ e non d\`a luogo a paradossi che dice che per un sistema
+$S$ che soddisfi queste condizioni se $S$ \`e coerente allora non $\vdash\gamma$ dove si intende con coerenza il fatto che $S$ dimostra solo verit\`a in 
+quanto se $\gamma$ fosse dimostrabile e pertanto falso il sistema consentirebbe di derivare enunciati falsi come teoremi. Se $\gamma$ non \`e dimostrabile
+allora $\gamma$ \`e vero, pertanto se $S$ \`e coerente allora $\vdash\neg\gamma$ in quanto se fosse vero la sua negazione sar\`a falsa ed essendo $S$ 
+coerente $\neg\gamma$ non sar\`a teorema di $S$. Queste due condizioni unite costituiscono una versione semantica informale del primo teorema di 
+incomletezza di G\"oedel. Il primo teorema dice che qualunque sistema formale coerente $S$ in grado di esprimere l'aritmetica elementare \`e incompleto:
+si possono formulare enunciati aritmetici veri nel suo linguaggio ma $S$ non pu\`o derivarli come teoremi. Inoltre $\gamma$ \`e indecidibile per $S$ in 
+quanto non pu\`o dimostarlo n\`e refutarlo in quanto non pu\`o dimostrare n\`e lui n\`e la sua negazione. E aggiungere questo problema indecidibile come
+assioma ne creerebbe altri.
+\subsection{Incompletezza e prove di coerenza}
+Si \`e provato come si $S$ \`e coerente allora $\gamma$ non \`e dimostrabile. Per esprimere questa idea nel sistema formale bisogna introdurre 
+un'affermazione di coerenza ($Coer$) per $S$, dove $Coer:=\neg Dim("k")$ ovvero dire che $S$ \`e coerente \`e come dire che $S$ non dimostra $k$ una 
+qualsiasi falsit\`a logica o aritmetica. Si pu\`o esprimre che se $S$ \`e coerente allora $\gamma$ non \`e dimostrabile: $\neg Dim("k")\Rightarrow\neg 
+Dim("\gamma")$. Il coonseguente di quest'ultima \`e $\gamma$, pertanto $Coer\Rightarrow\gamma$, pertanto se $S$ \`e coerente allora non $\vdash Coer$
+Supponendo di poter dimostare l'antecedente che la formula esprimere la coerenza di $S$ sia un teorema del sistema di esso mediante il modus ponens si 
+potrebbe dimostrare anche $\gamma$, quello esclusio dal primo teorema di incompletezza, viene pertanto espresso il secondo teorema di incompletezza di 
+G\"oedel che \`e un corollario del primo che dice che se $S$ \`e coerente allora non \`e in grado di dimostrare l'assezione $Coerr$ del linguaggio formale
+su cui \`e impiantato che esprima $S$, ovvero $S$ non \`e in grado di dimostrare la propria coerenza. 
+\subsection{La logica \`e trasendentale}
+Questi due teoremi si ritiene illustrino una discrepanza tra dimostrabilit\`a in un sistema formale e verit\`a in quanto nessun sistema formale pu\`o 
+dimostrare solo cose vere ma non tutte e nessun sistema coerente \`e capace di dimostrare autonomamente di esserlo. 

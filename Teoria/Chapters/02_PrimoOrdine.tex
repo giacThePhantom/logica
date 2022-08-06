@@ -1,0 +1,43 @@
+\chapter{Logica del primo ordine}
+A differenza della logica proposizionale la logica del primo ordine considera un universo costituito da costanti nominali, predicati e funzioni. Una formula
+atomica viene costruita applicando predicati a costanti. O funzioni a costanti e un predicato sull'oggetto corrispondente. Inoltre vengono introdotti il 
+quantificatore universale $\forall$ ed esistenziale $\exists$ in modo da quantificare arbitrari oggetti dell'universo. 
+\section{Linguaggio}
+\subsection{Sintassi}
+L'alfabeto della logica del primo ordine \`e costituito da:
+\begin{itemize}
+\item Simboli logici: costante logica, connettivi proposizionali, quantificatori e un insieme infinito di simboli di variabili. 
+\item Simboli non logici: un insieme di simboli costanti, un'insieme di simboli funzionali ad ognuno dei quali \`e associta un'arity (numero di argomenti), 
+un insieme di simboli relazionali ad ognuno dei quali \`e associata un'arity. 
+\end{itemize}
+I simboli non logici dipendono dall'universo che si vuole modellare.
+\subsection{Terms e formule}
+Ogni costante, variabile logica \`e ogni simbolo funzionale pieno sono term. Le formule sono formate dai term attraverso connettivi logici, quantificatori e 
+simboli relazionali pieni. 
+\section{Funzione di interpretazione}
+Un'interpretazione di primo ordine per il linguaggio $L=(c_1, \dots, c_n, f_1, \dots, f_n, P1, \dots, P_n)$ \`e una coppia $(\Delta, I)$ dove $\Delta$ \`e un insieme non vuoto detto dominio di interpretazione e 
+$I$ \`e la funzoine di interpretazione tale che $I(c_i)\in\Delta$, $I(f_i): \Delta^n\rightarrow\Delta$ e $I(P_i)\subset\Delta^n$ dove $n$ \`e l'arity di $f_i$ e $P_i$. 
+\section{Soddisfacibilit\`a rispetto ad un'assegnazione}
+Si definisce un assegnazione $a$ una funzione dall'insieme di variabili al dominio dell'interpretazione $\Delta$. $a[x/d]$ dentoa l'assegnazione che coincide con $a$ su tutte le variabili $x$ che \`e associata a 
+$d$. L'interpretazione di un termine con l'assegnazione $a$ o $I(t)[a]$ \`e definita come: 
+\begin{itemize}
+\item $I(x_i)[a]=a(x_i)$.
+\item $I(c_i)[a]=I(c_i)$.
+\item $I(f(t_1, \dots, t_n))[a]=I(f)(I(t_1)[a], \dots, I(t_n)[a])$.
+\end{itemize}
+\section{Variabili libere}
+Un'occorrenza libera di una variabile $x$ \`e un'occorrenza di $x$ la quale non \`e legata  a un quantificatore: si definisce come ogni occorrenza di $x$ in $t_k$ \`e libera in $P(t_1, \dots, t_k, \dots, t_n)$, ogni
+occorrenza libera di $x$ in $\phi$ o $\psi$ \`e libera anche in $\phi\land\psi$, $\phi\lor\psi$, $\phi\Rightarrow\psi$ e $\neg\phi$, ogni occorrenza libera di $x$ in $\phi$ \`e libera in $\forall y.\phi$ e $\exists y.
+\phi$ se $y$ \`e distinta da $x$. Una formula $\phi$ si dice ground se non contiene nessuna variabile, \`e chiusa se non contiene occorrenze libere di una variabile. Una variabile $x$ \`e libera in $\phi$ se almeno
+esiste una sua occorrenza libera, si denota con $\phi(x)$. Un termine $t$ \`e libero per una variabile $x$ in formula $\phi$ se e solo se ogni occorrenza di $x$ in $\phi$ non occorre nello scopo del quantificatore
+di qualche variabile che occorre in $t$. 
+\section{Soddisfacibilit\`a e validit\`a}
+Un interprentazione $I$ \`e un modello di $\phi$ sotto l'assegnazione $a$ se $I\models\phi[a]$. Una formula si dice soddisfacibile se esiste qualche $I$ e qualche $a$ tali che $I\models\phi[a]$, \`e 
+insoddisfacibile se non \`e soddisfacibile ed \`e valida se ogni $I$ e ogni $a$ $I\models\phi[a]$. Una formula $\phi$ si dice conseguenza logica di un insieme di formule $\Gamma\models\phi$ se per ogni
+interpretazione ed assegnazione $I\models\Gamma[a]\Rightarrow I\models\phi[a]$ dove il primo vuol dire che $I$ soddisfa tutte le formule in $\Gamma$ sotto $a$. Si noti pertanto che se la formula \`e
+chiusa essa non dipende dall'assegnazione e $I\models\phi[a]$ se e solo se $I\models\phi[a']$ dove $[a]$ e $[a']$ coincidono sulle variabili libere in $\phi$. 
+\section{Domini finiti con nomi per ogni elemento}
+UNA o unique name assumption \`e l'assunzione secondo la quale il linguaggio contiene un nome per ogni elemento nel dominio, ovvero $\phi_{\Delta=\{c_1, \dots, c_n\}}=(\bigwedge\limits_{i\neq j=1}^n
+c_i\neq c_j\land\forall x(\bigvee\limits_{i=1}^nc_i=x))$. Quest'assunzione dice che un predicato $P$ \`e vero solo per un insieme finito di oggetti per i quali il linguaggio contiene un nome \`e formalizzato
+come $\forall x.(P(x)\Leftrightarrow(x=c_1\lor\cdots\lor x=c_n))$.  Sotto l'ipotesi di un dominio finito con nomi costanti per ogni elemento le formule del primo ordine possono essere proposizionalizzate o 
+groundet secondo le analogie tra i $\forall$ e $\land$ e $\exists$ e $\lor$. 

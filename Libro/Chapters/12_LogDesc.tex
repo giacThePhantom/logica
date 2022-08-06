@@ -1,0 +1,76 @@
+\chapter{Logiche descrittive}
+Le logiche descrittive sono una famiglia di logiche che permettono di modellare relazioni rispetto entit\`a in un dominio di interesse. Esistono tre tipi di entit\`a: concetti, ruoli e nomi individuali che 
+rappresentano rispettivamente insiemi di individui, relazioni binarie tra individui e singolo individui nel dominio. A differenza di un database consiste in un insieme di predicati detti assiomi ognuno dei quali deve
+essere vero nella situazione che si vuole descrivere. Generalmente catturano una conoscenza parziale. Possono essere divisi in tre categorie: assiomi assertivi ($ABox$), assiomi terminologici $TBox$ e 
+assiomi relazionali $RBox$.
+\subsubsection{Asserire fatti attraverso assiomi $\mathbf{ABox}$}
+Gli assiomi $ABox$ catturano conoscenza riguardo individui nominati, ovvero a quale concetto appartengono (asserzione di concetto) e come sono messi in relazione tra di loro (asserzione di ruolo). I nomi 
+individuali cos\`i caratterizzati si dicono istanze dei concetti e delle relazioni. Essendo che questa logica non fa una unique name assumption nomi diversi possono riferirsi allo stesso individuo come pu\`o 
+accadere combinando conoscenza riguardo lo stesso dominio da fonti diverse, facendo ovvero ontology alignment.
+\subsubsection{Asserire conoscenza terminologica dagli assiomi $\mathbf{TBox}$}
+Gli assiomi $TBox$ descrivono relazioni tra concetti attraverso inclusione $\sqsubseteq$ detta anche sottoassunzione o equivalenza $\equiv$. 
+\subsubsection{Modellare relazioni tra ruoli attraverso assiomi $\mathbf{RBox}$}
+Gli assiomi $RBox$ si riferiscono a propriet\`a dei ruoli. Riguardo ai concetti vengono supportate inclusioni ed equivalenze. Si possono comporre ruoli attraverso $\circ$ e ruoli disgiunti attraverso
+$Disjoint(A,B)$. Gli assiomi includono anche caratteristiche di ruolo come riflessivit\`a, transitivit\`a e simmetria.
+\section{Costruttori per concetti e ruoli}
+Gli assiomi tipici sono limitati, per descrivere situazioni pi\`u complesse si renda necessaria la creazione di nuovi concetti e ruoli utilizzando una variet\`a di costruttori. Nel caso dei concetti i costruttori possono
+essere separati in basici booleani, restrizioni d
+i ruolo e nominali, enumerazioni.
+\subsection{Costruttori di concetti booleani}
+Questi costruttori mettono a disposizione operazioni booleane classiche in vicina relaizone con le operazioni di intersezione, unione e complemento o le analoghe operazioni logiche. L'inclusione di concetti 
+permette di congiungere concetti attraverso l'operazione di intersezione $\sqcap$ di altri due concetti. L'unione invece permette di descrivere un nuovo concetto attraverso l'unione di altri due con l'operatore
+$\sqcup$. Il complementare di un concetto, ovvero la sua negazione \`e espresso dall'operatore $\neg$. Si definisce $\top$ il top concept, ovvero il concetto in cui ogni individuo \`e una sua istanza e $\bot$ il 
+bot concept, la contraddizione, il concetto in cui nessun individuo \`e una sua istanza. 
+\subsection{Restrizioni di ruolo}
+$TBox$ e $RBox$ possono essere utilizzate per esprimere relazioni tra ruoli e concetti. Essendo $C$ un concetto e $R$ una relazione si definisce l'operatore di restrizione esistenziale $\exists R.C$ che 
+descrive che esiste $y$ tale che $C(y)$ tutte le $x$ tali che $R(y, x)$. Un ulteriore operatore \`e la restrizione universale $\forall R.C$ che definisce che per ogni $y$, se $R(x,y)$ allora $C(y)$. Queste due
+restrizioni sono utili in combinazione con $\top$ per esprimere restrizioni di dominio e range per i ruoli. Si pu\`o inoltre aggiungere a questi operatori le restrizioni almeno $\ge n$ e al pi\`u $\le n$. Inoltre
+la riflessivit\`a locale espressa da $op R.Self.C$ pu\`o esprimere i concetti in relazione con s\`e stessi nel ruolo.
+\subsection{Nominali}
+Si possono definire concetti anche enumerando le loro istanze. Questo pu\`o essere fatto attraverso i nominali, concetti che hanno esattamente un'istanza. Combinando questi elementi atraverso l'unione nasce 
+l'enumerazione. 
+\subsection{Costruttori di ruolo}
+Esistono pochi costruttori per i ruoli complessi. Come per esempio i ruoli inversi. Il ruolo inverso di $R: C\rightarrow C'$ viene indicato con $R^-: C'\rightarrow C$ . Viene definito il ruolo universale $U$ che 
+mette in relazione tutte le paia di individui. Si pu\`o definire un ruolo $R$ come vuoto attraverso l'assioma $\top\sqsubseteq\neg\exists R.\top$. 
+\subsection{Caratteristiche di ruolo}
+La transitivit\`a \`e una forma di composizione di ruolo complessa, la riflessivit\`a l'equivalenza rispetto all'intersezione.
+\section{La logica descrittiva $\mathbf{\mathcal{SROIQ}}$}
+Formalmente ogni ontologia delle logiche descrittive \`e basata su tre insiemi finiti di simboli: un insieme $N_i$ di nomi individuali, un insieme $N_C$ di nomi di concetti e un insieme $N_R$ di nomi di ruoli.
+Questi concetti sno assunti fissati per qualche applicazione e non menzionati esplicitamente. L'insieme delle espressioni di ruoli di $\mathcal{SROIQ}$ $R$ \`e definito come $R:=U|N_R|N_{R^-}$ dove
+$U$ \`e il ruolo universale.  L'insieme dei concetti $C$ verr\`a definito come $C:=C_C|(C\sqcap C)|(C\sqcup C)|\neg C|\top|\bot|\exists R.C|\forall R.C|\ge n R.C|\le n R.C| \exists R.Self|\{N_i\}$. Utilizzando 
+questi insiemi gli assiomi di $\mathcal{SROIQ}$ possono essere definiti come:
+\begin{center}
+\begin{tabular}{|c c c c c|}
+\hline
+$ABox$: & $C(N_i)$ & $R(N_i, N_i)$ & $N_i\approx N_i$ & $N_i\not\approx N_i$\\
+\hline
+$TBox$: & $C\sqsubseteq C$ & $C\equiv C$ &  & \\
+\hline
+$RBox$: & $R\sqsubseteq C$ & $R\equiv R$ & $R\circ R\sqsubseteq R$ & $Disjoint(R,R)$\\
+\hline
+\end{tabular}
+\end{center}
+L'ontologia o base di conoscenza \`e un insieme di tali assiomi. Per garantire l'esistenza di algoritmi di ragionamento corretti e che terminano si devono aggiungere aggiuntive restrizioni sintattiche che si 
+riferiscono all'intera struttura dell'ontologia e sono pertanto chiamate restrizioni strutturali. Le due condizioni rilevanti per $\mathcal{SROIQ}$ sono basate sulla nozione di semplicit\`a e regolarit\`a, entrambe
+automaticamente soddisfatte in mancanza di assiomi di inclusione di ruolo complessi. Un ruolo $R$ in un'ontologia $O$ \`e detto non semplice se qualche assioma di inclusione di ruolo complesso in $O$ 
+implica istanze di $R$:
+\begin{itemize}
+\item Se $O$ contiene un'assioma $S\circ T\sqsubseteq R$ allora $R$ \`e non semplice.
+\item Se $R$ \`e non semplice allora la sua inversa $R^-$ \`e non semplice.
+\item Se $R$  \`e non semplice e $O$ contiene uno qualunque degli assiomi $R\sqsubseteq S$, $S\equiv R$ o $R\equiv S$ allora anche $S$ \`e non semplice.
+\end{itemize}
+Tutti gli altri ruoli sono semplici. Per un'ontologia $\mathcal{SROIQ}$ \`e richiesto che i seguenti assiomi e concetti contengano solamente ruoli semplici:
+\begin{itemize}
+\item Assiomi limitati: $Disjoint(R,R)$.
+\item Espressioni di concetto limitate: $\exists R.Self$, $\ge n R.C$, $\le n R.C$.
+\end{itemize}
+L'altra restrizione strutturale \`e chiamata regolarit\`a e riguarda unicamente gli assiomi per $RBOx$. Questa restrizione si assicura che dipendenze cicliche tra assiomi di inclusione di ruoli complessi avvengano
+unicamente in una forma limitata. 
+\section{Semantiche delle logiche descrittive}
+Il significato formale degli assiomi \`e dato dalla semantica della teoria del modello. La semantica specifica cos'\`e la conseguenza logica di un ontologia. Un'ontologia descrive una particolare 
+situazione in un dominio del discorso dato, senza specificarla completamente. Dovendo gestire questa incompletezza considerando tutte le situazioni possibili dove gli assiomi di un'ontologia siano soddisfatti.
+Questa caratteristica \`e detta Open World Assumption in quanto lascia le informazioni non specificate aperte a interpretazione. Una conseguenza logica di un'ontologia \`e un assioma che vale in tutte le 
+interpetazioni che soddisfano l'ontologia. Un'ontologia pu\`o non essere soddisfatta da nessuna interpretazione ed \`e pertanto detta inconsistente e ogni assioma rimane indecidibile. Un'interpretazione
+$I$ consiste di un insieme $\Delta^I$ detto dominio di $I$ e una funzione di interpretazione $\cdot^I$ che mappa ogni concetto atomico $A$ a un insieme $A^I\subseteq\Delta^I$, ogni ruolo atomico $R$ a
+una relazione binaria $R^I\subseteq\Delta^I\times\Delta^I$ e ogni nome individuale $a$ a un elemento $a^I\in\Delta^I$. L'interpretazione di concetti e ruoli complessi segue dall'interpretazione delle entit\`a
+base. 

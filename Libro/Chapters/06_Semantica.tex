@@ -1,0 +1,160 @@
+\chapter{Semantica logica}
+In generale si ascrive alla semantica tutti ci\`o che riguarda il rapporto fra i segni linguistici e le entit\`a che essi possono significare. \`E strettamente connessa all'ontologia, lo studio dei complessi di enti che si 
+possono esprimere nel linguaggio formale. Verranno trattati i tratti essenziali della semantica logica elementare standard. Per parlare di ontologia si rendono necessari richiami alla teoria degli insiemi.
+\section{Teoria degli insiemi}
+\subsection{Insiemi}
+Si definisce un insieme come una qualsiasi collezione di oggetti rappresentati da lettere maiuscole i cui elementi sono indicate con lettere minuscole. La relazione fondamentale \`e l'appartenenza $\in$ che 
+determina che un oggetto appartiene ad un insieme. Un insieme pu\`o essere identificato attraverso una lista completa dei suoi elementi tra parentesi classe e non contano n\`e l'ordine n\`e le ripetizioni. Per 
+rappresentare insiemi infiniti viene utilizzata una condizione di appartenenza che indica la caratteristica comune posseduta da tutti e soli gli elementi dell'insieme in questione. In generale una qualsiasi 
+propriet\`a $F$ determina un'insieme (principio di astrazione). Il principio di estensionalit\`a stabilisce le condizioni sufficienti per l'identit\`a tra insiemi: $\forall x(x\in A\Leftrightarrow x\in B)\Rightarrow 
+A=B$. Un insieme \`e determinato interamente dalla totalit\`a dei suoi elementi, in particolare tutti gli insiemi vuoti sono identici tra di loro, ovvero $\forall x(x\not\in A\land x\not\in B)\Rightarrow\forall x(x\in A 
+\Leftrightarrow x\in B)\Rightarrow A=B$. Pertanto si identifica l'unico insieme vuoto con $\emptyset=\{x|x\neq x\}$. All'estremo opposto dell'insieme vuoto si trova l'insieme universo di cui ogni oggetto \`e 
+membro indicato con $V=\{x|x=x\}$.
+\subsection{Relazioni e operazioni insiemistiche}
+La prima relazione da considerare \`e quella di inclusione o $\subseteq$ che indica la propriet\`a di un sottoinsieme, ovvero: $A\subseteq B\Leftrightarrow\forall x(x\in A\Rightarrow x\in B)$ a differenza della 
+relazione di appartenenza che rapporta oggetti e insiemi questa mette in relazione insiemi con insiemi. Si deve pertanto distinguere tra l'oggetto $x$ e il singoletto $[x]$, ovvero l'insieme che ha come unico 
+oggetto $x$. Questa relazione \`e riflessiva e transitiva. L'insieme vuoto \`e incluso in ogni insieme. 
+\subsubsection{Operazioni tra insiemi}
+\begin{itemize}
+\item Unione: $A\cup B:=\{x|x\in A\lor x\in B\}$.
+\item Intersezione: $A\cap B:=\{x|x\in A\land x\in B\}$.
+\item Complementazione: $A':=\{x|x\not\in A\}$.
+\end{itemize}
+\subsubsection{Prodotto cartesiano}
+Si definisce ennupla ordinata un insieme di $n$ elementi in cui l'ordine \`e specifico e serve a determinarla, si indica con $<x_1, \dots, x_n>$. Si dice prodotto cartesiano $A\times B$ un insieme formato da 
+tutte e sole le coppie ordinate il cui primo elemento appartiene al primo insieme e il secondo al secondo: $A_1\times\dots\times A_n:=\{<x_1,\dots,  x_n>|x_1\in A_1\land\dots\land x_n\in A_n\}$. Si definisce 
+potenza cartesiana il prodotto di un insieme con s\`e stesso.
+\subsubsection{Insieme potenza}
+Si definisce insieme potenza l'insieme formato da tutti i sottoinsiemi di un insieme: $P(A):=\{B|B\subseteq B\}$. 
+\subsection{Ontologia e insiemi}
+Attraverso la teoria degli insiemi si possono esprimere le strutture ontologiche che si assumono come sistemi di significati da attribuire alle espressioni del linguaggio formale. L'ontologia logica elementare si 
+basa infatti su concetti che sono esprimibili mediante la teoria degli insiemi. Quando si interpretano espressioni dei linguaggi formali della logica si attribuisce loro un riferimento in strutture ontologiche dette 
+universi del discorso, i mondi dove si pu\`o far parlare i linguaggi formali. Una struttura \`e normalmente formata da un insieme non vuoto $U$ di individui detto dominio o supporto alla struttura i quali godono 
+di certe propriet\`a e fra cui sussistono relazioni e operazioni definite in $U$. In questo modo si possono esprimere i concetti di propriet\`a, relazione, operazione o funzione mediante insiemi in modo naturale. 
+Assegnare una propriet\`a a certi individui vuol dire creare un sottoinsieme di $U$ detto estensione ontologica. Una relazione ennaria \`e un sottoinsieme dell'ennesima potenza cartesiana di $U$.
+\subsection{Paradosso di Russel}
+Esiste la possibilit\`a che esistano degli insiemi che contengano loro stessi. Gli insiemi che non appartengono a loro stessi si dicono normali e il loro insieme viene definito come $R=\{x|x\not\in x\}$. Questo 
+insieme esiste in virt\`u di comprensione secondo cui qualsiasi condizione o propriet\`a determina un insieme. Ora ci si pu\`o chiedere se $R$ appartenga a s\`e stesso: da questo si ottiene che $R\in 
+R\Leftrightarrow R\not\in R$ da cui per la logica elementare discende una contraddizione: $R\in R\land R\not\in R$. Questo paradosso mostra come se il principio di comprensione viene assunto senza 
+restrizioni porta a possibili contraddizioni. La soluzione sta nella teoria di tipi logici. Il meccanismo consiste nello sviluppare una gerarchia di tipi di oggetti: individui, insiemi, insiemi di insiemi e cos\`i via e 
+determinare che ci\`o che fa parte di un tipo logico pu\`o essere membro solo di qualcosa che faccia parte del livello superiore. Come risultato un insieme pu\`o essere composto solo di oggetti omogenei, ovvero 
+appartenenti allo stesso livello logico. Altre proposte si basano sul principio della limitazione di grandezza in cui si differisce tra insieme e classe: alcune estensioni di predicati o classi non possono essere 
+considerate insiemi o oggetti dei quali chiedersi se appartengano ad altri insiemi o classi. 
+\section{Una teoria del significato basata sulla verit\`a}
+Comprendere un enunciato vuol dire coglierne il significato che consiste nelle sue condizioni di verit\`a. Un enunciato si presenta come la descrizione di un pezzo di realt\`a e il suo significato \`e noto quando si 
+conoscono le condizioni in cui la descrizione che esso fornisce \`e adeguata, ovvero come deve essere fatto il mondo affinch\`e il significato sia vero. La concezione di significato cos\`i proposta \`e pertanto 
+incentrata sulla verit\`a. Quest'ultima si colloca fra il livello segnico e simbolico del linguaggio e il livello ontologico. La semantica in questa istanza ha lo scopo di di determinare le condizioni sotto le quali un 
+enunciato costituisce un'affermazione vera intorno all'universo del discorso in cui lo si interpreta. Viene pertanto detta semantica vero-condizionale. Questa idea di significato si lega al fatto che l'enunciato 
+dichiarativo \`e l'unit\`a fondamentale della logica in quanto configurazione linguistica secondo cui si pu\`o parlare di condizioni di verit\`a e che il significato delle espressioni subenunciative consiste nel modo in 
+cui esse contribuiscono al significato degli enunciati in cui compaiono. In questo modo si pu\`o interpretare come soltanto negli enunciati le parole hanno senso. Conoscere le condizioni di verit\`a di un enunciato 
+non equivale a sapere che sia vero o falso in quanto si pu\`o comprendere il significato di un enunciato il cui valore di verit\`a risulta ignoto o pu\`o cambiare nel tempo. Si deve considerare inoltre il principio di 
+composizionalit\`a del significato secondo cui il significato di un'espressione linguistica composta dipende funzionalmente dai significati dei sui costituenti. Una teoria semantica deve tener conto di come si 
+comprendono potenzialmente infinite espressioni linguistiche nuove se sono sintatticamente ben formate. Questo fatto pu\`o essere spigato come la capacit\`a da parte di un parlante competente di effettuare 
+un calcolo del valore semantico di ogni espressione composta partendo da un numero finito di costituenti gi\`a noti. La composizionalit\`a del significato opera anche a livello di enunciati composti: un enunciato 
+composto vero-funzionalmente ha un significato che dipende dal significato degli enunciati che lo compongono e dalla loro composizione. Avendo detto che il significato degli enunciati consiste nelle 
+circostanze che li rendono veri il valore semantico di ogni enunciato composto dipende composizionalmente dal valore semantico degli enunciati che lo compongono. 
+\section{Semantica Tarskiana}
+\subsection{La convenzione V}
+Vengono forniti gli strumenti per edificare una semantica rigorosa per un ampio gruppo di linguaggi formali. Per fare questo si caratterizza la nozione di verit\`a relativamente ad un certo linguaggio 
+accompagnando ad essa un metodo per esplicitare le condizioni di verit\`a degli enunciati di singoli linguaggi logici formalizzati. La verit\`a \`e considerata come una propriet\`a di enunciati: il predicato "\`e vero" 
+si applica al nome dell'enunciato la cui verit\`a \`e attribuita. Si definisce linguaggio oggetto il linguaggio di cui si parla o intorno al quale si forma una certa teoria o trattazione che sar\`a formata in un altro 
+linguaggio detto metalinguaggio. Secondo questa convezione linguaggio oggetto e metalinguaggio devono essere distinti. Si pu\`o in questo modo formulare lo schema di verit\`a come $N$ \`e vero (nel 
+linguaggio $L$) se e solo se $T$, dove $N$ \`e il nome dell'enunciato di $L$ cui si ascrive la verit\`a e $T$ \`e la sua traduzione nel metalinguaggio. Questo schema aiuta a ben definire la verit\`a per un 
+linguaggio in quanto si individua una condizione formale di adeguatezza per la definizione consistente nel fatto che questa non deve consentire di dedurre contraddizioni e una condizione materiale di 
+adeguatezza che si esprime formulando la convenzione $V$: la definizione sar\`a adeguata se si potr\`a dedurne logicamente tutte le esemplificazioni dello schema di verit\`a, ossia se per ognuno degli enunciati 
+del linguaggio-oggetto $L$ si potr\`a derivare dalla definizione il corrispondente condizionale in quanto determinerebbero l'estensione del predicato di verit\`a per il linguaggio in questione. Emerge come 
+questa concezione di verit\`a sia corrispondentista in base a cui un enunciato \`e vero se e solo se corrisponde ai fatti. Lo schema di verit\`a fornisce un criterio guida generale per specificare le condizioni di 
+verit\`a degli enunciati senza far ricorso a troppe nozioni. Si studi ora come queste nozioni si sviluppano nel linguaggio studiato precedentemente che verr\`a chiamato $L$. La sua semantica verr\`a sviluppata 
+utilizzando come metalinguaggio l'italiano informale con notazione di tipo insiemistico. A differenza dei linguaggio naturali che sono gi\`a interpretati, ovvero le espressioni sono originariamente provviste di 
+significato le formule dei linguaggi formali sono pure sequenze di simboli costruite in base alle regole sintattiche. Si \`e pertanto interessati a stabilire le condizioni di verit\`a di $L$ quando alle espressioni di 
+$L$ viene attribuito un significato in universi del discorso, ovvero fare in modo che il linguaggio parli di un certo mondo e poi di stabilire sotto quali condizioni una certa formula \`e vera in quell'universo. In 
+questa prospettiva si parler\`a di verit\`a o falsit\`a in relazione all'universo in cui $L$ viene interpretato. 
+\subsection{Interpretazioni e assegnazioni}
+Si consideri una struttura ontologica che ha per dominio un insieme non vuoto $U$ di individui, un modello $\mathcal{M}$ per $L$ \`e una coppia ordinata $\mathcal{M}=<U, i>$ dove $i$ \`e una funzione di 
+interpretazione, ossia una funzione che assegna significati a espressioni di $L$. Un'interpretazione di  $L$ \`e un'attribuzione di significato a ogni simbolo descrittivo costante di $L$ meiante $i$ che 
+assegner\`a significati ai simboli in modo che per ogni nome proprio o costante individuale $k$ il suo significato secondo $i$ in $\mathcal{M}$ o $\mathcal{M}(k)$ sar\`a un individuo appartenente a $U$, per 
+ogni costante funtoriale ennaria $f$ $\mathcal{M}(f)$ assegnatole da $i$ in $\mathcal{M}$ sar\`a una certa operazione ennaria definita su $U$ e per ogni costante predicativa ennaria $P$, $\mathcal{M}(P)$ 
+assegnatole da $i$ in $\mathcal{M}$ sar\`a una propriet\`a, o una relazione ennaria definita su $U$. In questo modo i predicati monadici significheranno propriet\`a ricondotte a insiemi e alle loro estensioni 
+ontologiche. I predicati poliadici di $L$ significheranno relazioni fra enti di $U$, ovvero insiemi di ennuple ordinate di elementi di $U$. Inoltre \`e stato fissato univocamente il significato delle costanti 
+descrittive: ogni simbolo descrittivo costante ha uno e un solo significato in $\mathcal{M}$. Questa semantica \`e centrata su un apparato referenzialista: assume che il significato delle espressioni 
+subenunciative di $L$ consista nel riferimento o denotazione di oggetti del dominio di $U$. Le variabili individuali a differenza delle costanti possono stare per individui o assumere valori diversi e si assume di 
+solito che l'interpretazione si limiti a fissare per ogni variabile individuale di $x$ un campo di variazione, ovvero l'insieme dei suoi valori possibili. Tuttavia in termini di esplicitazione delle condizioni di verit\`a 
+delle formule risulta utile assegnare un valore determinato o denotazione temporanea che servir\`a per poter valutare le formule aperte che contengono variabili libere. Si dice pertanto che una asseggazione 
+$a$ relativa a un modello $\mathcal{M}$ \`e l'attribuzione a ogni variabile $x$ di $L$ di un valore determinato $a(x)$ nel suo campo di variazione $U$. Occorre distinguere tra assegnazione, ossia 
+l'applicazione delle variabili a un oggetto determinato nel loro dominio e l'interpretazione delle costanti. $a$ differisce da $i$ perch\`e si suppone che il significato di una costante resti fissato univocamente in 
+un'interpretazione mentre si possono avere diverse assegnazioni di valore alle variabili entro una stessa interpretazione. Combinando queste due operazioni si pu\`o avere una notazione deteminata per tutti i 
+termini individuali del linguaggio e si scrive $\mathcal{M}^a(t)$ per indicare la denotazione di un termine individuale $t$ relativa all'interpretazione del modello e all'assegnazione $a$ e si definisce per 
+induzione la costruzione dei termini individuali di $L$:
+\begin{itemize}
+\item Base idnuttiva:
+\begin{itemize}
+\item Se $t$ \`e una costante individuale allora $\mathcal{M}^a(t):=\mathcal{M}(t)$.
+\item Se $s$ \`e una variabile individuale allora $\mathcal{M}^a(s):=a(s)$.
+\end{itemize}
+\item Passo induttivo: se $t_1, \dots, t_n$ sono termini individuali e $f$ \`e una qualsiasi costante funtoriale ennaria allora $\mathcal{M}^a(f(t_1, \dots, t_n)):=\mathcal{M}(f)(\mathcal{M}^a(t_1), \dots, 
+\mathcal{M}^a(t_n))$
+\end{itemize}
+Se $t$ non contiene variabili le assegnazioni di valori alle variabili non fanno differenza per esso e il suo singificato \`e interamente fissato dalla sola interpretazione delle costanti.
+\subsection{La definizione ricorsiva}
+Dopo aver attribuito significati a tutte le parti descrittive di $L$ ha senso tentare di esplicitare per ogni formula di $L$ le condizioni per cui \`e vera in relazione all'interpretazione effettuata. Se si riuscir\`a a 
+fornire una definizione che consenta in linea di principio di poter dedurre tutti i bicondizionali della forma di $V$ si rispetter\`a la convenzione $V$ e fornita una soddisfacente caratterizzazione della verit\`a per 
+$L$. Per far ci\`o si necessita di considerare che i bicondizionali che esemplificano $V$ sono infiniti in quanto le regole di formazione consentono di costruire potenzialmente infinite formule e per ciascuna si 
+rende necessario poter derivare il corrispondente bicondizionale. Si vuole pertanto poter esplicitare le condizioni di verit\`a di un'infinit\`a di formule in modo finito partendo da una definizione che contenga un 
+numero finito di clausole. Per far questo si utilizzi l'induzione sulla costruzione delle formule di $L$. Siccome la semantica intende conformarsi al principio di composizionalit\`a si pu\`o pensare di specificare 
+schematicamente le condizioni di verit\`a delle formule atomiche di $L$ come dipendenti dalle denotazioni dei costituenti subenunciativi e poi indicare come il valore semantico delle fomule comonenti 
+determina quello dei composti vero-funzionali. Tuttavia formule quantificate di $L$ non sono formule atomiche e non sembrano propriamente composti vero-funzionali e potrebbero essere intese come 
+abbreviazioni di congiunzioni e disgiunzioni. Se il dominio dell'interpretazione \`e infinito queste operazioni dovrebbero contenere infiniti congiunti e simili formule infinitarie. Un'altra considerazione va fatta 
+sulle regole di formazione per $L$ in quanto permettono di costruire formule aperte che non sono propriamente enunciati. Le due ultime considerazioni sono risolte mediante la nozione di soddisfacimento di 
+una formula rispetto a una data assegnazione di un valore alle variabili in modo da esplicitare anche le condizioni di verit\`a di formule quantificate che saranno vere solo se la loro condizione \`e soddisfatta da 
+ogni e da almeno una assegnazione di valore a $x$. I quantificatori vengono visti come una sorta di istruzione per valutare assegnazioni di valori alle variabili che li quantificano. Si generalizza il concetto di 
+soddisfacimento a tutte le formule, sia quelle aperte che agli enunciati. Si indica con $\models$. Si pu\`o ora scrivere la definizione induttiva. Si indica $\mathcal{M}^a\models\alpha$ a indicare che la formula $
+\alpha$ di $L$ \`e soddisfatta nel modello $\mathcal{M}=<U, i>$ e rispetto all'assegnazione $a$ di un dato valore alle variabili di $L$ entro quella interpretazione. Con $a[x/u]$ si indica l'assegnazione 
+identica ad $a$ tranne per il fatto che assegna come valore alla variabile $x$ l'individuo $u$ del dominio $U$. 
+\begin{itemize}
+\item Base induttiva: riguarda le formule atomiche: $\mathcal{M}^a\models P(t_1, \dots, t_n)$ se e solo se $<\mathcal{M}^a(t_1), \dots, \mathcal{M}^a(t_n)>\in\mathcal{M}(P)$. Questa clausola pu\`o essere 
+interpretata come: una qualunque formula atomica $P(t_1, \dots, t_n)$ di $L$ \`e soddisfatta nell'interpretazione nel modello $\mathcal{M}=<U, i>$ e rispetto all'assegnazione $a$ se e solo se la ennupla 
+ordinata di individui rispetto a questa assegnazione appartiene all'insieme denotato dal predicato $P$, equivalentemente: se e solo se fra gli individui di $U$ che sono le denotazioni dei termini $t_1, \dots, 
+t_n$ in questa interpretazione e secondo questa assegnazione sussiste la relazione che \`e la denotazione del predicato ennario $P$.
+\item Passo induttivo: vengono stabilite le clausole per il soddisfacimento di formule composte:
+\begin{itemize}
+\item $\mathcal{M}^a\models\neg\alpha$ se e solo se non $\mathcal{M}\models\alpha$.
+\item $\mathcal{M}^a\models\alpha\land\beta$ se e solo se $\mathcal{M}\models\alpha$ e $\mathcal{M}\models\beta$.
+\item $\mathcal{M}^a\models\alpha\lor\beta$ se e solo se $\mathcal{M}\models$ o $\mathcal{M}\models$.
+\item $\mathcal{M}^a\models\alpha\Rightarrow\beta$ se e solo se non $\mathcal{M}\models\alpha$ o $\mathcal{M}\models\beta$.
+\item $\mathcal{M}^a\models\alpha\Leftrightarrow\beta$ se e solo se ($\mathcal{M}\models\alpha$ e $\mathcal{M}\models\beta$ oppure non $\mathcal{M}\models\alpha$ e non $\mathcal{M}
+\models\beta$.
+\item $\mathcal{M}^a\models\forall x\alpha$ se e solo se per ogni $u\in U\mathcal{M}^{a[x/u]}\models\alpha$.
+\item $\mathcal{M}^a\models\exists x\alpha$ se e solo se per qualche $u\in U\mathcal{M}^{a[x/u]}\models\alpha$.
+\end{itemize}
+\end{itemize}
+La definizione di soddisfacimento nella semantica tarskiana viene strutturata in modo tale che per il soddifacimento di una formula $\alpha$ rispetto a un'assegnazione il valore attribuito da quell'assegnazione 
+a variabili che non compaiono libere in $\alpha$ \`e irrilevante. In conseguenza di ci\`o gli enunciati non contenendo variabili libere sono soddisfatti rispetto a tutte le assegnazioni o rispetto a nessuna.  La 
+verit\`a di una formula in un'interpretazione \`e definita come soddisfacimento rispetto a tutte le assegnazioni. Per indicare che $\alpha$ \`e vera nell'interpretazione nel modello $\mathcal{M}$ si scrive $
+\mathcal{M}\models\alpha$. La definizione induttiva della relazione di soddisfacimento \`e conforme alla convenzione $V$. Consente infatti di esplicitare le condizioni di verit\`a di formule semplici e delle loro 
+derivate. Poich\`e se ne possono dedurre tutti i condizionali \`e in grado di caratterizzare la verit\`a per il linguaggio predicativo $L$. 
+\subsection{Verit\`a logica e conseguenza logica}
+La verit\`a degli enunciati \`e caratterizzata relativamente al modello e all'interpretazione: una formula potr\`a essere vera o falsa dipendentemente da essa. Si consideri la totalit\`a delle interpretazioni possibili: 
+se una formula \`e soddisfatta rispetto ad un'assegnazione in almeno un'interpretazione si dice soddisfacibile, me \`e vera rispetto a tutte le assegnazioni in almeno un'interpretazione si dice verificabile. Si pu\`o 
+dare il caso che $\alpha$ sia soddisfatta rispetto a tutte le assegnazioni in tutte le interpretazioni, ovvero che sia vera in tutti i modelli: dato un qualsiasi modello $\mathcal{M}$, $\mathcal{M}\models\alpha$. 
+In questo caso dice che $\alpha$ \`e una formula logicamente vera o universalmente valida, ovvero \`e una legge logica e si indica con $\models\alpha$. Le formule predicative che sono leggi logiche si dicono 
+leggi logico-predicative. Attraverso la semantica formale si pu\`o caratterizzare precisamente e generalmente la nozione di legge logica: essa \`e una formula che resta vera qualunque significato si assegni ai 
+suoi simboli descrittivi e si tratta di una verit\`a logica. Si pu\`o inoltre caratterizzare una conseguenza logica: si \`e detto che una formula \`e conseguenza logica di altre formule se e solo se in qualsiasi 
+circostanza in cui tutte queste formule sono vere anche quella \`e vera. Essendo un modello la rappresentazione formale di una circostanza si pu\`o dire che $\beta$ \`e conseguenza logica di $\alpha_1, \dots, 
+\alpha_n$ se e solo se per ogni modello $\mathcal{M}$ se $\mathcal{M}\models\alpha_1$ e $\dots$ e $\mathcal{M}\models\alpha_n$ allora $\mathcal{M}\models\beta$, ossia se e solo se tutti i modelli che 
+rendono vera ciascuna delle premesse rendono vera anche la conclusione. Si pu\`o estendere la notazione in modo da poter scrivere $\alpha_1, \dots, \alpha_n\models\beta$. Un'altra notazione caratterizzabile 
+\`e l'equivalenza logica. $\alpha$ e $\beta$ si dice che sono logicamente equivalenti se ciascuna delle due \`e conseguenza logica dell'altra, ovvero se tutti i modelli che rendono vera l'una rendono vera anche 
+l'altra e viceversa. A differenza dei teoremi e di derivabilit\`a logica puramente sintattici leggi logiche e conseguenze logiche sono nozioni semantiche in quanto nella loro caratterizzazione si fa ricorso esplicito 
+alla nozione di verit\`a. Che i teoremi del calcolo dei predicati classico coincidano con le leggi logiche \`e vero ma non scontato. 
+\subsection{La verit\`a \`e inesprimibile}
+La condizione formale di adeguatezza di una definizione della verit\`a per un linguaggio \`e che non consenta di dedurre contraddizioni, che \`e legata alla distinzione fra linguaggio-oggetto e metalinguaggio: se i 
+due vengono confusi $V$ pu\`o generare paradossi che accadono se si assume che il predicato di verit\`a per un linguaggio sia esprimibile o definibile nello stesso linguaggio. Questo \`e dovuto al paradosso del 
+mentitore $(M)$: l'enunciato $(M)$ \`e falso. Questo enunciato \`e autoreferenziale. Ci si chiede quale sia il suo valore di verit\`a e si ragiona per casi: se sia vero allora per ci\`o che dice \`e falso, supponendo sia 
+falso allora \`e vero. Accettando il principio di bivalenza ciascuna di queste alternative produce una situazione paradossale. Mediante una particolare tecnica \`e possibile costruire enunciati autoreferenziali 
+attraverso un linguaggio formale come $L$: essendo le formule di $L$ insiemi di oggetti possono venir prese come dominio di una interpretazione di $L$ per cui esister\`a un'interpretazione detta morfologica 
+in cui formule di $L$ parlano delle stesse formule di $L$. Sotto certe condizioni \`e posibile costruire enunciati autoreferenziali mediante la diagonalizzazione che permette di associare a $\alpha[x]$ l'enunciato 
+$\beta$ che si ottiene sostituendo al variabile libera con il suo nome in quella interpretazione $\beta\Leftrightarrow\alpha[x."\beta"]$ $\beta$ viene detto punto fisso di $\alpha[x]$. Si ponga ora che $V$ sia il 
+predicato di verit\`a per $L$ e che sia esprimibile in $L$. Ora diagonalizzando $V(x)$ si potr\`a avere $\mu\Leftrightarrow\neg V("\mu")$ che dice che questo enunciato non \`e vero che rompe il principio di 
+bivalenza. Una conclusione \`e che il predicato di verit\`a per un linguaggio $L$ non deve essere esprimibile nello stesso linguaggio $L$, secondo una versione del teorema di Tarski di indefinibilit\`a della 
+verit\`a. Da qui l'importanza per cui la teoria in cui viene definita la verit\`a per $L$ sia formulata in un metalingauggio $L_1$ distinto dal linguaggio-oggetto $L$ e nel quale si possa soltanto parlare dei concetti 
+semantici riguardanti $L$. Una conseguenza di questa situazione \`e che una caratterizzazione universale della verit\`a \`e impossibile. Questo metodo inoltre non sembra applicabile al linguaggio naturale in 
+quanto non \`e strutturato secondo una gerarchia di metalinguaggi n\`e che ci possano essere concetti inesprimibili in esso. 

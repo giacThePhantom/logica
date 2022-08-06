@@ -1,0 +1,115 @@
+\chapter{Predicazione e quantificazione}
+\section{Dal linguaggio enunciativo a quello predicativo}
+Il linguaggio logico descritto proposizionale non basta a esprimere tutti i ragionamenti: la correttezza di alcuni dipende da altri tipi di parole logiche e dalla struttura interna degli enunciati semplici che la logica 
+enunciativa non \`e in grado di analizzare. Occorre dunque utilizzare un linguaggio di tipo diverso in grado di esibire la struttura interna degli enunciati, chiamato predicativo o elementare possiede grandi 
+capacit\`a espressive e unisce il linguaggio proposizionale e le asserzioni categoriche. 
+\section{Enunciati singolari}
+Il linguaggio deve possedere nomi per individui o nomi atomici individuati da lettere minuscole corsive e simboli per i predicati, indicati da lettere maiuscole corsive dette lettere di predicazione o costanti 
+predicative. Per significare l'individuo $m$ possiede la propriet\`a $F$ si scrive $F(m)$. Si possono rappresentare tutti gli enunicati semplici in cui si attribuisce una propriet\`a a un certo individuo. Esistono 
+inoltre enunciati in cui si afferma una relazione tra un gruppo di individui: per rappresentare questo si scrive la propriet\`a seguita dalla ennupla generalmente ordinata di nomi (tra parentesi tonde). 
+Naturalmente queste espressioni possono essere collegate da connettivi logici. 
+\subsection{Descrizioni definite ed espressioni funtoriali}
+Gli individui, oltre ad essere individuati da nomi propri possono essere identificati anche da descrizioni definite chiamate in questo modo in quanto si riferisce ad uno e un solo individuo descrivendolo mediante 
+certe propriet\`a o caratteristiche. Le descrizioni definite possono pertanto essere considerate nomi nel senso lato di espressioni che significano individui. A differenza dei nomi atomici possono essere 
+ulteriormente scomposte. In logica le descrizioni definite sono rappresentate da simboli che significano funzioni e sono pertanto detti espressioni funtoriali o costanti funtoriali o funtori. Le descrizioni definite 
+sono considerate significanti l'individuo assunto come valore da una certa funzione ennaria per una certa ennupla ordinata di argomenti individuali. I funtori sono rappresentati da lettere minuscole. Si possono 
+costruire descrizioni con altre descrizioni annidate al loro interno. 
+\section{Considerazioni generali}
+\subsection{Funzioni enunciative}
+Si cominci introducendo un insieme di simboli chiamato variabili individuali rappresentato dalle lettere minuscole corsive, utilizzate per designare individui con la possibilit\`a di cambiare valore. Sostituendo al 
+nome proprio $m$ in $F(m)$ la variabile individuale $x$ questo tipo di espressione non traduce pi\`u un enunciato in quanto la variabile $x$ non si riferisce ad alcun individuo determinato, ovvero non si pu\`o 
+stabilire il valore di verit\`a fino alla determinazione di $x$. $F(x)$ viene pertanto chiamata funzione enunciativa, definita come un'espressione che contiene $n$ variabili individuali e che si trasforma in 
+enunciato quando tutte vengono sostituite con constanti individuali o nomi.
+\subsection{I quantificatori}
+Si possono ottenere enunciati da funzioni enunciative anche attraverso la quantificazione, il metodo utilizzato per rendere gli enunciati universali e particolari. Si chiamano quantificatori in quanto dicono per 
+quanti oggetti vale l'espressione che segue, sono immediatamente seguiti dalla variabile che quantificano o vincolano. 
+\subsubsection{Quantificatore per tutti}
+Il quantificatore universale si indica con $\forall$ e vuol dire che la propriet\`a vale per tutti gli elementi della funzione enunciativa: per esempio per dire che tutte le cose hanno la propriet\`a $F$ si dir\`a: $
+\forall xF(x)$. Tramite questo quantificatore si possono rendere tutti gli enunciati universali.
+\subsubsection{Quantificatore per qualcuno}
+Il quantificatore particolari si indica con $\exists$ e vuol dire che la propriet\`a vale per alcuni degli elementi della funzione enunciativa. L'espressione \`e vera se esiste almeno un elemento che la soddisfa. 
+\subsubsection{Quantificatori combinati e interdefiniti}
+Si pu\`o esprimere tutto ci\`o che si dice con ciascuno dei due quantificatori adoperando l'altro e la negazione. \`E inoltre possibile che entrambi capitino nella stessa espressione enunciativa. 
+\section{L'identit\`a}
+Una particolare importanza viene data al simbolo che indica la relazione d'identit\`a: l'essere del linguaggio naturale quando viene utilizzato per indicare che il precedente \`e la stessa cosa del seguente, viene 
+spesso seguito da descrizioni definite. La relazione di identit\`a \`e la relazione che ogni oggetto ha unicamente con s\`e stesso. Viene rappresentata dal simbolo di uguaglianza $=$. Si noti come $x\neq 
+y:=\neg(x=y)$. L'aggiunta di questo simbolo al linguaggio predicativo ne determina un'espansione detta linguaggio quasipredicativo o quasielementare. Il potere espressivo risulta grandemente aumentato e si 
+possono fare affermazioni numericamente determinate su oggetti.
+\section{Regole per una buona formazione}
+\subsection{Simboli}
+L'alfabeto di base del linguaggio predicativo sar\`a suddiviso in tre sottoalfabeti:
+\begin{itemize}
+\item Logico: i cinque connettivi logici e i quantificatori universale ed esistenziale detti operatori logici.
+\item Descrittivo: un'infinit\`a numerabile di variabili individuali, un numero determinato o indefinitamente esteso di costanti individuali, un altro numero di lettere di predicazione o costanti predicative ennarie, 
+un certo numero di costanti funtoriali ennarie.
+\item L'alfabeto ausiliario consistente delle parentesi e della virgola.
+\end{itemize}
+\subsection{Termini e formule}
+Alle regole di formazione delle formule ben formate vanno aggiunte regole per descrivere i termini individuali o singolari, ovvero le locuzioni che esprimono determinatamente o indeterminatamente individui. 
+Verranno create a supporto metavariabili per termini individuali identificate dalle lettere $t, s, r$. Queste regole vengono create attraverso un processo induttivo: 
+\begin{itemize}
+\item Base dell'induzione: sono termini individuali le variabili individuali e le costanti individuali (o nomi propri o atomici).
+\item Passo induttivo: se $t_1,\dots, t_n$ sono termini individuali e $f$ \`e una qualsiasi costante funtoriale ennaria allora $f(t_1,\dots, t_n)$ \`e un
+termine individuale.
+\item Chiusura induttiva: nient'altro tranne quello descritto da base e passo induttivo \`e un termine individuale. 
+\end{itemize}
+Si dice formula atomica una lettera di predicazione ennaria con i termini necessari per i suoi $n$ posti. Le formule atomiche sono la base da cui si costruiscono le formule pi\`u complesse. Pertanto per 
+induzione:
+\begin{itemize}
+\item Base induttiva: ogni formula atomica \`e ben formata.
+\item Passo induttivo: definisce i composti ben formati se $\alpha$ e $\beta$ sono formule ben formate e $x$ una variabile individuale:
+\begin{itemize}
+\item $\neg\alpha$ \`e una formula ben formata.
+\item $\alpha\land\beta$ \`e una formula ben formata.
+\item $\alpha\lor\beta$ \`e una formula ben formata.
+\item $\alpha\Rightarrow\beta$ \`e una formula ben formata.
+\item $\alpha\Leftrightarrow\beta$ \`e una formula ben formata.
+\item $\forall x\alpha$ \`e una formula ben formata.
+\item $\exists x\alpha$ \`e una formula ben formata.
+\end{itemize}
+\item Chiusura induttiva: null'altro che quello specificato nella base e nel passo creano una formula ben formata.
+\end{itemize}
+Anche per il linguaggio predicativo sussistono le nozioni di occorrenza, campo e subordinazione. Si estende la notazione di campo di un quantificatore come la pi\`u piccola formula su cui esso agisce. Si 
+stabilisce che i quantificatori nella gerarchia sono allo stesso livello della negazione, ovvero al di sopra di qualsiasi connettore binario. A essere quantificata \`e l'occorrenza di una variabile e una formula si dice 
+quantificata quando inizia con un quantificatore. A volte si utilizzano linguaggi privi di costanti funtoriali e hanno come termini individuali solo variabili individuali e nomi propri e possono mancare anche questi 
+ultimi: in questo caso si parla di linguaggi puramente predicativi.  Considerando le costanti predicative ennarie non \`e stato escluso che $n=0$: in questo modo si esprimono le variabili enunciative del 
+linguaggio enunciativo. In questo modo tutti i simboli base del linguaggio enunciativo sono simboli di quello predicativo, pertanto ogni formula ben formata del linguaggio enunciativo sar\`a una formula ben 
+formata di quello predicativo, secondo questa considerazione il linguaggio predicativo \`e un'estensione di quello enunciativo. 
+\section{Variabili in libert\`a, vincolate, sostituzioni}
+Le occorrenze di una variabile in una formula del linguaggio predicativo si dividono in vincolate e libere a seconda che siano o meno abbinate ad un quantificatore e una stessa variabile pu\`o comparire libera e 
+vincolata in occorrenze diverse. Viene detta aperta una formula $\alpha$ con la variabile $x$ con almeno un'occorrenza libera e si indica con $\alpha[x]$. Una formula senza variabili libere \`e detta formula 
+chiusa o enunciato. Come gi\`a visto esistono termini individuali che contengono variabili: un termine privo di variabili \`e detto termine chiuso o nome, se ne contiene \`e chiamato termine aperto o forma 
+nominale. La definizione di formula ben formata permette la quantificazione vacua, ovvero la quantificazione di una variabile che non occorre libera, ma questo non ha effetti sulla formula. 
+\subsection{Sostituzione}
+Un'operazione che si pu\`o svolgere sulle formule \`e la sostituzione: dati una formula $\alpha$, una qualunque variabile $x$ e un termine $t$ si dice sostituzione di $x$ con $t$ in $\alpha$ la formula ottenuta 
+rimpiazzando uniformemente tutte le occorrenze libere della variabile in $\alpha$ con $t$, tale formula si indicher\`a con $\alpha[x/t]$. Si noti come \`e possibile nella sostituzione creare degli enunciati chiusi. 
+Per impedire questo si dice che un termine $t$ \`e libero per $x$ , ovvero sostituibile a $x$ in una qualsiasi formula $\alpha$ se ogni occorrenza libera di $x$ nella formula \`e tale che nessuna sottoformula di $
+\alpha$ che la contenga comincia con un quantificatore che vincola una delle variabili occorrenti nel termine $t$. $\alpha[x/t]$ \`e una sostituzione corretta se e solo se $t$ \`e libero per $x$.
+\section{Alberi di refutazione}
+Le regole semantiche e quelle per gli operatori vero-funzionali permettono di caratterizzare il concetto di validit\`a deduttiva: i simboli non logici che compaiono nella forma argomentativa possono essere 
+interpretati: una forma argomentativa della logica dei predicati \`e valida se e solo se non esiste nessun modello per quella forma in cui le premesse sono vere mentre la conclusione \`e falsa, in particolare: $
+\vdash\forall x\alpha\Leftrightarrow\neg\exists x\neg\alpha$ e $\vdash\exists x\alpha\Leftrightarrow\neg\forall x\neg\alpha$. Pur essendo la logica dei predicati indecidibile esistono procedure algoritmiche 
+per verificare la validit\`a di un numero di forme argomentative. Una tecnica consiste nella generalizzazione degli alberi di refutazione. Questa tecnica permette di dimostrare la validit\`a di qualunque forma 
+valida in un numero finito di passi ma non garantisce che si possa sempre dimostrare l'invalidit\`a di una forma invalida. Rimane in ogni caso corretto e completo. 
+\subsection{Regole di formazione}
+Rimarranno valide le regole introdotte per gli operatori vero-funzionali e le loro negazioni che verranno integrate da altre quattro regole:
+\begin{itemize}
+\item Quantificatore universale: se un cammino aperto contiene una formula nella forma $\forall x\alpha$ se $t$ \`e una costante individuale che compare in qualche passo di quel cammino si scriva $\alpha[t/x]
+$. Se e solo se il cammino non contiene alcuna formula in cui compare una costante individuale si scelga una costante individuale qualsiasi $u$ e si scriva $\alpha[u/x]$. In entrambi i casi non si segni $\forall 
+x\alpha$.
+\item Quantificazione esistenziale negata: se un cammino aperto contiene una formula non segnata nella forma $\neg\exists x\alpha$ la si segni e si scriva $\forall x\neg\alpha$ al termine di ogni cammino 
+aperto che la contiene.
+\item Quantificazione universale negata: se un cammino aperto contiene una formula non segnata nella forma $\neg\forall x \alpha$ la si segni e si scriva $\exists x\neg\alpha$ al termine di ogni cammino 
+aperto che la contiene. 
+\item Quantificazione esistenziale : se un cammino aperto contiene una formula non segnata nella forma $\exists x\alpha$ la si segni, si scelga una costante individuale $t$ che non sia gi\`a presente in alcun 
+cammino aperto che la contiene e si scriva $\alpha[t/x]$ al termine di tali cammini.
+\item Identit\`a: se un cammino aperto contiene una formula nella forma $\alpha=\beta$ e se un'altra formula $\gamma$ che contiene o $\alpha$ o $\beta$ e non \`e segnata si scriva al termine del cammino 
+qualunque formula che non vi compaia e risulti dalla sostituzione in $\gamma$ un qualsiasi numero di occorrenze di $\beta$ con $\alpha$ o viceversa.
+\item Identit\`a negata: se sul cammino aperto compare una formula nella forma $\neg\alpha=\alpha$ si scriva una $\times$ alla fine del cammino. 
+\end{itemize}
+\subsection{Generare controesempi}
+Si noti come questi alberi non generino una lista completa di controesempi, ma \`e possibile definire un metodo sistematico per associare ciascun cammino aperto di un albero terminato con un controesempio, 
+ovvero un modello in cui le premesse della forma argomentativa sono vere e la conclusione falsa. Per far ci\`o si fissa un universo che contiene esattamente un oggetto distinto per ogni distinta costante 
+individuale che compare in qualche formula del cammino e si considerino le formule atomiche che compaiono per definire un'adeguata rappresentazione dei simboli non logici in cui basta associare ciascuna 
+costante individuale a un oggetto dell'universo e interpretare ogni lettera predicativa in maniera da rendere vere le formule non negate e vere quelle negate. Si conviene di includere nella classe designata da una 
+lettera predicativa solo quegli oggetti che devono essere inclusi per rendere vere le formule atomiche. 

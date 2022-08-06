@@ -1,0 +1,145 @@
+\BOOKMARK [0][-]{chapter.1}{Introduzione}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Enunciati dichiarativi}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Essere corretti, essere veridici}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Induzione e deduzione}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Forma logica}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.5}{Logica e scienze particolari}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.6}{Parole logiche}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.7}{Diagrammi}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.8}{Argomentazioni convergenti}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.9}{Asserzioni implicite}{chapter.1}% 10
+\BOOKMARK [1][-]{section.1.10}{Valutare un'argomentazione}{chapter.1}% 11
+\BOOKMARK [2][-]{subsection.1.10.1}{Criteri di valutazione}{section.1.10}% 12
+\BOOKMARK [2][-]{subsection.1.10.2}{Verit\340 delle premesse}{section.1.10}% 13
+\BOOKMARK [2][-]{subsection.1.10.3}{Probabilit\340 della conclusione}{section.1.10}% 14
+\BOOKMARK [2][-]{subsection.1.10.4}{Pertinenza}{section.1.10}% 15
+\BOOKMARK [2][-]{subsection.1.10.5}{Vulnerabilit\340}{section.1.10}% 16
+\BOOKMARK [1][-]{section.1.11}{Fallacie di ragionamento}{chapter.1}% 17
+\BOOKMARK [0][-]{chapter.2}{Logica proposizionale}{}% 18
+\BOOKMARK [1][-]{section.2.1}{Simbolizzare \350 chiarificare}{chapter.2}% 19
+\BOOKMARK [1][-]{section.2.2}{Determinatezza, bivalenza, vero-funzionalit\340}{chapter.2}% 20
+\BOOKMARK [1][-]{section.2.3}{Connettivi logici}{chapter.2}% 21
+\BOOKMARK [2][-]{subsection.2.3.1}{Congiunzione}{section.2.3}% 22
+\BOOKMARK [2][-]{subsection.2.3.2}{Disgiunzione}{section.2.3}% 23
+\BOOKMARK [2][-]{subsection.2.3.3}{Negazione}{section.2.3}% 24
+\BOOKMARK [2][-]{subsection.2.3.4}{Condizione materiale}{section.2.3}% 25
+\BOOKMARK [2][-]{subsection.2.3.5}{Bicondizionale}{section.2.3}% 26
+\BOOKMARK [1][-]{section.2.4}{Regole per mettere in campo una buona formazione}{chapter.2}% 27
+\BOOKMARK [2][-]{subsection.2.4.1}{Simboli}{section.2.4}% 28
+\BOOKMARK [2][-]{subsection.2.4.2}{Formule ben formate}{section.2.4}% 29
+\BOOKMARK [2][-]{subsection.2.4.3}{Come catturare un infinito in modo finito}{section.2.4}% 30
+\BOOKMARK [2][-]{subsection.2.4.4}{Metavariabili e regole di formazione}{section.2.4}% 31
+\BOOKMARK [2][-]{subsection.2.4.5}{Campo, subordinazione di connettivi}{section.2.4}% 32
+\BOOKMARK [1][-]{section.2.5}{Creare tavole di verit\340}{chapter.2}% 33
+\BOOKMARK [2][-]{subsection.2.5.1}{Valutare i ragionamente con le tavole di verit\340}{section.2.5}% 34
+\BOOKMARK [2][-]{subsection.2.5.2}{Tautologie, incoerenze e contingenze}{section.2.5}% 35
+\BOOKMARK [2][-]{subsection.2.5.3}{La foma condizionale corrispondente}{section.2.5}% 36
+\BOOKMARK [1][-]{section.2.6}{Alberi di refutazione}{chapter.2}% 37
+\BOOKMARK [2][-]{subsection.2.6.1}{Regole sintattiche}{section.2.6}% 38
+\BOOKMARK [2][-]{subsection.2.6.2}{Regole di formazione}{section.2.6}% 39
+\BOOKMARK [2][-]{subsection.2.6.3}{Altri utilizzi per gli alberi di refutazione}{section.2.6}% 40
+\BOOKMARK [0][-]{chapter.3}{La logica delle asserzioni categoriche}{}% 41
+\BOOKMARK [1][-]{section.3.1}{Diagrammi di Venn}{chapter.3}% 42
+\BOOKMARK [1][-]{section.3.2}{Inferenze dirette}{chapter.3}% 43
+\BOOKMARK [1][-]{section.3.3}{Sillogismi categorici}{chapter.3}% 44
+\BOOKMARK [0][-]{chapter.4}{Predicazione e quantificazione}{}% 45
+\BOOKMARK [1][-]{section.4.1}{Dal linguaggio enunciativo a quello predicativo}{chapter.4}% 46
+\BOOKMARK [1][-]{section.4.2}{Enunciati singolari}{chapter.4}% 47
+\BOOKMARK [2][-]{subsection.4.2.1}{Descrizioni definite ed espressioni funtoriali}{section.4.2}% 48
+\BOOKMARK [1][-]{section.4.3}{Considerazioni generali}{chapter.4}% 49
+\BOOKMARK [2][-]{subsection.4.3.1}{Funzioni enunciative}{section.4.3}% 50
+\BOOKMARK [2][-]{subsection.4.3.2}{I quantificatori}{section.4.3}% 51
+\BOOKMARK [1][-]{section.4.4}{L'identit\340}{chapter.4}% 52
+\BOOKMARK [1][-]{section.4.5}{Regole per una buona formazione}{chapter.4}% 53
+\BOOKMARK [2][-]{subsection.4.5.1}{Simboli}{section.4.5}% 54
+\BOOKMARK [2][-]{subsection.4.5.2}{Termini e formule}{section.4.5}% 55
+\BOOKMARK [1][-]{section.4.6}{Variabili in libert\340, vincolate, sostituzioni}{chapter.4}% 56
+\BOOKMARK [2][-]{subsection.4.6.1}{Sostituzione}{section.4.6}% 57
+\BOOKMARK [1][-]{section.4.7}{Alberi di refutazione}{chapter.4}% 58
+\BOOKMARK [2][-]{subsection.4.7.1}{Regole di formazione}{section.4.7}% 59
+\BOOKMARK [2][-]{subsection.4.7.2}{Generare controesempi}{section.4.7}% 60
+\BOOKMARK [0][-]{chapter.5}{Deduzioni naturali}{}% 61
+\BOOKMARK [1][-]{section.5.1}{La dimostrazione formale}{chapter.5}% 62
+\BOOKMARK [1][-]{section.5.2}{Assiomatica}{chapter.5}% 63
+\BOOKMARK [1][-]{section.5.3}{Il calcolo enunciativo}{chapter.5}% 64
+\BOOKMARK [2][-]{subsection.5.3.1}{Assunzioni a tempo indeterminato}{section.5.3}% 65
+\BOOKMARK [2][-]{subsection.5.3.2}{Modus ponens o eliminazione del condizionale}{section.5.3}% 66
+\BOOKMARK [2][-]{subsection.5.3.3}{Introduzione del condizionale e assunzioni a tempo determinato}{section.5.3}% 67
+\BOOKMARK [2][-]{subsection.5.3.4}{Eliminazione della congiunzione}{section.5.3}% 68
+\BOOKMARK [2][-]{subsection.5.3.5}{Introduzione alla congiunzione}{section.5.3}% 69
+\BOOKMARK [2][-]{subsection.5.3.6}{Eliminazione della disgiunzione}{section.5.3}% 70
+\BOOKMARK [2][-]{subsection.5.3.7}{Introduzione della disgiunzione}{section.5.3}% 71
+\BOOKMARK [2][-]{subsection.5.3.8}{Eliminazione della negazione}{section.5.3}% 72
+\BOOKMARK [2][-]{subsection.5.3.9}{Introduzione della negazione}{section.5.3}% 73
+\BOOKMARK [2][-]{subsection.5.3.10}{Due negazioni fanno un'affermazione}{section.5.3}% 74
+\BOOKMARK [2][-]{subsection.5.3.11}{Introduzione di teoremi}{section.5.3}% 75
+\BOOKMARK [1][-]{section.5.4}{Il calcolo elementare o dei predicati}{chapter.5}% 76
+\BOOKMARK [2][-]{subsection.5.4.1}{Eliminazione dell'universale}{section.5.4}% 77
+\BOOKMARK [2][-]{subsection.5.4.2}{Introduzione dell'universale}{section.5.4}% 78
+\BOOKMARK [2][-]{subsection.5.4.3}{Eliminazione dell'esistenziale}{section.5.4}% 79
+\BOOKMARK [2][-]{subsection.5.4.4}{Introduzione dell'esistenziale}{section.5.4}% 80
+\BOOKMARK [2][-]{subsection.5.4.5}{Propriet\340 dei quantificatori}{section.5.4}% 81
+\BOOKMARK [2][-]{subsection.5.4.6}{Quantificatori e implicazione materiale}{section.5.4}% 82
+\BOOKMARK [1][-]{section.5.5}{Il calcolo dei predicati con identit\340 o quasielementare}{chapter.5}% 83
+\BOOKMARK [2][-]{subsection.5.5.1}{Eliminazione dell'identit\340}{section.5.5}% 84
+\BOOKMARK [2][-]{subsection.5.5.2}{Introduzione dell'identit\340}{section.5.5}% 85
+\BOOKMARK [1][-]{section.5.6}{Considerazioni conclusive}{chapter.5}% 86
+\BOOKMARK [0][-]{chapter.6}{Semantica logica}{}% 87
+\BOOKMARK [1][-]{section.6.1}{Teoria degli insiemi}{chapter.6}% 88
+\BOOKMARK [2][-]{subsection.6.1.1}{Insiemi}{section.6.1}% 89
+\BOOKMARK [2][-]{subsection.6.1.2}{Relazioni e operazioni insiemistiche}{section.6.1}% 90
+\BOOKMARK [2][-]{subsection.6.1.3}{Ontologia e insiemi}{section.6.1}% 91
+\BOOKMARK [2][-]{subsection.6.1.4}{Paradosso di Russel}{section.6.1}% 92
+\BOOKMARK [1][-]{section.6.2}{Una teoria del significato basata sulla verit\340}{chapter.6}% 93
+\BOOKMARK [1][-]{section.6.3}{Semantica Tarskiana}{chapter.6}% 94
+\BOOKMARK [2][-]{subsection.6.3.1}{La convenzione V}{section.6.3}% 95
+\BOOKMARK [2][-]{subsection.6.3.2}{Interpretazioni e assegnazioni}{section.6.3}% 96
+\BOOKMARK [2][-]{subsection.6.3.3}{La definizione ricorsiva}{section.6.3}% 97
+\BOOKMARK [2][-]{subsection.6.3.4}{Verit\340 logica e conseguenza logica}{section.6.3}% 98
+\BOOKMARK [2][-]{subsection.6.3.5}{La verit\340 \350 inesprimibile}{section.6.3}% 99
+\BOOKMARK [0][-]{chapter.7}{Cenni di metalogica}{}% 100
+\BOOKMARK [1][-]{section.7.1}{Coerenza e completezza o le virt\371 di una logica}{chapter.7}% 101
+\BOOKMARK [2][-]{subsection.7.1.1}{La coerenza dei sistemi formali}{section.7.1}% 102
+\BOOKMARK [2][-]{subsection.7.1.2}{La completezza dei sistemi formali}{section.7.1}% 103
+\BOOKMARK [1][-]{section.7.2}{Teoremi limitativi}{chapter.7}% 104
+\BOOKMARK [2][-]{subsection.7.2.1}{L'incompletezza dell'aritmetica}{section.7.2}% 105
+\BOOKMARK [2][-]{subsection.7.2.2}{Incompletezza e prove di coerenza}{section.7.2}% 106
+\BOOKMARK [2][-]{subsection.7.2.3}{La logica \350 trasendentale}{section.7.2}% 107
+\BOOKMARK [0][-]{chapter.8}{Il ragionamento induttivo}{}% 108
+\BOOKMARK [1][-]{section.8.1}{Il concetto di forza}{chapter.8}% 109
+\BOOKMARK [1][-]{section.8.2}{Il sillogismo statistico}{chapter.8}% 110
+\BOOKMARK [2][-]{subsection.8.2.1}{Argomentazioni statistiche}{section.8.2}% 111
+\BOOKMARK [1][-]{section.8.3}{Generalizzazioni statistiche}{chapter.8}% 112
+\BOOKMARK [1][-]{section.8.4}{Generalizzazioni induttive e induzioni semplici}{chapter.8}% 113
+\BOOKMARK [1][-]{section.8.5}{Induzione per analogia}{chapter.8}% 114
+\BOOKMARK [1][-]{section.8.6}{Inferenza causali e metodi di Mill}{chapter.8}% 115
+\BOOKMARK [2][-]{subsection.8.6.1}{Causa necessaria o condizione causalmente necessaria}{section.8.6}% 116
+\BOOKMARK [2][-]{subsection.8.6.2}{Causa sufficiente o condizione causalmente sufficiente}{section.8.6}% 117
+\BOOKMARK [2][-]{subsection.8.6.3}{Causa necessaria e sufficiente}{section.8.6}% 118
+\BOOKMARK [2][-]{subsection.8.6.4}{Dipendenza causale di una quantit\340 variabile da un'altra}{section.8.6}% 119
+\BOOKMARK [0][-]{chapter.9}{La semantica di Kripke}{}% 120
+\BOOKMARK [1][-]{section.9.1}{Strutture \(frames\)}{chapter.9}% 121
+\BOOKMARK [1][-]{section.9.2}{Interpretazioni e verit\340 in strutture: modelli}{chapter.9}% 122
+\BOOKMARK [1][-]{section.9.3}{Concetti semantici}{chapter.9}% 123
+\BOOKMARK [0][-]{chapter.10}{La logica modale minimale}{}% 124
+\BOOKMARK [1][-]{section.10.1}{Formule valide}{chapter.10}% 125
+\BOOKMARK [1][-]{section.10.2}{Formule non valide}{chapter.10}% 126
+\BOOKMARK [1][-]{section.10.3}{Il calcolo K della logica modale minimale}{chapter.10}% 127
+\BOOKMARK [0][-]{chapter.11}{Logiche modali aletiche}{}% 128
+\BOOKMARK [1][-]{section.11.1}{La logica modale aletica minimale KT}{chapter.11}% 129
+\BOOKMARK [2][-]{subsection.11.1.1}{Teorema}{section.11.1}% 130
+\BOOKMARK [1][-]{section.11.2}{Il sistema KT4}{chapter.11}% 131
+\BOOKMARK [1][-]{section.11.3}{il sistema KT5\(S5\)}{chapter.11}% 132
+\BOOKMARK [1][-]{section.11.4}{Le modalit\340 nei tre sistemi logici}{chapter.11}% 133
+\BOOKMARK [2][-]{subsection.11.4.1}{KT}{section.11.4}% 134
+\BOOKMARK [2][-]{subsection.11.4.2}{KT4}{section.11.4}% 135
+\BOOKMARK [2][-]{subsection.11.4.3}{KT5}{section.11.4}% 136
+\BOOKMARK [0][-]{chapter.12}{Logiche descrittive}{}% 137
+\BOOKMARK [1][-]{section.12.1}{Costruttori per concetti e ruoli}{chapter.12}% 138
+\BOOKMARK [2][-]{subsection.12.1.1}{Costruttori di concetti booleani}{section.12.1}% 139
+\BOOKMARK [2][-]{subsection.12.1.2}{Restrizioni di ruolo}{section.12.1}% 140
+\BOOKMARK [2][-]{subsection.12.1.3}{Nominali}{section.12.1}% 141
+\BOOKMARK [2][-]{subsection.12.1.4}{Costruttori di ruolo}{section.12.1}% 142
+\BOOKMARK [2][-]{subsection.12.1.5}{Caratteristiche di ruolo}{section.12.1}% 143
+\BOOKMARK [1][-]{section.12.2}{La logica descrittiva SROIQ}{chapter.12}% 144
+\BOOKMARK [1][-]{section.12.3}{Semantiche delle logiche descrittive}{chapter.12}% 145

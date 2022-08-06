@@ -1,0 +1,64 @@
+\chapter{Logiche modali aletiche}
+Le logiche modali aletiche studiano il comportamento logico delle modalit\`a del necessario, del possibile, dell'impossibile e del contingente. Si amplia il linguaggio della logica proposizionale con $\nece$ e 
+$\poss$. $\nece A$ si legge $A$ \`e necessariamente vera e $\poss$ come $A$ \`e possibile. L'impossibile si formalizza con $\neg\poss A$ mentre contingente con $A\land\poss\neg A$. Tutto quanto 
+assunto nella logica modale minimale \textbf{K} vale nella logica modale aletica e pertanto la semantica di Kripke \`e uno strumento adeguato per trattare gli operatori modali aletici. 
+\section{La logica modale aletica minimale \textbf{KT}}
+\textbf{KT} si ottiene aggiungendo a \textbf{K} come nuovo assioma $\nece A\Rightarrow A$. Sono derivabili in tutte le formule derivabili da \textbf{K}. pi\`u quelle nella cui derivazione si utilizza l'assioma 
+appena aggiunto. Per ottenere una semantica adeguata a \textbf{KT} si deve modificare la nozione di validit\`a utilizzando la nozione di validit\`a in una struttura $(W, R)$. Una formula $A$ \`e valida in $(W, R)$ 
+se e solo se per ogni interpretazione$I$ e per ogni mondo $u$ di $W$ $A$ \`e vera in $u$ rispetto a $\mathcal{M}=(W,R,I)$ per fare questo si dimostri il seguente teorema da qui seguono facilmente 
+correttezza e completezza di \textbf{KT}.
+\subsection{Teorema}
+\subsubsection{Enunciato}
+La formula $\nece p\Rightarrow p$ \`e valida in $(W, R)$ se e solo se $R$ \`e riflessiva.
+\subsubsection{Dimostrazione}
+Si dimostri prima che se $\nece p\Rightarrow p$ \`e valida in $(W, R)$ allora $R$ \`e riflessiva, ovvero se $u\in W$ in mondo qualsiasi allora $uRu$. Sia $u\in W$ un mondo qualsiasi si definisce 
+l'interpretazione $I$ in $(W, R)$ come per ogni $w$ di $W$, $I(p,w)=True$ se e solo se $uRw$.  In base a $I$ in $u$ \`e vera $\nece p$. Dato che per ipotesi $\nece p\Rightarrow p$ \`e valida in $(W, R)$ essa 
+\`e vera in tutti i mondi di $W$ e pertanto anche in $u$, dalla verit\`a in $u$ di $\nece p$ e di $\nece p\Rightarrow p$ segue la verit\`a di $p$, ovvero $I(p, u)=True$, dalla definizione di $I$ si ottiene $uRu$. \\
+Si dimostri ora che se $R$ \`e riflessiva allora $\nece p\Rightarrow p$ \`e valida in $(W, R)$. Se $\nece p\Rightarrow p$ non fosse valida in $(W, R)$ esisterebbe un'interpretazione $I$ e un mondo $u\in W$  in
+cui \`e falsa, pertanto $\nece p$ vera e $p$ falsa. Dato che per ipotesi $R$ \`e riflessiva si ha l'assurdo che in $u$ sarebbe vera $\nece p$ e in un mondo accessibile da $u$ falsa $p$.
+\section{Il sistema $\mathbf{KT_4}$}
+Si consideri la formula $\nece p\Rightarrow\nece\nece p$ se $p$ \`e necessaria, allora \`e necessariamente vero che $p$ \`e necessaria. Questa regola non \`e derivabile in \textbf{KT} in quanto supponendo un
+mondo $u$ con $\nece p$ e $\neg\nece\nece p$ che accede a $v$ con $\neg\nece p$ che a sua volta accede a $\neg p$ crea un modello in cui $\nece p\Rightarrow\nece\nece p$ \`e falsa anche se i mondi 
+accedono a s\`e stessi. Per questo motivo si aggiunge a \textbf{KT} come assioma $\nece A\Rightarrow\nece\nece A$. Questo sistema viene chiamato anche $\mathbf{S_4}$. Per trovare la semantica adeguata
+occorre individuare una nuova nozione di validit\`a per cui l'assioma diventi valido. Il diagramma descritto precedentemente suggerisce come procedere: se il mondo $w$ fosse accessibile da $u$ il modello
+verrebbe a contenere l'assurdo che in $u$ sia vera $\nece p$ e in $w$ $\neg p$. Pertanto si deve imporre che $R$ sia transitiva: da $uRv$ e $vRw$ segue che $uRw$. SI dimostra pertanto il teorema: la 
+formula $\nece p\Rightarrow\nece\nece p$ \`e valida in $(W, R)$ se e solo se $R$ \`e transitiva. da cui segue il teorema di correttezza e completezza. La semantica di Kripke pertanto determina che 
+l'accettazione o meno della validit\`a di una formula equivale ad una propriet\`a della relazione $R$ di accessibilit\`a. 
+\section{il sistema $\mathbf{KT_5}(S_5)$}
+Un ragionamento analogo alla sezione precedente si pu\`o condurre sulla formula $\poss p\Rightarrow\nece\poss p$: ci\`o che \`e possibile \`e necessario che sia possibile. Questa formula non \`e derivabile in 
+$\mathbf{KT_4}$ e pertanto esprime una propriet\`a non ancora considerata dell'operatore di necessit\`a. Si introduce pertanto come assioma grazie al teorema: la formula $\poss p\Rightarrow\nece\poss p$ 
+\`e valida in $(W,R)$ se e solo se \`e euclidea. Determinando una relazione $R$ come euclidea se e solo se per ogni $u,v,w\in W$ se $uRv$ e $uRw$ allora $vRw$ e $wRv$, ovvero se da un mondo si accede a 
+due mondi questi si vedono l'un l'altro. Se $R$ \`e riflessiva ed euclidea allora \`e una relazione di equivalenza. Si aggiunge pertanto lo schema $\poss A\Rightarrow \nece\poss A$. Le formule derivabili in 
+$\mathbf{KT_5}$ sono tutte e sole le formule nelle strutture $(W, R)$ con $R$ riflessiva ed euclidea, con $R$ relazione di equivalenza. \`E un estensione di $\mathbf{KT_4}$ corretta e completa.
+\section{Le modalit\`a nei tre sistemi logici}
+I re sistemi modali considerati $\mathbf{KT}, \mathbf{KT_4}$ e $\mathbf{KT_5}$ si distinguono per il numero di modalit\`a distinte in essi presenti. Si definisce modalit\`a una qualisasi stringa di operatori 
+modali preceduta o meno dal segno di negazione. 
+\subsection{$\mathbf{KT}$}
+Si pu\`o dimostrare che in $\mathbf{KT}$ vi sono infinite modalit\`a non equivalenti: non si possono dimostrare formule bicondizionali del tipo $SA\Leftrightarrow S'A$ dove $S$ e $S'$ sono stringhe diverse 
+di operatori modali.
+\subsection{$\mathbf{KT_4}$}
+In $\mathbf{KT_4}$ ci sono varie modalit\`a equivalenti:
+\begin{center}
+\begin{tabular}{c c}
+$\mathbf{KT_4}\vdash\poss\poss A\Leftrightarrow\poss A$ & $\mathbf{KT_4}\vdash\nece\nece A\Leftrightarrow\nece A$\\
+$\mathbf{KT_4}\vdash\nece\poss A\Leftrightarrow\nece\poss\nece\poss A$ & $\mathbf{KT_4}\vdash\nece\poss A\Leftrightarrow\poss\nece\poss\nece A$
+\end{tabular}
+\end{center}
+Sfruttando queste equivalenze si dimostra che in $\mathbf{KT_4}$ vi sono quattordici modalit\`a distinte in quanto tutte le altre sono equivalenti ad una di esse e sono le seguenti e le rispettive negazioni:
+\begin{center}
+$-$ \quad $\nece$ \quad $\poss$ \quad $\nece\poss$ \quad $\poss\nece$ \quad $\nece\poss\nece$ \quad $\poss\nece\poss$
+\end{center}
+Inoltre tra le prime sette valgono le seguenti relazioni di implicazione:
+\begin{itemize}
+\item $\poss\nece A\Rightarrow \poss\nece\poss A\Rightarrow\poss A$.
+\item $\nece\poss A\Rightarrow\poss\nece\poss A$.
+\item $\nece\poss\nece a\Rightarrow\nece\poss A$,
+\item $\nece A\Rightarrow\nece\poss\nece A\Rightarrow\poss\nece A$.
+\item $\nece A\Rightarrow A\Rightarrow \poss A$.
+\end{itemize}
+\subsection{$\mathbf{KT_5}$}
+In $\mathbf{KT_5}$ si dimostrano i seguenti condizionali:
+\begin{center}
+$\mathbf{KT_5}\vdash\poss A\Leftrightarrow\nece\poss A$ \quad $\mathbf{KT_5}\vdash\nece A\Leftrightarrow\poss\nece A$
+\end{center}
+E le modalit\`a distinte si riducono a $-$, $\nece$, $\poss$ e le loro negazioni.

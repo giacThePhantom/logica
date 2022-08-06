@@ -1,0 +1,158 @@
+\chapter{Logica Proposizionale}
+Una proposizione \`e una frase riguardante cosa succede nel mondo, possono avere diverse forme ma unicamente vere o false e formano le formule atomiche del
+linguaggio proposizionale. 
+\section{Linguaggio}
+L'alfabeto si separa in tre componenti:
+\begin{itemize}
+\item Simboli logici: $\neg, \land,\lor, \supset, \equiv$.
+\item Simboli non logici: un insieme $\mathcal{Prop}$ di simboli $P$ detto variabili proposizionali.
+\item Simboli separatori $($ e $)$.
+\end{itemize}
+Si definisce formula ben formata:
+\begin{itemize}
+\item Ogni $P\in\mathcal{Prop}$ \`e una formula atomica.
+\item Ogni formula atomica \`e ben formata.
+\item Se $A$ e $B$ sono formule ben formate allora lo sono anche $\neg A$, $A\land B$, $A\lor B$, $A\supset B$, $A\equiv B$.
+\end{itemize}
+Si dicono costanti proposizionali le proposizioni con un dato valore di verit\`a. Le variabili proposizionali sono segni che rappresentano una possibile 
+costante proposizionale, non hanno valore di verit\`a definito. I simboli hanno una scala di priorit\`a, in ordine decrescente: $\neg, \land, lor, \supset, 
+\equiv$. 
+\subsection{Formule come alberi}
+Una formula pu\`o essere considerata come un albero dove i nodi foglia sono variabili o costanti proposizionali mentre gli altri connettivi logici. 
+\subsection{Sottoformule}
+Si definiscono sottoformule come: 
+\begin{itemize}
+\item $A$ \`e sottoformula di s\`e stessa.
+\item $A$ e $B$ sono sottoformule di $A\land B$, $A\lor B$, $A\supset B$, $A\equiv B$.
+\item $A$ \`e sottoformula di $\neg A$. 
+\item Se $A$ \`e sottoformula di $B$ e $B$ \`e sottoformula di $C$ allora $A$ \`e sottoformula di $C$.
+\item $A$ si dice sottoformula di $B$ se $A$ \`e sottoformula di $B$ e $A$ \`e diversa da $B$.
+\end{itemize}
+Le sottoformule sono tutti i sottoalberi di una formula rappresentata come albero, uno per ogni nodo. 
+\section{Soddisfacibilit\`a}
+Si definisce interpretazione proposizionale una formula $I:\mathcal{Prop}\rightarrow\{True, False\}$. Esistono $2^{|\mathcal{Prop}|}$ interpretazioni. Si 
+pu\`o considerare come un sottoinsieme $S\subset\mathcal{Prop}$ tale che $A\in S\Leftrightarrow I(A)=True$. Una formula $A$ si dice soddisfatta per 
+l'interpretazione $I$ o $I\models A$ se:
+\begin{itemize}
+\item $I\models A$ se $I(A)=True,\ A\in\mathcal{Prop}$.
+\item $I\models\neg A$ se non $I\models A$.
+\item $I\models A\land B$ se $I\models A$ e $I\models B$.
+\item $I\models A\lor B$ se $I\models A$ o $I\models B$.
+\item $I\models A\supset B$ se quando $I\models A$ allora $I\models B$.
+\item $I\models A\equiv B$ se $I\models A$ se e solo se $I\models B$.
+\end{itemize} 
+Per ogni variabile proposizionale $P$ che appaia in $A$ se $I(P)=I'(P)$ allora $I\models A$ se e solo se $I'\models A$. 
+\section{Formule valide, soddisfacibili e insoddisfacibili}
+Una formula $A$ si dice valida se per ogni sua interpretazione $I$ allora $I\models A$. Una formula si dice soddisfacibile se esiste almeno una 
+interpretazione $I$ tale che $I\models A$. Una formula si dice insoddisfacibile non esiste interpretazione che la soddisfi. Per controllare la validit\`a
+di una formula si possono enumerare tutte le interpretazioni rilevanti per essa e controllare se la soddisfano. Un insieme $\Gamma=\{A_1, \dots, A_n\}$ \`e
+valido, soddisfacibile o insoddisfacibile se e solo se lo \`e $A_1\land\dots\land A_n$. 
+\section{Conseguenza e equivalenza logica}
+Una formula $A$ si dice conseguenza di $\Gamma$ o $\Gamma\models A$ se e solo se per ogni interpretazione $I$ tale che $I\models\Gamma$ allora $I\models A$. 
+Due formule $F$ e $G$ si dicono equivalenti se e solo se hanno lo stesso valore per ogni interpretazione: $F\equiv G\Leftrightarrow I(G)=I(F)\forall I$.
+\subsection{Propriet\`a della conseguenza logica proposizionale}
+Siano $\Gamma$ e $\Sigma$ due insiemi di formule e $A$ e $B$ due formule ben formate, allora :
+\begin{itemize}
+\item Riflessivit\`a: $\{A\}\models A$.
+\item Monotonicit\`a: se $\Gamma\models A$ allora $\Gamma\cup\Sigma\models A$.
+\item Taglio: se $\Gamma\models A$ e $\Sigma \cup A\models B$ allora $\Gamma\cup\Sigma\models B$.
+\item Compattezza: Se $\Gamma\models A$ esiste un sottoinsieme finito $\Gamma_0\subset\Gamma$ tale che $\Gamma_0\models A$. 
+\item Teorema della deduzione: se $\Gamma, A\models B$ allora $\Gamma\models A\supset B$.
+\item Principio di refutazione: $\Gamma\models A$ se e solo se $\Gamma\cup\{\neg A\}$ \`e insoddisfacibile.
+\end{itemize}
+\subsubsection{Dimostrazione riflessivit\`a}
+Per ogni interpretazione $I$ se $I\models A$ allora $I\models A$.
+\subsubsection{Dimostrazione monotonicit\`a}
+Per ogni $I$ se $I\models \Gamma\cup\Sigma$ allora $I\models\Gamma$. Essendo per ipotesi che $\Gamma\models A$ si pu\`o inferire che $I\models A$, pertanto 
+$\Gamma\cup\Sigma\models A$.
+\subsubsection{Dimostrazione Taglio}
+Per definizione di conseguenza logica si capisce dall'ipotesi che $I\models \Gamma$ e $I\models \Sigma$. Essendo che $I\models \Gamma$ allora $I\models A$,
+essendo che $I\models\Sigma$, $I\models\Sigma\cup\{A\}$ essendo per ipotesi $\Sigma\cup\{A\}\models B$ allora $I\models B$. Si pu\`o pertanto concludere che
+$\Gamma\cup\Sigma\models B$.
+\subsubsection{Dimostrazione compattezza}
+La dimostrazione \`e banale se $A$ \`e una tautologia o se $\Gamma$ \`e finito. Sia $P_A$ l'insieme di formule atomiche in $A$, un insieme finito e siano
+$I_1, \dots, I_n$ con $n\le 2^{P_A}$ tutte le interpretazioni di $P_A$ che non soddisfano $A$, ovvero $I_i\not\models A$. Esistono in quanto $A$ non \`e una
+tautologia. Dal fatto che $\Gamma\models A$ si estendano $I_1, \dots, I_n$ in $I'_1, \dots, I'_n$ tali che $I'_i\not\models \Gamma_k\in \Gamma$. Sia ora
+$\Gamma_0=\{\Gamma_1, \dots, \Gamma_k\}$ allora $\Gamma_0\models A$ in quanto dal falso segue ogni cosa. Pertanto se $I\models\Gamma_0$ $I$ \`e 
+un'estensione di $J$ di $P_A$ che soddisfa $A$, pertanto $I\models A$. 
+\subsubsection{Dimostrazione del teorema della deduzione}
+Si assuma per ipotesi che $I\models\Gamma$ ci sono due casi: se $I\models A$ allora $I\models B$ per ipotesi, pertanto $I\models A\Rightarrow B$, se $I\not\models A$ allora, siccome $(FALSE)\models 
+B$ allora $I\models A\Rightarrow B$ in quanto per ogni interpretazione da premessa falsa segue ogni cosa. Si pu\`o pertanto concludere che $I\models A\Rightarrow B$. 
+\subsubsection{Principio di refutazione}
+Si supponga per contraddizione che $\Gamma\cup\{\neg A\}$ sia soddisfacibile: questo implica che esiste un'interpretazione $I$ tale che $I\models\Gamma$ e $I\models\neg A$, ovvero $I\not\models A$, 
+questo crea una contraddizione con l'ipotesi che $\Gamma\models A$. Si consideri ora $I\models\Gamma$, pertanto dal fatto che $\Gamma\cup\{\neg A\}$ \`e insoddisfacibile si ha che $I\not\models\neg A$
+pertanto $I\models A$ e si pu\`o concludere che $\Gamma\models A$. 
+\section{Assiomi e teorie}
+\subsection{Teoria proposizionale}
+Si definisce teoria un insieme di formule chiuso per la conseguenza logica, ovvero $T$ \`e una teoria se e solo se $T\models A$ implica che $A\in T$. Una teoria proposizionale contiene un insieme di formule
+infinito: ogni teoria $T$ contiene almeno tutte le formule valide.
+\subsection{Assiomatizzazione}
+\subsubsection{Insieme di assiomi per una teoria}
+Un insieme di formule $\Omega$ \`e un insieme di assiomi per una teoria $T$ se per ogni $A\in T$, $\Omega\models A$. Una teoria si dice assiomatizzabile finitamente se ha un insieme finito di assiomi. Si
+definisce chiusura logica per ogni insieme $\Gamma$, la funzione $cl$ tale che $cl(\Gamma)=\{A|\Gamma\models A\}$. Per ogni insieme $\Gamma$, la sua chiusura logica $cl(\Gamma)$ \`e una teoria e 
+$\Gamma$ \`e un insieme di assiomi per la sua chiusura logica ma non l'unico.
+\subsection{Rappresentazione compatta della conoscenza}
+L'assiomatizzazione di una teoria \`e un modo compatto di rappresentare un insieme di interpretazioni e pertanto un gruppo di stati del mondo possibili e accettabili, ovvero di rappresentare tutta la 
+conoscenza posseduta del mondo. Gli assiomi di una teoria costituiscono la conoscenza base e tutto il resto pu\`o essere ottenuto attraverso la conseguenza logica. Da questo deriva il fatto che nessun assioma
+deve essere derivabile da altri.
+\subsection{Sistemi basati sulla logica}
+Un sistema basato sulla logica per rappresentare e ragionare sulla conoscenza \`e composto da una conoscenza di base e un sistema di ragionamento: la prima consiste un una collezione finita di formule in un
+linguaggio logico in modo da permettere di risolvere queries sottomesse al sistema di ragionamento. 
+\section{Tavole di verit\`a}
+Due formule $F$ e $G$ si dicono logicamente equivalenti se $I(F)=I(G)$ per ogni $I$ e conseguenza logica se ogni interpretazione di $F$ soddisfa $G$ $F$ si dice valida se \`e soddisfatta da ogni 
+interpretazione, soddisfacibile se \`e soddisfatta da qualche interpretazione, insoddisfacibile se non esiste alcuna interpretazione che la soddisfa. Le tavole di verit\`a esplicitano ogni possibile interpretazione
+in modo da decidere il tipo di formula.
+\section{Problemi di ragionamento e decisione}
+Si dice controllo del modello o $MC(I, \phi)$ il calore di verit\`a di $\phi$ in $I$, ovvero se $I$ soddisfa o no $\phi$. Soddisfacibilit\`a o insoddisfacibilit\`a $SAT/UNSAT(\phi): \exists I: I\models\phi$ ovvero
+l'esistenza di un modello che soddisfa $\phi$.  Conseguenza logica$(\Gamma, \phi): \Gamma\models\phi$ se $\phi$ \`e soddisfatta da tutti i modelli $I$ che soddisfino tutte le formule in $\Gamma$. 
+Una procedura di decisione del modello o MCDP \`e un algoritmo che controlla se una formula $\phi$ \`e soddisfatta da un'interpretazione $I$, ovvero $MCDP(\phi, I)=TRUE)$ se e solo se $I\models\phi$ e
+falsa altrimenti. La procedura ritorna per ogni input vero o falso. Un modo semplice per implementare questo algoritmo \`e sostituire nella formula ogni valore delle formule atomiche attraverso le tavole di 
+verit\`a di $I$ e poi applicare ricorsivamente la vero-funzione degli algoritmi. 	Una semplice ottimizzazione \`e rappresentata dalla lazy evaluation che permette, se il valore viene deciso univocamente dal primo
+elemento di un connettivo di non considerare il secondo. Una procedura di decisione della soddisfacibilit\`a o SDP \`e un algoritmo che riceve in input una formula $\phi$ e controlla la sua soddisfacibilit\`a. 
+Una procedura di decisione della validit\`a o VDC \`e un algoritmo che prende in input una forma e controlla la sua validit\`a. Possono essere basati su una decisione di soddisfacibilit\`a in quanto $\phi$ \`e
+valida se e solo se $\neg\phi$ \`e non soddisfacibile. Quando $SDP(\neg\phi)$ ritorna un'interpretazione si dice contromodello di $\phi$. Una procedura di decisione per la conseguenza logica LCPD \`e
+un algoritmo che controlla se una formula sia logica conseguenza di un insieme finito di formula, pu\`o essere implementato attraverso una SDP in quanto $\Gamma\models\phi$ se e solo se $\Gamma\cup
+\{\neg\phi\}$ \`e insoddisfacibile. Quando $SDP(\gamma_1\land\cdots\land\gamma_n\land\neg\phi)$ ritorna un'interpretazione $I$ \`e un'intepretazione per il modello e un contromodello per $\phi$.
+\section{Decidire soddisfacibilit\`a}
+\subsection{Conjunctive normal form (CNF)}
+Si definisce come literal una variabile proposizionale o una sua negazione e clause una disgiunzione di literals, una formula in conjunctive normal form \`e una congiunzione di clauses. Una formula in CNF ha
+pertanto la forma $(I_{1,1}\lor\cdots\lor I_{1, n_1})\land\cdots\land(I_{m1}\lor\cdots\lor I_{m,n_m})$ o, in maniera equivalente $\bigwedge\limits_{i=1}^m(\bigvee\limits_{j=1}^{n_j}I_{j, i})$. $\land$ e 
+$\lor$ godono delle propriet\`a della commutativit\`a, e dell'assorbimento: se sono composte dallo stesso elemento si pu\`o sostituire con l'elemento. 
+\subsubsection{Propriet\`a delle clauses}
+Tutte le clauses ottenute riordinando i literals sono equivalenti. Occorrenze multiple dello stesso literal possono essere elimitate tranne una. Si possono rappresentare pertanto come un insieme di literals, 
+lasciando implicita la disgiunzione.
+\subsubsection{Propriet\`a delle formule in CNF}
+Tutte le formule ottenute riordinando clauses sono equivalenti e occorrenze multiple delle stesse clauses possono essere eliminate tranne una. Si possono pertanto rappresentare le formule CNF come insiemi
+di insiemi di literals. Inoltre ogni formula pu\`o essere ridotta in CNF, ovvero $\models CNF(\phi)\equiv\phi$.
+\subsubsection{Riduzione in CNF}
+La funzione $CNF$ che trasforma una formula proposizionale nella sua forma $CNF$ \`e definita ricorsivamente come:
+\begin{itemize}
+\item $CNF(p)=p$ se $p\in\mathcal{Prop}$.
+\item $CNF(\neg p)=\neg p$ se $\neg p\in\mathcal{Prop}$.
+\item $CNF(\phi\Rightarrow\psi)=CNF(\neg\phi)\otimes CNF(\psi)$.
+\item $CNF(\phi\land\psi)=CNF(\phi)\land CNF(\psi)$.
+\item $CNF(\phi\lor\psi)=CNF(\phi)\otimes CNF(\psi)$.
+\item $CNF(\phi\equiv\psi)=CNF(\phi\Rightarrow\psi)\land CNF(\psi\Rightarrow\phi)$.
+\item $CNF(\neg\neg\phi)=CNF(\phi)$.
+\item $CNF(\neg(\phi\Rightarrow\psi))=CNF(\phi)\otimes CNF(\neg\psi)$.
+\item $CNF(\neg(\phi\land\psi))=CNF(\neg\phi)\otimes CNF(\neg\psi)$.
+\item $CNF(\neg(\phi\lor\psi))=CNF(\neg\phi)\land CNF(\neg\psi)$.
+\item $CNF(\neg(\phi\equiv\psi))=CNF(\phi\land\neg\psi)\otimes CNF(\psi\land\neg\phi)$.
+\end{itemize}
+Dove $(C_1\land\cdots\land C_n)\otimes(D_1\land\cdots\land D_m)$ \`e definito come $(C_1\lor D_1)\land\cdots\land(C_1\lor D_m)\land\cdots\land(C_n\lor D_1)\land\cdots\land(C_n\lor D_m)$. 
+\subsubsection{Costo del CNF}
+Il CNF nella sua forma normale permette di avere un algoritmo di soddisfacibilit\`a semplice ma il costo della trasformazione diventa esponenziale. 
+\subsection{La procedura di decisione DPLL SAT}
+\subsubsection{Soddisfacibilit\`a di un insieme di clauses}
+Sia $N=C_0, \dots, C_n=CNF(\phi)$ allora $I\models\phi$ se e solo se $I\models C_i$ per ogni $i=0,\dots, n$ e $I\models C_i$ se e solo se per qualche literal $P\in C, I\models P$. Per controllare che un 
+modello $I$ soddisfi $N$ non si devono conoscere i valori di verit\`a che $I$ assegna a tutti i literals che appaiono in $N$. 
+\subsubsection{Valutazione parziale}
+Una valutazione parziale \`e una funzione parziale che associa a qualche variabile proposizionale di $\mathcal{Prop}$ un valore di verit\`a e pu\`o essere indefinita per gli altri. Grazie ad essa si possono costruire
+modelli per un insieme di clauses $N$ in maniera incrementale. La DPLL comincia con una valutazione vuota e prova ad espanderla passo per passo a tutte le lettere proposizionali in $N$. Una clause pu\`o 
+essere cos\`i vera se uno dei suoi literals \`e vero, falsa se sono tutti falsi o altrimenti indecisa o non risolta. 
+\subsubsection{DPLL}
+Per ogni formula CNF$\phi$ e la formula atomica $p$ $\phi|_p$ \`e la formula ottenuta da $\phi$ sostituendo tutte le occorrenze di $p$ con $T$ e semplificando il risultato rimuovendo tutte le clause 
+contenenti il termine disgiuntivo $T$ e tutti i literals $\neg T$ nelle clause rimanenti.  Se una formula contiene una clause che consiste di un singolo literal \`e detta unit clause. Se $\phi$ contiene una unit
+clause allora per soddisfarla si deve soddisfare la unit clause e pertanto il suo literal deve essere valutato VERO. Attraverso questo metodo una formula risulta soddisfacibile se \`e rappresentata da un insieme
+vuoto, se invece la formula contiene un insieme vuoto allora \`e insoddisfacibile. Se la unit propagation non termina si deve decidere un valore di verit\`a per un literal per poterla applicare. Questo verr\`a fatto
+attraverso una scelta euristica.

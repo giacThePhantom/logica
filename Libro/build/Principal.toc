@@ -1,0 +1,180 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\contentsline {chapter}{\numberline {1}Introduzione}{7}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Enunciati dichiarativi}{7}{section.1.1}% 
+\contentsline {section}{\numberline {1.2}Essere corretti, essere veridici}{8}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}Induzione e deduzione}{8}{section.1.3}% 
+\contentsline {section}{\numberline {1.4}Forma logica}{8}{section.1.4}% 
+\contentsline {subsubsection}{\numberline {1.4.0.1}Osservazioni}{8}{subsubsection.1.4.0.1}% 
+\contentsline {section}{\numberline {1.5}Logica e scienze particolari}{9}{section.1.5}% 
+\contentsline {section}{\numberline {1.6}Parole logiche}{9}{section.1.6}% 
+\contentsline {section}{\numberline {1.7}Diagrammi}{9}{section.1.7}% 
+\contentsline {section}{\numberline {1.8}Argomentazioni convergenti}{9}{section.1.8}% 
+\contentsline {section}{\numberline {1.9}Asserzioni implicite}{9}{section.1.9}% 
+\contentsline {section}{\numberline {1.10}Valutare un'argomentazione}{10}{section.1.10}% 
+\contentsline {subsection}{\numberline {1.10.1}Criteri di valutazione}{10}{subsection.1.10.1}% 
+\contentsline {subsection}{\numberline {1.10.2}Verit\`a delle premesse}{10}{subsection.1.10.2}% 
+\contentsline {subsection}{\numberline {1.10.3}Probabilit\`a della conclusione}{10}{subsection.1.10.3}% 
+\contentsline {subsection}{\numberline {1.10.4}Pertinenza}{11}{subsection.1.10.4}% 
+\contentsline {subsection}{\numberline {1.10.5}Vulnerabilit\`a}{11}{subsection.1.10.5}% 
+\contentsline {section}{\numberline {1.11}Fallacie di ragionamento}{11}{section.1.11}% 
+\contentsline {chapter}{\numberline {2}Logica proposizionale}{13}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Simbolizzare \`e chiarificare}{13}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Determinatezza, bivalenza, vero-funzionalit\`a}{13}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}Connettivi logici}{14}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}Congiunzione}{14}{subsection.2.3.1}% 
+\contentsline {subsection}{\numberline {2.3.2}Disgiunzione}{14}{subsection.2.3.2}% 
+\contentsline {subsection}{\numberline {2.3.3}Negazione}{14}{subsection.2.3.3}% 
+\contentsline {subsection}{\numberline {2.3.4}Condizione materiale}{15}{subsection.2.3.4}% 
+\contentsline {subsection}{\numberline {2.3.5}Bicondizionale}{15}{subsection.2.3.5}% 
+\contentsline {section}{\numberline {2.4}Regole per mettere in campo una buona formazione}{15}{section.2.4}% 
+\contentsline {subsubsection}{\numberline {2.4.0.1}Parentesi}{15}{subsubsection.2.4.0.1}% 
+\contentsline {subsection}{\numberline {2.4.1}Simboli}{16}{subsection.2.4.1}% 
+\contentsline {subsection}{\numberline {2.4.2}Formule ben formate}{16}{subsection.2.4.2}% 
+\contentsline {subsection}{\numberline {2.4.3}Come catturare un infinito in modo finito}{16}{subsection.2.4.3}% 
+\contentsline {subsection}{\numberline {2.4.4}Metavariabili e regole di formazione}{16}{subsection.2.4.4}% 
+\contentsline {subsection}{\numberline {2.4.5}Campo, subordinazione di connettivi}{17}{subsection.2.4.5}% 
+\contentsline {section}{\numberline {2.5}Creare tavole di verit\`a}{18}{section.2.5}% 
+\contentsline {subsection}{\numberline {2.5.1}Valutare i ragionamente con le tavole di verit\`a}{18}{subsection.2.5.1}% 
+\contentsline {subsection}{\numberline {2.5.2}Tautologie, incoerenze e contingenze}{18}{subsection.2.5.2}% 
+\contentsline {subsubsection}{\numberline {2.5.2.1}Principio di identit\`a}{18}{subsubsection.2.5.2.1}% 
+\contentsline {subsubsection}{\numberline {2.5.2.2}Principio di non contraddizione}{18}{subsubsection.2.5.2.2}% 
+\contentsline {subsubsection}{\numberline {2.5.2.3}Principio del terzo escluso}{18}{subsubsection.2.5.2.3}% 
+\contentsline {subsubsection}{\numberline {2.5.2.4}Tautologie}{19}{subsubsection.2.5.2.4}% 
+\contentsline {subsubsection}{\numberline {2.5.2.5}Incoerenze o contraddizioni}{19}{subsubsection.2.5.2.5}% 
+\contentsline {subsubsection}{\numberline {2.5.2.6}Contingenza}{19}{subsubsection.2.5.2.6}% 
+\contentsline {subsubsection}{\numberline {2.5.2.7}Decidibilit\`a}{19}{subsubsection.2.5.2.7}% 
+\contentsline {subsection}{\numberline {2.5.3}La foma condizionale corrispondente}{19}{subsection.2.5.3}% 
+\contentsline {section}{\numberline {2.6}Alberi di refutazione}{19}{section.2.6}% 
+\contentsline {subsection}{\numberline {2.6.1}Regole sintattiche}{20}{subsection.2.6.1}% 
+\contentsline {subsection}{\numberline {2.6.2}Regole di formazione}{20}{subsection.2.6.2}% 
+\contentsline {subsection}{\numberline {2.6.3}Altri utilizzi per gli alberi di refutazione}{21}{subsection.2.6.3}% 
+\contentsline {chapter}{\numberline {3}La logica delle asserzioni categoriche}{23}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Diagrammi di Venn}{23}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Inferenze dirette}{24}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Sillogismi categorici}{24}{section.3.3}% 
+\contentsline {chapter}{\numberline {4}Predicazione e quantificazione}{27}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Dal linguaggio enunciativo a quello predicativo}{27}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Enunciati singolari}{27}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Descrizioni definite ed espressioni funtoriali}{27}{subsection.4.2.1}% 
+\contentsline {section}{\numberline {4.3}Considerazioni generali}{28}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}Funzioni enunciative}{28}{subsection.4.3.1}% 
+\contentsline {subsection}{\numberline {4.3.2}I quantificatori}{28}{subsection.4.3.2}% 
+\contentsline {subsubsection}{\numberline {4.3.2.1}Quantificatore per tutti}{28}{subsubsection.4.3.2.1}% 
+\contentsline {subsubsection}{\numberline {4.3.2.2}Quantificatore per qualcuno}{28}{subsubsection.4.3.2.2}% 
+\contentsline {subsubsection}{\numberline {4.3.2.3}Quantificatori combinati e interdefiniti}{29}{subsubsection.4.3.2.3}% 
+\contentsline {section}{\numberline {4.4}L'identit\`a}{29}{section.4.4}% 
+\contentsline {section}{\numberline {4.5}Regole per una buona formazione}{29}{section.4.5}% 
+\contentsline {subsection}{\numberline {4.5.1}Simboli}{29}{subsection.4.5.1}% 
+\contentsline {subsection}{\numberline {4.5.2}Termini e formule}{29}{subsection.4.5.2}% 
+\contentsline {section}{\numberline {4.6}Variabili in libert\`a, vincolate, sostituzioni}{30}{section.4.6}% 
+\contentsline {subsection}{\numberline {4.6.1}Sostituzione}{31}{subsection.4.6.1}% 
+\contentsline {section}{\numberline {4.7}Alberi di refutazione}{31}{section.4.7}% 
+\contentsline {subsection}{\numberline {4.7.1}Regole di formazione}{31}{subsection.4.7.1}% 
+\contentsline {subsection}{\numberline {4.7.2}Generare controesempi}{32}{subsection.4.7.2}% 
+\contentsline {chapter}{\numberline {5}Deduzioni naturali}{33}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}La dimostrazione formale}{33}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Assiomatica}{33}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}Il calcolo enunciativo}{34}{section.5.3}% 
+\contentsline {subsection}{\numberline {5.3.1}Assunzioni a tempo indeterminato}{34}{subsection.5.3.1}% 
+\contentsline {subsection}{\numberline {5.3.2}Modus ponens o eliminazione del condizionale}{34}{subsection.5.3.2}% 
+\contentsline {subsection}{\numberline {5.3.3}Introduzione del condizionale e assunzioni a tempo determinato}{35}{subsection.5.3.3}% 
+\contentsline {subsubsection}{\numberline {5.3.3.1}I teoremi}{35}{subsubsection.5.3.3.1}% 
+\contentsline {subsection}{\numberline {5.3.4}Eliminazione della congiunzione}{35}{subsection.5.3.4}% 
+\contentsline {subsection}{\numberline {5.3.5}Introduzione alla congiunzione}{36}{subsection.5.3.5}% 
+\contentsline {subsection}{\numberline {5.3.6}Eliminazione della disgiunzione}{36}{subsection.5.3.6}% 
+\contentsline {subsection}{\numberline {5.3.7}Introduzione della disgiunzione}{36}{subsection.5.3.7}% 
+\contentsline {subsection}{\numberline {5.3.8}Eliminazione della negazione}{36}{subsection.5.3.8}% 
+\contentsline {subsection}{\numberline {5.3.9}Introduzione della negazione}{37}{subsection.5.3.9}% 
+\contentsline {subsection}{\numberline {5.3.10}Due negazioni fanno un'affermazione}{37}{subsection.5.3.10}% 
+\contentsline {subsection}{\numberline {5.3.11}Introduzione di teoremi}{37}{subsection.5.3.11}% 
+\contentsline {section}{\numberline {5.4}Il calcolo elementare o dei predicati}{37}{section.5.4}% 
+\contentsline {subsection}{\numberline {5.4.1}Eliminazione dell'universale}{37}{subsection.5.4.1}% 
+\contentsline {subsection}{\numberline {5.4.2}Introduzione dell'universale}{38}{subsection.5.4.2}% 
+\contentsline {subsection}{\numberline {5.4.3}Eliminazione dell'esistenziale}{38}{subsection.5.4.3}% 
+\contentsline {subsection}{\numberline {5.4.4}Introduzione dell'esistenziale}{39}{subsection.5.4.4}% 
+\contentsline {subsection}{\numberline {5.4.5}Propriet\`a dei quantificatori}{39}{subsection.5.4.5}% 
+\contentsline {subsubsection}{\numberline {5.4.5.1}Scambio dei quantificatori}{39}{subsubsection.5.4.5.1}% 
+\contentsline {subsubsection}{\numberline {5.4.5.2}Cambio alfabetico}{39}{subsubsection.5.4.5.2}% 
+\contentsline {subsubsection}{\numberline {5.4.5.3}Associativit\`a rispetto ai connettori}{39}{subsubsection.5.4.5.3}% 
+\contentsline {subsection}{\numberline {5.4.6}Quantificatori e implicazione materiale}{39}{subsection.5.4.6}% 
+\contentsline {section}{\numberline {5.5}Il calcolo dei predicati con identit\`a o quasielementare}{39}{section.5.5}% 
+\contentsline {subsection}{\numberline {5.5.1}Eliminazione dell'identit\`a}{40}{subsection.5.5.1}% 
+\contentsline {subsection}{\numberline {5.5.2}Introduzione dell'identit\`a}{40}{subsection.5.5.2}% 
+\contentsline {section}{\numberline {5.6}Considerazioni conclusive}{40}{section.5.6}% 
+\contentsline {chapter}{\numberline {6}Semantica logica}{41}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Teoria degli insiemi}{41}{section.6.1}% 
+\contentsline {subsection}{\numberline {6.1.1}Insiemi}{41}{subsection.6.1.1}% 
+\contentsline {subsection}{\numberline {6.1.2}Relazioni e operazioni insiemistiche}{41}{subsection.6.1.2}% 
+\contentsline {subsubsection}{\numberline {6.1.2.1}Operazioni tra insiemi}{42}{subsubsection.6.1.2.1}% 
+\contentsline {subsubsection}{\numberline {6.1.2.2}Prodotto cartesiano}{42}{subsubsection.6.1.2.2}% 
+\contentsline {subsubsection}{\numberline {6.1.2.3}Insieme potenza}{42}{subsubsection.6.1.2.3}% 
+\contentsline {subsection}{\numberline {6.1.3}Ontologia e insiemi}{42}{subsection.6.1.3}% 
+\contentsline {subsection}{\numberline {6.1.4}Paradosso di Russel}{42}{subsection.6.1.4}% 
+\contentsline {section}{\numberline {6.2}Una teoria del significato basata sulla verit\`a}{43}{section.6.2}% 
+\contentsline {section}{\numberline {6.3}Semantica Tarskiana}{44}{section.6.3}% 
+\contentsline {subsection}{\numberline {6.3.1}La convenzione V}{44}{subsection.6.3.1}% 
+\contentsline {subsection}{\numberline {6.3.2}Interpretazioni e assegnazioni}{45}{subsection.6.3.2}% 
+\contentsline {subsection}{\numberline {6.3.3}La definizione ricorsiva}{46}{subsection.6.3.3}% 
+\contentsline {subsection}{\numberline {6.3.4}Verit\`a logica e conseguenza logica}{47}{subsection.6.3.4}% 
+\contentsline {subsection}{\numberline {6.3.5}La verit\`a \`e inesprimibile}{48}{subsection.6.3.5}% 
+\contentsline {chapter}{\numberline {7}Cenni di metalogica}{51}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}Coerenza e completezza o le virt\`u di una logica}{51}{section.7.1}% 
+\contentsline {subsection}{\numberline {7.1.1}La coerenza dei sistemi formali}{51}{subsection.7.1.1}% 
+\contentsline {subsection}{\numberline {7.1.2}La completezza dei sistemi formali}{52}{subsection.7.1.2}% 
+\contentsline {section}{\numberline {7.2}Teoremi limitativi}{52}{section.7.2}% 
+\contentsline {subsection}{\numberline {7.2.1}L'incompletezza dell'aritmetica}{52}{subsection.7.2.1}% 
+\contentsline {subsection}{\numberline {7.2.2}Incompletezza e prove di coerenza}{53}{subsection.7.2.2}% 
+\contentsline {subsection}{\numberline {7.2.3}La logica \`e trasendentale}{54}{subsection.7.2.3}% 
+\contentsline {chapter}{\numberline {8}Il ragionamento induttivo}{55}{chapter.8}% 
+\contentsline {section}{\numberline {8.1}Il concetto di forza}{55}{section.8.1}% 
+\contentsline {section}{\numberline {8.2}Il sillogismo statistico}{55}{section.8.2}% 
+\contentsline {subsection}{\numberline {8.2.1}Argomentazioni statistiche}{56}{subsection.8.2.1}% 
+\contentsline {section}{\numberline {8.3}Generalizzazioni statistiche}{56}{section.8.3}% 
+\contentsline {section}{\numberline {8.4}Generalizzazioni induttive e induzioni semplici}{56}{section.8.4}% 
+\contentsline {section}{\numberline {8.5}Induzione per analogia}{57}{section.8.5}% 
+\contentsline {section}{\numberline {8.6}Inferenza causali e metodi di Mill}{57}{section.8.6}% 
+\contentsline {subsection}{\numberline {8.6.1}Causa necessaria o condizione causalmente necessaria}{57}{subsection.8.6.1}% 
+\contentsline {subsubsection}{\numberline {8.6.1.1}Metodo dell'accordo}{57}{subsubsection.8.6.1.1}% 
+\contentsline {subsection}{\numberline {8.6.2}Causa sufficiente o condizione causalmente sufficiente}{58}{subsection.8.6.2}% 
+\contentsline {subsubsection}{\numberline {8.6.2.1}Metodo della differenza}{58}{subsubsection.8.6.2.1}% 
+\contentsline {subsection}{\numberline {8.6.3}Causa necessaria e sufficiente}{58}{subsection.8.6.3}% 
+\contentsline {subsubsection}{\numberline {8.6.3.1}Metodo del congiunto}{58}{subsubsection.8.6.3.1}% 
+\contentsline {subsection}{\numberline {8.6.4}Dipendenza causale di una quantit\`a variabile da un'altra}{58}{subsection.8.6.4}% 
+\contentsline {subsubsection}{\numberline {8.6.4.1}Metodo della variazione concomitante}{58}{subsubsection.8.6.4.1}% 
+\contentsline {chapter}{\numberline {9}La semantica di Kripke}{59}{chapter.9}% 
+\contentsline {section}{\numberline {9.1}Strutture (frames)}{59}{section.9.1}% 
+\contentsline {section}{\numberline {9.2}Interpretazioni e verit\`a in strutture: modelli}{59}{section.9.2}% 
+\contentsline {section}{\numberline {9.3}Concetti semantici}{60}{section.9.3}% 
+\contentsline {chapter}{\numberline {10}La logica modale minimale}{63}{chapter.10}% 
+\contentsline {section}{\numberline {10.1}Formule valide}{63}{section.10.1}% 
+\contentsline {subsubsection}{\numberline {10.1.0.1}Esempio 1}{63}{subsubsection.10.1.0.1}% 
+\contentsline {subsubsection}{\numberline {10.1.0.2}Esempio 2}{63}{subsubsection.10.1.0.2}% 
+\contentsline {subsubsection}{\numberline {10.1.0.3}Esempio 3}{64}{subsubsection.10.1.0.3}% 
+\contentsline {section}{\numberline {10.2}Formule non valide}{64}{section.10.2}% 
+\contentsline {subsubsection}{\numberline {10.2.0.1}Esempio 4}{64}{subsubsection.10.2.0.1}% 
+\contentsline {subsubsection}{\numberline {10.2.0.2}Esempio 5}{64}{subsubsection.10.2.0.2}% 
+\contentsline {section}{\numberline {10.3}Il calcolo \textbf {K} della logica modale minimale}{64}{section.10.3}% 
+\contentsline {chapter}{\numberline {11}Logiche modali aletiche}{65}{chapter.11}% 
+\contentsline {section}{\numberline {11.1}La logica modale aletica minimale \textbf {KT}}{65}{section.11.1}% 
+\contentsline {subsection}{\numberline {11.1.1}Teorema}{65}{subsection.11.1.1}% 
+\contentsline {subsubsection}{\numberline {11.1.1.1}Enunciato}{65}{subsubsection.11.1.1.1}% 
+\contentsline {subsubsection}{\numberline {11.1.1.2}Dimostrazione}{65}{subsubsection.11.1.1.2}% 
+\contentsline {section}{\numberline {11.2}Il sistema $\mathbf {KT_4}$}{66}{section.11.2}% 
+\contentsline {section}{\numberline {11.3}il sistema $\mathbf {KT_5}(S_5)$}{66}{section.11.3}% 
+\contentsline {section}{\numberline {11.4}Le modalit\`a nei tre sistemi logici}{67}{section.11.4}% 
+\contentsline {subsection}{\numberline {11.4.1}$\mathbf {KT}$}{67}{subsection.11.4.1}% 
+\contentsline {subsection}{\numberline {11.4.2}$\mathbf {KT_4}$}{67}{subsection.11.4.2}% 
+\contentsline {subsection}{\numberline {11.4.3}$\mathbf {KT_5}$}{67}{subsection.11.4.3}% 
+\contentsline {chapter}{\numberline {12}Logiche descrittive}{69}{chapter.12}% 
+\contentsline {subsubsection}{\numberline {12.0.0.1}Asserire fatti attraverso assiomi $\mathbf {ABox}$}{69}{subsubsection.12.0.0.1}% 
+\contentsline {subsubsection}{\numberline {12.0.0.2}Asserire conoscenza terminologica dagli assiomi $\mathbf {TBox}$}{69}{subsubsection.12.0.0.2}% 
+\contentsline {subsubsection}{\numberline {12.0.0.3}Modellare relazioni tra ruoli attraverso assiomi $\mathbf {RBox}$}{69}{subsubsection.12.0.0.3}% 
+\contentsline {section}{\numberline {12.1}Costruttori per concetti e ruoli}{70}{section.12.1}% 
+\contentsline {subsection}{\numberline {12.1.1}Costruttori di concetti booleani}{70}{subsection.12.1.1}% 
+\contentsline {subsection}{\numberline {12.1.2}Restrizioni di ruolo}{70}{subsection.12.1.2}% 
+\contentsline {subsection}{\numberline {12.1.3}Nominali}{70}{subsection.12.1.3}% 
+\contentsline {subsection}{\numberline {12.1.4}Costruttori di ruolo}{70}{subsection.12.1.4}% 
+\contentsline {subsection}{\numberline {12.1.5}Caratteristiche di ruolo}{71}{subsection.12.1.5}% 
+\contentsline {section}{\numberline {12.2}La logica descrittiva $\mathbf {\mathcal {SROIQ}}$}{71}{section.12.2}% 
+\contentsline {section}{\numberline {12.3}Semantiche delle logiche descrittive}{72}{section.12.3}% 
